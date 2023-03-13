@@ -3,7 +3,7 @@
     <GeneCategoryDef>
         <defName>StagzMermaids</defName>
         <label>Mermaids</label>
-        <displayPriorityInXenotype>500</displayPriorityInXenotype>
+        <displayPriorityInXenotype>511</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneDef>
