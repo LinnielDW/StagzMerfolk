@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <GeneCategoryDef>
+        <defName>StagzMermaids</defName>
+        <label>Mermaids</label>
+        <displayPriorityInXenotype>500</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneDef>
+        <defName>Stagz_WebbedHands</defName>
+        <label>webbed hands</label>
+        <description>TODO.</description>
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>StagzMermaids</displayCategory>
+        <minAgeActive>3</minAgeActive>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>1</biostatMet>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>0.95</postFactor>
+            </li>
+        </capMods>
+    </GeneDef>
+</Defs>
