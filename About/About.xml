@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>StagzMermaids</name>
+  <name>StagzMerfolk</name>
   <author>Someone</author>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
-  <packageId>Arquebus.StagzMermaids</packageId>
+  <packageId>Arquebus.StagzMerfolk</packageId>
   <description>Put Stuff Here</description>
   <modDependencies>
     <li>

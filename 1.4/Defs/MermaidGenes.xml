@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <GeneCategoryDef>
-        <defName>StagzMermaids</defName>
-        <label>Mermaids</label>
+        <defName>StagzMerfolk</defName>
+        <label>Merfolk</label>
         <displayPriorityInXenotype>511</displayPriorityInXenotype>
     </GeneCategoryDef>
 
@@ -13,7 +13,7 @@
         <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <selectionWeight>0</selectionWeight>
-        <displayCategory>StagzMermaids</displayCategory>
+        <displayCategory>StagzMerfolk</displayCategory>
         <minAgeActive>3</minAgeActive>
         <biostatCpx>0</biostatCpx>
         <biostatMet>1</biostatMet>

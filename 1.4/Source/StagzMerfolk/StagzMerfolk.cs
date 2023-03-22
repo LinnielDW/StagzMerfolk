@@ -10,9 +10,9 @@ using HarmonyLib;
 namespace MT
 {
     [StaticConstructorOnStartup]
-    public static class StagzMermaids
+    public static class StagzMerfolk
     {
-        static StagzMermaids()
+        static StagzMerfolk()
         {
 
         }

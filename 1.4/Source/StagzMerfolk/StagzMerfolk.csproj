@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MT</RootNamespace>
-    <AssemblyName>StagzMermaids</AssemblyName>
+    <AssemblyName>StagzMerfolk</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,7 +51,7 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StagzMermaids.cs" />
+    <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
