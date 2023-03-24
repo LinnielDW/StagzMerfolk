@@ -51,8 +51,8 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConditionalStatEffector_Rain.cs" />
-    <Compile Include="ConditionalStatEffector_WaterOrRain.cs" />
+    <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
+    <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
