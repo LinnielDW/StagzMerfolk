@@ -47,4 +47,28 @@
         <biostatCpx>2</biostatCpx>
         <biostatMet>-1</biostatMet>
     </GeneDef>
+
+    <GeneDef>
+        <defName>Stagz_RainVeil</defName>
+        <label>rain veil</label>
+        <!--        TODO: finalize desc-->
+        <description>todo.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
+                <statOffsets>
+                    <MeleeDodgeChance>15</MeleeDodgeChance>
+                    <ArmorRating_Heat>0.7</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <Flammability>0</Flammability>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+    </GeneDef>  
 </Defs>
