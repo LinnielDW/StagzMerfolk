@@ -9,7 +9,9 @@
     <GeneDef>
         <defName>Stagz_WebbedHands</defName>
         <label>webbed hands</label>
+        <!--        TODO: finalize desc-->
         <description>TODO.</description>
+        <!--        TODO: Add icon-->
         <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <selectionWeight>0</selectionWeight>
