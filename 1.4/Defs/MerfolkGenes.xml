@@ -26,4 +26,25 @@
             </li>
         </capMods>
     </GeneDef>
+
+    <GeneDef>
+        <defName>Stagz_SwiftSwim</defName>
+        <label>swift swim</label>
+        <!--        TODO: finalize desc-->
+        <description>Carriers of this gene move faster in the rain.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_WaterOrRain">
+                <statFactors>
+                    <MoveSpeed>2</MoveSpeed>
+                    <MeleeDodgeChance>2</MeleeDodgeChance>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+    </GeneDef>
 </Defs>
