@@ -1,4 +1,6 @@
-﻿using Verse;
+﻿using System.Reflection;
+using HarmonyLib;
+using Verse;
 
 namespace StagzMerfolk
 {
@@ -7,7 +9,8 @@ namespace StagzMerfolk
     {
         static StagzMerfolk()
         {
-
+            var harmony = new Harmony("com.arquebus.rimworld.mod.stagzmerfolk");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 }

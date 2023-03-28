@@ -70,5 +70,19 @@
         </conditionalStatAffecters>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-1</biostatMet>
-    </GeneDef>  
+    </GeneDef>
+
+<!--    TODO: custom description, +20% dodge (ignoring cap).-->
+    <GeneDef>
+        <defName>Stagz_KeenReflexes</defName>
+        <label>keen reflexes</label>
+        <!--        TODO: finalize desc-->
+        <description>todo.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+    </GeneDef>
 </Defs>

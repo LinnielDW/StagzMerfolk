@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
+    <Compile Include="HarmonyPatches\KeenReflexes_Patches.cs" />
+    <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
