@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -25,11 +26,12 @@ public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
     private static void Postfix(ref float __result, ref TargetInfo ___target)
     {
         if (___target == null) return;
-        
+
         var pawn = ___target.Thing as Pawn;
         if (pawn != null && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
         {
-            __result += pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) * 0.75f;
+            //0.75 multiplier and max of 0.9 can be changed later
+            __result = Math.Min(__result + (pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) * 0.75f), 0.9f);
         }
     }
 }
