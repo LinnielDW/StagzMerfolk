@@ -84,5 +84,6 @@
         <displayOrderInCategory>500</displayOrderInCategory>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-1</biostatMet>
+        <biostatArc>1</biostatArc>
     </GeneDef>
 </Defs>
