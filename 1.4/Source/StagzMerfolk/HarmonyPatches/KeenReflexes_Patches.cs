@@ -12,21 +12,12 @@ public static class Verb_MeleeAttack_GetDodgeChance_Patch
         Pawn pawn = target.Thing as Pawn;
         if (pawn != null && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result > 0)
         {
-            // pawn_EquipmentTracker = (((thing != null) ? thing.ParentHolder : null) as Pawn_EquipmentTracker);
-            // flag = (pawn_EquipmentTracker != null);
             __result += 0.2f;
         }
-        /*else
-        {
-            flag = false;
-        }
-        bool flag2 = flag;
-        if (flag2)
-        {
-            __result /= pawn_EquipmentTracker.pawn.GetStatValue(VFEDefOf.VEF_RangeAttackSpeedFactor, true, -1);
-        }*/
     }
 }
+
+//TODO: patch SpecialDisplayStats to show keen reflexes (similar to DarknessCombatUtility.GetStatEntriesForPawn)
 
 [HarmonyPatch(typeof(ShotReport), "AimOnTargetChance_IgnoringPosture", MethodType.Getter)]
 public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
