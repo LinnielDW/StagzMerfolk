@@ -14,7 +14,7 @@ public static class Verb_MeleeAttack_GetDodgeChance_Patch
         Pawn pawn = target.Thing as Pawn;
         if (pawn != null && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result > 0)
         {
-            __result += 0.2f;
+            __result = Math.Min(__result + 0.2f, 0.9f);
         }
     }
 }
