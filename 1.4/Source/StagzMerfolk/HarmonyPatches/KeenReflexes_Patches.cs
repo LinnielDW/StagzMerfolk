@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -19,7 +20,21 @@ public static class Verb_MeleeAttack_GetDodgeChance_Patch
     }
 }
 
-//TODO: patch SpecialDisplayStats to show keen reflexes (similar to DarknessCombatUtility.GetStatEntriesForPawn)
+[HarmonyPatch(typeof(Pawn), "SpecialDisplayStats")]
+public static class Pawn_SpecialDisplayStats_Patch
+{
+    private static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> __result, Pawn_GeneTracker ___genes)
+    {
+        if (___genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
+        {
+            //todo: translation strings
+            var keenReflexesStatDrawEntry = new StatDrawEntry(StatCategoryDefOf.PawnCombat, "keen reflexes","+20%", "added dodge, can exceed the usual 50% limit", 410000);
+            return __result.Concat(keenReflexesStatDrawEntry);
+        }
+
+        return __result;
+    }
+}
 
 [HarmonyPatch(typeof(ShotReport), "AimOnTargetChance_IgnoringPosture", MethodType.Getter)]
 public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
@@ -37,8 +52,7 @@ public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
     }
 }
 
-// TODO: finish
-/*[HarmonyPatch(typeof(ShotReport), "GetTextReadout")]
+[HarmonyPatch(typeof(ShotReport), "GetTextReadout")]
 public static class ShotReport_GetTextReadout_Patch
 {
     private static void Postfix(ref string __result, ref TargetInfo ___target)
@@ -46,9 +60,11 @@ public static class ShotReport_GetTextReadout_Patch
         if (___target == null) return;
                 
         var pawn = ___target.Thing as Pawn;
-        if (pawn != null && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
+        if (pawn != null && pawn.RaceProps.Humanlike && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
         {
-            __result += " bla + " + (pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) * 0.75f).ToString();
+            //TODO: translation strings
+            __result += "   keen reflexes " + (pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) * 0.75f).ToStringPercent()+"\n";
+            __result += "   keen reflexes flat dodge " + (0.2f * 0.75f).ToStringPercent()+"\n";
         }
     }
-}*/
+}
