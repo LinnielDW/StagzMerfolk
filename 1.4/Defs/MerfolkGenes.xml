@@ -72,6 +72,42 @@
         <biostatMet>-1</biostatMet>
     </GeneDef>
 
+    <GeneDef>
+        <defName>Stagz_Raincaller</defName>
+        <label>raincaller</label>
+        <!--        TODO: finalize desc-->
+        <description>todo.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
+                <statOffsets>
+                    <PsychicSensitivity>0.8</PsychicSensitivity>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
+<!--        TODO: add raincaller ability-->
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatArc>1</biostatArc>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>Stagz_SirenSong</defName>
+        <label>siren song</label>
+        <!--        TODO: finalize desc-->
+        <description>todo.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+<!--        TODO: add siren song ability-->
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-3</biostatMet>
+    </GeneDef>
+
 <!--    TODO: custom description, +20% dodge (ignoring cap).-->
     <GeneDef>
         <defName>Stagz_KeenReflexes</defName>
