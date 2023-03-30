@@ -18,7 +18,7 @@ public class ConditionalStatEffector_WaterOrRain : ConditionalStatAffecter
         if (!req.HasThing || pawn?.Map == null) return false;
 
         //Check if pawn is in water or in rain
-        return pawn.Position.GetTerrain(pawn.Map).IsWater || (!pawn.Position.Roofed(pawn.Map) && pawn.Map.weatherManager.RainRate > 0.01f);
+        return pawn.IsWet();
     }
 
     public override string Label
