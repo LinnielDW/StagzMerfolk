@@ -57,6 +57,9 @@
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StagzUtils.cs" />
+    <Compile Include="Stagz_Gene_Aquatic.cs" />
+    <Compile Include="Stagz_Need_Aquatic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -149,4 +149,43 @@
             </suffixSymbols>
         </symbolPack>
     </GeneDef>
+
+    <GeneDef>
+        <defName>Stagz_Aquatic</defName>
+        <label>aquatic</label>
+        <!--        TODO: finish desc-->
+        <description>todo.</description>
+        <geneClass>StagzMerfolk.Stagz_Gene_Aquatic</geneClass>
+        <!--        TODO: icon-->
+        <iconPath>UI/Icons/Genes/Gene_Deathrest</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <causesNeed>Stagz_NeedAquatic</causesNeed>
+        <biostatMet>3</biostatMet>
+        <minAgeActive>3</minAgeActive>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>water</symbol></li>
+                <li><symbol>aqua</symbol></li>
+                <li><symbol>aquatic</symbol></li>
+                <li><symbol>hydro</symbol></li>
+                <li><symbol>mer</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>folk</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <NeedDef>
+        <defName>Stagz_NeedAquatic</defName>
+        <needClass>StagzMerfolk.Stagz_Need_Aquatic</needClass>
+        <label>aquatic</label>
+        <!--        TODO: finish desc-->
+        <description>todo.</description>
+        <baseLevel>0.01</baseLevel>
+        <listPriority>600</listPriority>
+        <major>true</major>
+        <minIntelligence>ToolUser</minIntelligence>
+        <onlyIfCausedByGene>true</onlyIfCausedByGene>
+    </NeedDef>
+<!--    TODO: add dehydration hediff-->
 </Defs>
