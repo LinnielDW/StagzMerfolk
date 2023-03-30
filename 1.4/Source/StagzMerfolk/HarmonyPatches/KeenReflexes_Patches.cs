@@ -47,7 +47,7 @@ public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
         if (pawn != null && pawn.RaceProps.Humanlike && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result < 1f)
         {
             //todo: 0.75 multiplier can be changed later
-            __result = Math.Min(__result - ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * 0.75f), 0.02f);
+            __result = Math.Max(__result - ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * 0.75f), 0.02f);
         }
     }
 }
