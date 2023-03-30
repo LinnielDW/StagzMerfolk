@@ -122,4 +122,31 @@
         <biostatMet>-1</biostatMet>
         <biostatArc>1</biostatArc>
     </GeneDef>
+
+    <GeneDef ParentName="GeneEarsBase">
+        <defName>Stagz_FinEars</defName>
+        <label>fin ears</label>
+<!--        TODO: finish desc-->
+        <description>Carriers of this gene have fin-like ears.</description>
+<!--        TODO: add icon-->
+        <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+<!--        TODO: add graphics-->
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</graphicPath>
+            <colorType>Skin</colorType>
+        </graphicData>
+<!--        TODO: finalize token symbols-->
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>scale</symbol></li>
+                <li><symbol>mer</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>frill</symbol></li>
+                <li><symbol>folk</symbol></li>
+                <li><symbol>merfolk</symbol></li>
+                <li><symbol>ear</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
 </Defs>
