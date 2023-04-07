@@ -8,4 +8,6 @@ public class StagzDefOf
 {
 
     public static GeneDef Stagz_KeenReflexes;
+
+    public static HediffDef Stagz_Dehydration;
 }

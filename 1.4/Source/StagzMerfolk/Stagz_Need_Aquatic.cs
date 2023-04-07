@@ -28,8 +28,16 @@ public class Stagz_Need_Aquatic: Need
             this.CurLevel -= 0.0003f;
         }
         
-        //TODO: add dehydration
-        //this.CheckForStateChange();
+        if (this.CurLevel < 0.1f)
+        {
+            //TODO: finalize dehydration tick severity increase
+            HealthUtility.AdjustSeverity(this.pawn, StagzDefOf.Stagz_Dehydration, 0.0075f);
+        }
+        else
+        {
+            pawn.health.hediffSet.GetFirstHediffOfDef(StagzDefOf.Stagz_Dehydration).Severity = 0;
+        }
+        
     }
     
     public override int GUIChangeArrow
