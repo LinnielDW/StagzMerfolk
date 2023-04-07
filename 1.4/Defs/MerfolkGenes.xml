@@ -104,6 +104,9 @@
         <displayCategory>StagzMerfolk</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
 <!--        TODO: add siren song ability-->
+        <abilities>
+            <li>Stagz_SirenCall</li>
+        </abilities>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-3</biostatMet>
     </GeneDef>

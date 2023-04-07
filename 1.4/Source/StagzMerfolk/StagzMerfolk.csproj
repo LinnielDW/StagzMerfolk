@@ -51,6 +51,7 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect_GiveMentalStateInArea.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_River.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
