@@ -13,7 +13,7 @@ public static class Verb_MeleeAttack_GetDodgeChance_Patch
     {
         if (target == null) return;
         Pawn pawn = target.Thing as Pawn;
-        if (pawn != null && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result > 0)
+        if (pawn != null && pawn.RaceProps.Humanlike && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result > 0)
         {
             __result = Math.Min(__result + 0.2f, 0.9f);
         }
@@ -23,9 +23,9 @@ public static class Verb_MeleeAttack_GetDodgeChance_Patch
 [HarmonyPatch(typeof(Pawn), "SpecialDisplayStats")]
 public static class Pawn_SpecialDisplayStats_Patch
 {
-    private static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> __result, Pawn_GeneTracker ___genes)
+    private static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> __result, Pawn __instance)
     {
-        if (___genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
+        if (__instance != null && __instance.RaceProps.Humanlike && __instance.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
         {
             //todo: translation strings
             var keenReflexesStatDrawEntry = new StatDrawEntry(StatCategoryDefOf.PawnCombat, "keen reflexes","+20%", "added dodge, can exceed the usual 50% limit", 410000);

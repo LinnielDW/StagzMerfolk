@@ -19,4 +19,9 @@ public static class StagzUtils
     {
         return pawn.Position.GetTerrain(pawn.Map).IsWater;
     }
+
+    public static bool InRiver(this Pawn pawn)
+    {
+        return pawn.Position.GetTerrain(pawn.Map).IsRiver;
+    }
 }
