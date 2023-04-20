@@ -22,10 +22,19 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
         var things = GenRadial.RadialDistinctThingsAround(target.Cell, this.parent.pawn.Map, this.parent.def.EffectRadius, true);
         foreach (var thing in things)
         {
-            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.HostileTo(Faction.OfPlayer))
+            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.Faction != Faction.OfPlayer)
             {
-                target.Pawn.jobs.StopAll();
-                target.Pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.PanicFlee);
+                if (Rand.Chance(0.2f))
+                {
+                    // Log.Message("effected " + pawn.Label);
+                    pawn.jobs.StopAll();
+                    pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.PanicFlee);
+                }
+                // else
+                // {
+                //     Log.Message("did not effect " + pawn.Label);
+                // }
+
             }
         }
         if (this.Props.casterEffect != null)
