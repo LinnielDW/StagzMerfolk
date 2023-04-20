@@ -5,6 +5,7 @@
         <label>siren call</label>
 <!--        TODO: finish desc-->
         <description>With a powerful bellow and psychic connection, call an animal to fight your enemies for a few hours.</description>
+        <!--        TODO: Add icon-->
         <iconPath>UI/Abilities/AnimalWarcall</iconPath>
         <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
         <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
@@ -38,6 +39,38 @@
             <li Class="StagzMerfolk.CompProperties_AbilityGiveMentalStateInArea">
                 <compClass>StagzMerfolk.CompAbilityEffect_GiveMentalStateInArea</compClass>
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
+            </li>
+        </comps>
+    </AbilityDef>
+    
+    <AbilityDef ParentName="AbilityTouchBase">
+        <defName>Stagz_CallRain</defName>
+        <label>call rain</label>
+        <!--        TODO: finish desc-->
+        <description>call rain.</description>
+        <!--        TODO: Add icon-->
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>900000</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>5</warmupTime>
+            <range>-1</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="StagzMerfolk.CompProperties_AbilityCallWeather">
+                <compClass>StagzMerfolk.CompAbilityEffect_CallWeather</compClass>
+                <casterEffect>AnimalWarcall_Cast</casterEffect>
+                <weatherDef>RainyThunderstorm</weatherDef>
+                <weatherDuration>450000</weatherDuration>
             </li>
         </comps>
     </AbilityDef>

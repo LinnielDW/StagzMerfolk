@@ -89,6 +89,9 @@
             </li>
         </conditionalStatAffecters>
 <!--        TODO: add raincaller ability-->
+        <abilities>
+            <li>Stagz_CallRain</li>
+        </abilities>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-1</biostatMet>
         <biostatArc>1</biostatArc>
