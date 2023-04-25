@@ -38,7 +38,7 @@ public class Stagz_Need_Aquatic: Need
             var dehydrationHediff = pawn.health.hediffSet.GetFirstHediffOfDef(StagzDefOf.Stagz_Dehydration);
             if (dehydrationHediff != null)
             {
-                dehydrationHediff.Severity = 0;
+                dehydrationHediff.Severity -= 0.15f;
             }
         }
         
