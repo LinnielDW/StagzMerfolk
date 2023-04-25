@@ -184,7 +184,7 @@
     <NeedDef>
         <defName>Stagz_NeedAquatic</defName>
         <needClass>StagzMerfolk.Stagz_Need_Aquatic</needClass>
-        <label>aquatic</label>
+        <label>aquatic hydration</label>
         <!--        TODO: finish desc-->
         <description>todo.</description>
         <baseLevel>0.01</baseLevel>
@@ -292,4 +292,26 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <JobDef>
+        <defName>Stagz_HydrateAquaticJob</defName>
+        <driverClass>StagzMerfolk.JobDriver_HydrateAquatic</driverClass>
+        <reportString>hydrating TargetA.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+    
+    <WorkGiverDef>
+        <defName>Stagz_HydrateAquaticWorkGiver</defName>
+        <label>hydrate aquatics</label>
+        <giverClass>StagzMerfolk.WorkGiver_HydrateAquatic</giverClass>
+        <workType>Doctor</workType>
+        <verb>hydrate</verb>
+        <gerund>hydrating</gerund>
+        <priorityInType>100</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+        <tendToHumanlikesOnly>true</tendToHumanlikesOnly>
+    </WorkGiverDef>
 </Defs>

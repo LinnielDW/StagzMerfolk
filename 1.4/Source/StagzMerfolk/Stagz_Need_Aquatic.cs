@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace StagzMerfolk;
 
@@ -54,5 +54,9 @@ public class Stagz_Need_Aquatic: Need
             }
             return -1;
         }
+    }
+    public void Hydrate(float val)
+    {
+        this.CurLevel = Mathf.Min(CurLevel + val, 1f);
     }
 }
