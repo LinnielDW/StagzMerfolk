@@ -204,14 +204,7 @@
         <scenarioCanAdd>false</scenarioCanAdd>
         <stages>
             <li>
-                <label>trivial</label>
-                <socialFightChanceFactor>1.5</socialFightChanceFactor>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <offset>-0.05</offset>
-                    </li>
-                </capMods>
+                <label>initial</label>
             </li>
             <li>
                 <minSeverity>0.2</minSeverity>
@@ -220,29 +213,35 @@
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
-                        <offset>-0.10</offset>
+                        <offset>-0.05</offset>
                     </li>
                 </capMods>
             </li>
             <li>
                 <minSeverity>0.4</minSeverity>
                 <label>moderate</label>
-                <socialFightChanceFactor>2.5</socialFightChanceFactor>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
-                        <offset>-0.20</offset>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.10</offset>
                     </li>
                 </capMods>
             </li>
             <li>
                 <minSeverity>0.6</minSeverity>
                 <label>severe</label>
-                <socialFightChanceFactor>3</socialFightChanceFactor>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
-                        <offset>-0.30</offset>
+                        <offset>-0.20</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.20</offset>
                     </li>
                 </capMods>
             </li>
@@ -253,10 +252,44 @@
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>
-                        <offset>-0.50</offset>
+                        <setMax>0.1</setMax>
                     </li>
                 </capMods>
             </li>
         </stages>
     </HediffDef>
+
+    <ThoughtDef>
+        <defName>Stagz_DehydrationThought</defName>
+        <workerClass>StagzMerfolk.Stagz_ThoughtWorker_NeedHydration</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>dry</label>
+                <description>todo.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+            <li>
+                <label>very dry</label>
+                <description>todo.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>dehydrated</label>
+                <description>todo.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+                <label>badly dehydrated</label>
+                <description>todo.</description>
+                <baseMoodEffect>-16</baseMoodEffect>
+            </li>
+            <li>
+                <label>dangerously dehydrated</label>
+                <description>todo.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>
