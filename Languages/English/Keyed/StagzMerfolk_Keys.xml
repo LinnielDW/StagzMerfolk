@@ -2,4 +2,5 @@
 <LanguageData>
     <StagzMerfolk_ConditionalStatEffector_WaterOrRain>in water or rain</StagzMerfolk_ConditionalStatEffector_WaterOrRain>
     <StagzMerfolk_ConditionalStatEffector_Rain>in rain</StagzMerfolk_ConditionalStatEffector_Rain>
+    <AbilityDisabledNotOnWater>must be stood on a water tile</AbilityDisabledNotOnWater>
 </LanguageData>

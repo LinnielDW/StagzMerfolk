@@ -72,4 +72,52 @@
             </li>
         </comps>
     </AbilityDef>
+    
+    <AbilityDef>
+        <defName>Stagz_DeepDive</defName>
+        <label>deep dive</label>
+        <description>TODO</description>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <hostile>false</hostile>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>5</warmupTime>
+            <range>-1</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffect">
+                <compClass>StagzMerfolk.CompAbility_RequiresOnWater</compClass>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <hediffDef>Stagz_DeepDiving</hediffDef>
+                <psychic>False</psychic>
+            </li>
+        </comps>
+    </AbilityDef>
+    <HediffDef>
+        <defName>Stagz_DeepDiving</defName>
+        <label>deep diving</label>
+        <description>TODO.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties">
+                <compClass>HediffComp_Invisibility</compClass>
+            </li>
+            <li Class="StagzMerfolk.HediffCompProperties_DisappearsOnLeavingWater"/>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
 </Defs>

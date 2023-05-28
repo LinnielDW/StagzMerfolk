@@ -13,4 +13,6 @@ public class StagzDefOf
     public static HediffDef Stagz_Dehydration;
     public static NeedDef Stagz_NeedAquatic;
     public static JobDef Stagz_HydrateAquaticJob;
+
+    public static AbilityDef Stagz_DeepDive;
 }

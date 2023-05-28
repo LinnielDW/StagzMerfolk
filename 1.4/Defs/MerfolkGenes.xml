@@ -163,6 +163,9 @@
         <causesNeed>Stagz_NeedAquatic</causesNeed>
         <biostatMet>3</biostatMet>
         <minAgeActive>3</minAgeActive>
+        <abilities>
+            <li>Stagz_DeepDive</li>
+        </abilities>
         <symbolPack>
             <prefixSymbols>
                 <li><symbol>water</symbol></li>
