@@ -12,16 +12,17 @@ public static class StagzUtils
 
     public static bool InRain(this Pawn pawn)
     {
-        return (!pawn.Position.Roofed(pawn.Map) && pawn.Map.weatherManager.RainRate > 0.01f);
+        return  pawn.Position.GetTerrain(pawn.Map) != null &&  
+                !pawn.Position.Roofed(pawn.Map) && pawn.Map.weatherManager.RainRate > 0.01f;
     }
 
     public static bool OnWater(this Pawn pawn)
     {
-        return pawn.Position.GetTerrain(pawn.Map).IsWater;
+        return pawn.Position.GetTerrain(pawn.Map) != null && pawn.Position.GetTerrain(pawn.Map).IsWater;
     }
 
     public static bool InRiver(this Pawn pawn)
     {
-        return pawn.Position.GetTerrain(pawn.Map).IsRiver;
+        return pawn.Position.GetTerrain(pawn.Map) != null && pawn.Position.GetTerrain(pawn.Map).IsRiver;
     }
 }

@@ -18,6 +18,7 @@ public class Stagz_Need_Aquatic: Need
     //TODO: add bad hygiene integration
     public override void NeedInterval()
     {
+        if(pawn == null) return;
         if(pawn.IsWet())
         {
             //TODO: change numbers
