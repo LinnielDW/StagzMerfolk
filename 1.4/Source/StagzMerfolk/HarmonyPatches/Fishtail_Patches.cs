@@ -27,6 +27,7 @@ public static class Pawn_ApparelTracker_Wear_FishtailPatch
     {
         if (___pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish))
         {
+            Messages.Message("StagzMerfolk_CannotWearBecauseOfTail".Translate(___pawn.LabelShort), MessageTypeDefOf.NeutralEvent);
             return false;
         }
 
