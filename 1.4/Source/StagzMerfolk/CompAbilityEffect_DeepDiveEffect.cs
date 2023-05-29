@@ -6,7 +6,8 @@ namespace StagzMerfolk;
 public class HediffComp_DisappearsOnLeavingWater : HediffComp
 {
     private bool usedVerb = false;
-    private int minDuration = 20;
+    private int landDuration = 60;
+    private int onLandDuration = 0;
 
     private new HediffCompProperties_DisappearsOnLeavingWater Props
     {
@@ -15,15 +16,19 @@ public class HediffComp_DisappearsOnLeavingWater : HediffComp
 
     public override bool CompShouldRemove
     {
-        get { return base.CompShouldRemove || !this.parent.pawn.OnWater() || usedVerb; }
+        get { return base.CompShouldRemove || onLandDuration >= landDuration || usedVerb; }
     }
 
     public override void CompPostTick(ref float severityAdjustment)
     {
         base.CompPostTick(ref severityAdjustment);
-        if (minDuration > 0)
+        if (!parent.pawn.OnWater())
         {
-            minDuration--;
+            onLandDuration++;
+        }
+        else
+        {
+            onLandDuration = 0;
         }
     }
 
