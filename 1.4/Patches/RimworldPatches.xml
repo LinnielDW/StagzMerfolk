@@ -5,5 +5,11 @@
         <value>
             <nullifyingGenes><li>Stagz_Aquatic</li></nullifyingGenes>
         </value>
+    </Operation>    
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/*[nullifyingTraits="Nudist"]/nullifyingGenes</xpath>
+        <value>
+            <li>Stagz_Tail_Fish</li>
+        </value>
     </Operation>
 </Patch>
