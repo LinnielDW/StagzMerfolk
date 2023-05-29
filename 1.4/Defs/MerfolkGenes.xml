@@ -152,6 +152,20 @@
         </symbolPack>
     </GeneDef>
 
+    <GeneDef ParentName="GeneEarsBase">
+        <defName>Stagz_Tail_Fish</defName>
+        <label>fish tail</label>
+<!--        TODO: finish desc-->
+        <description>Carriers of this gene have fin-like ears.</description>
+<!--        TODO: add icon-->
+        <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+<!--        TODO: add graphics-->
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</graphicPath>
+            <colorType>Skin</colorType>
+        </graphicData>
+    </GeneDef>
+
     <GeneDef>
         <defName>Stagz_Aquatic</defName>
         <label>aquatic</label>
