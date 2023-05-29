@@ -32,7 +32,7 @@ public class HediffComp_DisappearsOnLeavingWater : HediffComp
         base.Notify_PawnUsedVerb(verb, target);
 
         var aVerb = verb as Verb_CastAbility;
-        if (aVerb?.ability != null && aVerb.ability.def != StagzDefOf.Stagz_DeepDive)
+        if (aVerb?.ability.def != StagzDefOf.Stagz_DeepDive)
         {
             usedVerb = true;
         }
