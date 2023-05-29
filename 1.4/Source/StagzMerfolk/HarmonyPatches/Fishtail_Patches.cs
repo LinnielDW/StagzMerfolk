@@ -1,17 +1,49 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
 namespace StagzMerfolk.HarmonyPatches;
 
-[HarmonyPatch(typeof(Apparel), "PawnCanWear")]
-public static class Apparel_PawnCanWear_FishtailPatch
+public static class TailHelpers
 {
-    private static bool Prefix(Pawn pawn, ref bool __result)
+    public static bool ApparelCoversLegs(Pawn pawn, ApparelProperties __instance)
     {
-        if (pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish))
+        return __instance.CoversBodyPart(pawn.def.race.body.AllParts.FirstOrDefault(x => x.def == BodyPartDefOf.Leg));
+    }
+
+    public static bool ApparelCoversLegs(Pawn pawn, Apparel __instance)
+    {
+        return ApparelCoversLegs(pawn, __instance.def.apparel);
+    }
+}
+
+[HarmonyPatch(typeof(ApparelProperties), "PawnCanWear", new Type[] { typeof(Pawn), typeof(bool) })]
+public static class ApparelProperties_PawnCanWear_FishtailPatch
+{
+    private static bool Prefix(Pawn pawn, ref bool __result, ApparelProperties __instance)
+    {
+        // Log.Message(__instance);
+        if (pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish) && TailHelpers.ApparelCoversLegs(pawn, __instance))
         {
             __result = false;
+            return false;
+        }
+
+        // Log.Message("can wear, continue");
+        return true;
+    }
+}
+
+[HarmonyPatch(typeof(Pawn_ApparelTracker), "Wear")]
+public static class Pawn_ApparelTracker_Wear_FishtailPatch
+{
+    private static bool Prefix(Pawn ___pawn, Apparel newApparel)
+    {
+        if (___pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish) && TailHelpers.ApparelCoversLegs(___pawn, newApparel))
+        {
+            // Log.Message("trying to wear: " + newApparel.LabelShort);
+            Messages.Message("StagzMerfolk_CannotWearBecauseOfTail".Translate(___pawn.LabelShort), MessageTypeDefOf.NeutralEvent);
             return false;
         }
 
@@ -19,18 +51,21 @@ public static class Apparel_PawnCanWear_FishtailPatch
     }
 }
 
-
-[HarmonyPatch(typeof(Pawn_ApparelTracker), "Wear")]
-public static class Pawn_ApparelTracker_Wear_FishtailPatch
+[HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) })]
+public static class PawnGenerator_GeneratePawn_FishtailPatch
 {
-    private static bool Prefix(Pawn ___pawn)
+    public static void Postfix(Pawn __result)
     {
-        if (___pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish))
+        if (__result.genes != null && __result.genes.HasGene(StagzDefOf.Stagz_Tail_Fish))
         {
-            Messages.Message("StagzMerfolk_CannotWearBecauseOfTail".Translate(___pawn.LabelShort), MessageTypeDefOf.NeutralEvent);
-            return false;
+            for (int i = __result.apparel.WornApparel.Count - 1; i >= 0; i--)
+            {
+                var apparel = __result.apparel.WornApparel[i];
+                if (TailHelpers.ApparelCoversLegs(__result, apparel))
+                {
+                    __result.apparel.Remove(apparel);
+                }
+            }
         }
-
-        return true;
     }
 }
