@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -9,7 +10,8 @@ public static class TailHelpers
 {
     public static bool ApparelCoversLegs(Pawn pawn, ApparelProperties __instance)
     {
-        return __instance.CoversBodyPart(pawn.def.race.body.AllParts.FirstOrDefault(x => x.def == BodyPartDefOf.Leg));
+        // return __instance.CoversBodyPart(pawn.def.race.body.AllParts.All(x => x.gr == BodyPartDefOf.Leg));
+        return pawn.def.race.body.AllParts.Where(part => part.IsInGroup(BodyPartGroupDefOf.Legs)).Any(record => __instance.CoversBodyPart(record));
     }
 
     public static bool ApparelCoversLegs(Pawn pawn, Apparel __instance)
