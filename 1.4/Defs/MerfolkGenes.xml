@@ -153,7 +153,7 @@
     </GeneDef>
 
     <GeneDef>
-        <defName>Stagz_Tail_Fish</defName>
+        <defName>Stagz_Gene_Tail_Fish</defName>
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
 <!--        TODO: finish desc-->
@@ -181,7 +181,7 @@
         <comps>
             <li Class="StagzMerfolk.HediffCompProperties_RemovedWhenGeneRemoved">
                 <compClass>StagzMerfolk.HediffComp_RemovedWhenGeneRemoved</compClass>
-                <geneDef>Stagz_Tail_Fish</geneDef>
+                <geneDef>Stagz_Gene_Tail_Fish</geneDef>
             </li>
         </comps>
     </HediffDef>

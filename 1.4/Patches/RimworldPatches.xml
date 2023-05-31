@@ -9,7 +9,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/*[nullifyingTraits="Nudist"]/nullifyingGenes</xpath>
         <value>
-            <li>Stagz_Tail_Fish</li>
+            <li>Stagz_Gene_Tail_Fish</li>
         </value>
     </Operation>
 </Patch>
