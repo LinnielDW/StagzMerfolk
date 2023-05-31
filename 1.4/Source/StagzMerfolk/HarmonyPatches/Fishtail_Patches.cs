@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
@@ -8,15 +9,15 @@ namespace StagzMerfolk.HarmonyPatches;
 
 public static class TailHelpers
 {
-    public static bool ApparelCoversLegs(Pawn pawn, ApparelProperties __instance)
-    {
-        // return __instance.CoversBodyPart(pawn.def.race.body.AllParts.All(x => x.gr == BodyPartDefOf.Leg));
-        return pawn.def.race.body.AllParts.Where(part => part.IsInGroup(BodyPartGroupDefOf.Legs)).Any(record => __instance.CoversBodyPart(record));
-    }
+    public static BodyPartGroupDef[] LegsOrFeetGroups = new[] { BodyPartGroupDefOf.Legs, StagzDefOf.Feet };
 
-    public static bool ApparelCoversLegs(Pawn pawn, Apparel __instance)
+    public static bool GroupsContainsLegsOrFeet(this IEnumerable<BodyPartGroupDef> bodyPartGroups)
     {
-        return ApparelCoversLegs(pawn, __instance.def.apparel);
+        return bodyPartGroups.Intersect(LegsOrFeetGroups).Any();
+    }
+    public static bool GroupContainsLegsOrFeet(this BodyPartGroupDef bodyPartGroup)
+    {
+        return GroupsContainsLegsOrFeet(new[] {bodyPartGroup});
     }
 }
 
@@ -26,7 +27,7 @@ public static class ApparelProperties_PawnCanWear_FishtailPatch
     private static bool Prefix(Pawn pawn, ref bool __result, ApparelProperties __instance)
     {
         // Log.Message(__instance);
-        if (pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish) && TailHelpers.ApparelCoversLegs(pawn, __instance))
+        if (pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish) && __instance.bodyPartGroups.GroupsContainsLegsOrFeet())
         {
             __result = false;
             return false;
@@ -42,7 +43,7 @@ public static class Pawn_ApparelTracker_Wear_FishtailPatch
 {
     private static bool Prefix(Pawn ___pawn, Apparel newApparel)
     {
-        if (___pawn.genes.HasGene(StagzDefOf.Stagz_Tail_Fish) && TailHelpers.ApparelCoversLegs(___pawn, newApparel))
+        if (___pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish) && newApparel.def.apparel.bodyPartGroups.GroupsContainsLegsOrFeet())
         {
             // Log.Message("trying to wear: " + newApparel.LabelShort);
             Messages.Message("StagzMerfolk_CannotWearBecauseOfTail".Translate(___pawn.LabelShort), MessageTypeDefOf.NeutralEvent);
@@ -58,12 +59,12 @@ public static class PawnGenerator_GeneratePawn_FishtailPatch
 {
     public static void Postfix(Pawn __result)
     {
-        if (__result.genes != null && __result.genes.HasGene(StagzDefOf.Stagz_Tail_Fish))
+        if (__result.genes != null && __result.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish))
         {
             for (int i = __result.apparel.WornApparel.Count - 1; i >= 0; i--)
             {
                 var apparel = __result.apparel.WornApparel[i];
-                if (TailHelpers.ApparelCoversLegs(__result, apparel))
+                if (apparel.def.apparel.bodyPartGroups.GroupsContainsLegsOrFeet())
                 {
                     __result.apparel.Remove(apparel);
                 }

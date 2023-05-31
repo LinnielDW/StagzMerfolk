@@ -60,12 +60,14 @@
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
     <Compile Include="HarmonyPatches\Fishtail_Patches.cs" />
     <Compile Include="HarmonyPatches\KeenReflexes_Patches.cs" />
+    <Compile Include="HediffComp_RemovedWhenGeneRemoved.cs" />
+    <!-- <Compile Include="HarmonyPatches\Pawn_PathFollower_Patches.cs" /> -->
     <Compile Include="JobDriver_HydrateAquatic.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StagzUtils.cs" />
-    <Compile Include="Stagz_Gene_Aquatic.cs" />
+    <Compile Include="Stagz_Gene_Tail_Fish.cs" />
     <Compile Include="Stagz_Need_Aquatic.cs" />
     <Compile Include="Stagz_ThoughtWorker_NeedHydration.cs" />
     <Compile Include="WorkGiver_HydrateAquatic.cs" />

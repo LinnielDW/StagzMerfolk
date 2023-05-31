@@ -154,6 +154,7 @@
 
     <GeneDef ParentName="GeneEarsBase">
         <defName>Stagz_Tail_Fish</defName>
+        <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
 <!--        TODO: finish desc-->
         <description>Carriers of this gene have fin-like ears.</description>
@@ -165,13 +166,30 @@
             <colorType>Skin</colorType>
         </graphicData>
     </GeneDef>
+    
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>Stagz_Tail</defName>
+        <label>merfolk fish tail</label>
+        <labelNoun>part of a merfolk tail</labelNoun>
+        <description>Part of a merfolk tail.</description>
+        <addedPartProps>
+          <solid>true</solid>
+          <partEfficiency>1</partEfficiency>
+          <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="StagzMerfolk.HediffCompProperties_RemovedWhenGeneRemoved">
+                <compClass>StagzMerfolk.HediffComp_RemovedWhenGeneRemoved</compClass>
+                <geneDef>Stagz_Tail_Fish</geneDef>
+            </li>
+        </comps>
+    </HediffDef>
 
     <GeneDef>
         <defName>Stagz_Aquatic</defName>
         <label>aquatic</label>
         <!--        TODO: finish desc-->
         <description>todo.</description>
-        <geneClass>StagzMerfolk.Stagz_Gene_Aquatic</geneClass>
         <iconPath>UI/Icons/Genes/Gene_Aquatic</iconPath>
         <displayCategory>StagzMerfolk</displayCategory>
         <causesNeed>Stagz_NeedAquatic</causesNeed>
