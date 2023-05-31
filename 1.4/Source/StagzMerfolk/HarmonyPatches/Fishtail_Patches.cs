@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace StagzMerfolk.HarmonyPatches;
@@ -69,6 +70,18 @@ public static class PawnGenerator_GeneratePawn_FishtailPatch
                     __result.apparel.Remove(apparel);
                 }
             }
+        }
+    }
+}
+
+[HarmonyPatch(typeof(PawnGraphicSet), "ResolveAllGraphics")]
+public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
+{
+    public static void Postfix(PawnGraphicSet __instance)
+    {
+        if (__instance.pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish))
+        {
+            __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(__instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn), ShaderDatabase.CutoutComplex, Vector2.one, __instance.pawn.story.SkinColor);
         }
     }
 }
