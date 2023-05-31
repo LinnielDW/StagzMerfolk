@@ -162,9 +162,11 @@
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
         <displayCategory>StagzMerfolk</displayCategory>
 <!--        TODO: add graphics-->
+        <bodyType>Standard</bodyType>
         <graphicData>
-            <!-- <graphicPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</graphicPath> -->
-            <!-- <colorType>Skin</colorType> -->
+            <useSkinShader>true</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Skin</colorType>
         </graphicData>
     </GeneDef>
     
@@ -185,6 +187,15 @@
             </li>
         </comps>
     </HediffDef>
+    
+    <FurDef>
+        <defName>Stagz_TailFur</defName>
+        <noGraphic>true</noGraphic>
+        <bodyTypeGraphicPaths>
+            <Female>Things/Pawn/Humanlike/Bodies/MerfolkBodies/female</Female>
+            <Male>Things/Pawn/Humanlike/Bodies/MerfolkBodies/male</Male>
+        </bodyTypeGraphicPaths>
+    </FurDef>
 
     <GeneDef>
         <defName>Stagz_Aquatic</defName>
