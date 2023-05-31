@@ -152,7 +152,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef ParentName="GeneEarsBase">
+    <GeneDef>
         <defName>Stagz_Tail_Fish</defName>
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
@@ -160,10 +160,11 @@
         <description>Carriers of this gene have fin-like ears.</description>
 <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
 <!--        TODO: add graphics-->
         <graphicData>
-            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</graphicPath>
-            <colorType>Skin</colorType>
+            <!-- <graphicPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</graphicPath> -->
+            <!-- <colorType>Skin</colorType> -->
         </graphicData>
     </GeneDef>
     
