@@ -116,7 +116,7 @@
             <li Class="HediffCompProperties">
                 <compClass>HediffComp_Invisibility</compClass>
             </li>
-            <li Class="StagzMerfolk.HediffCompProperties_DisappearsOnLeavingWater"/>
+            <li Class="StagzMerfolk.CompAbility.HediffCompProperties_DisappearsOnLeavingWater"/>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
         </comps>
     </HediffDef>
