@@ -136,6 +136,7 @@
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MerfolkEars/ears</graphicPath>
             <colorType>Skin</colorType>
+            <colorRGBPostFactor>0.9</colorRGBPostFactor>
         </graphicData>
 <!--        TODO: finalize token symbols-->
         <symbolPack>
