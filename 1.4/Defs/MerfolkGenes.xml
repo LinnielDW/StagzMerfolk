@@ -161,6 +161,9 @@
 <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
         <displayCategory>StagzMerfolk</displayCategory>
+        <abilities>
+            <li>Stagz_DeepDive</li>
+        </abilities>
 <!--        TODO: add graphics-->
         <bodyType>Standard</bodyType>
         <graphicData>
@@ -208,9 +211,6 @@
         <causesNeed>Stagz_NeedAquatic</causesNeed>
         <biostatMet>3</biostatMet>
         <minAgeActive>3</minAgeActive>
-        <abilities>
-            <li>Stagz_DeepDive</li>
-        </abilities>
         <symbolPack>
             <prefixSymbols>
                 <li><symbol>water</symbol></li>
