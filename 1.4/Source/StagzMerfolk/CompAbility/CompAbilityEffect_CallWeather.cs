@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace StagzMerfolk;
+namespace StagzMerfolk.CompAbility;
 
 public class CompAbilityEffect_CallWeather: CompAbilityEffect
 {

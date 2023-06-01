@@ -51,10 +51,10 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompAbilityEffect_CallWeather.cs" />
-    <Compile Include="CompAbilityEffect_DeepDiveEffect.cs" />
-    <Compile Include="CompAbilityEffect_GiveMentalStateInArea.cs" />
-    <Compile Include="CompAbility_RequiresOnWater.cs" />
+    <Compile Include="CompAbility\CompAbilityEffect_CallWeather.cs" />
+    <Compile Include="CompAbility\CompAbilityEffect_DeepDiveEffect.cs" />
+    <Compile Include="CompAbility\CompAbilityEffect_GiveMentalStateInArea.cs" />
+    <Compile Include="CompAbility\CompAbility_RequiresOnWater.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_River.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />

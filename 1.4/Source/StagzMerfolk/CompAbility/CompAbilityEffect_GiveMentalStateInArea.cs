@@ -4,7 +4,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace StagzMerfolk;
+namespace StagzMerfolk.CompAbility;
 
 public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
 {
