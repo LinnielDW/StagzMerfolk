@@ -167,6 +167,7 @@
             <useSkinShader>true</useSkinShader>
             <fur>Stagz_TailFur</fur>
             <colorType>Skin</colorType>
+            <color>(0, 127, 127)</color>
         </graphicData>
     </GeneDef>
     

@@ -81,7 +81,8 @@ public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
     {
         if (__instance.pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish))
         {
-            __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(__instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn), ShaderDatabase.CutoutComplex, Vector2.one, __instance.pawn.story.SkinColor);
+            var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData.color;
+            __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(__instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn), ShaderDatabase.CutoutComplex, Vector2.one, __instance.pawn.story.SkinColor, tailColors ?? new Color(0, 127, 127));
         }
     }
 }
