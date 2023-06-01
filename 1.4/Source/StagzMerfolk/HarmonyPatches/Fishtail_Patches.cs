@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -82,12 +83,14 @@ public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
     {
         if (__instance.pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish))
         {
-            var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData.color;
+            var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData;
+            var color = (Color) AccessTools.Method(typeof(GeneGraphicData), "GetColorFor").Invoke(tailColors, new object[]{__instance.pawn});
+            
             __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(
                 __instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn),
                 ShaderDatabase.CutoutComplex, Vector2.one,
                 __instance.pawn.story.SkinColor,
-                tailColors ?? new Color(0, 127, 127)
+                color
             );
         }
     }
