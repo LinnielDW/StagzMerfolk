@@ -168,10 +168,10 @@
 <!--        TODO: add graphics-->
         <bodyType>Standard</bodyType>
         <graphicData>
-            <useSkinShader>true</useSkinShader>
+            <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
-            <colorType>Skin</colorType>
-            <color>(0, 127, 127)</color>
+            <colorType>Custom</colorType>
+            <color>(0, 126.5, 126.5)</color>
         </graphicData>
     </GeneDef>
     
