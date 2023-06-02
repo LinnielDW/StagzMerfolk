@@ -152,6 +152,30 @@
             </suffixSymbols>
         </symbolPack>
     </GeneDef>
+    
+    <GeneDef ParentName="GeneTailBase">
+        <defName>Stagz_BodyFin</defName>
+        <label>body fins</label>
+        <!-- TODO: finalize description -->
+        <description>TODO.</description>
+        <!--        TODO: add icon-->
+        <iconPath>UI/Icons/Genes/Gene_TailFurry</iconPath>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <displayOrderInCategory>1000</displayOrderInCategory>
+        <!--<statOffsets>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+        </statOffsets>-->
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/MerfolkFins/fins</graphicPath>
+            <colorType>Custom</colorType>
+            <color>(0, 126.5, 126.5)</color>
+            <drawOffsetNorth>(0, 0.2, -0.15)</drawOffsetNorth>
+            <drawOffsetSouth>(0, 0.2, -0.15)</drawOffsetSouth>
+            <drawOffsetEast>(-0.07, 0.2, -0.15)</drawOffsetEast>
+        </graphicData>
+    </GeneDef>
 
     <GeneDef>
         <defName>Stagz_Gene_Tail_Fish</defName>
