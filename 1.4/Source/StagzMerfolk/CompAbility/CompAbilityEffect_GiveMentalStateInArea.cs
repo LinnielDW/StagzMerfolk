@@ -28,7 +28,7 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
                 {
                     // Log.Message("effected " + pawn.Label);
                     pawn.jobs.StopAll();
-                    pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.PanicFlee);
+                    pawn.mindState.mentalStateHandler.TryStartMentalState(Props.mentalState);
                 }
                 // else
                 // {
@@ -75,4 +75,5 @@ public class CompProperties_AbilityGiveMentalStateInArea : CompProperties_Abilit
     }		
     
     public EffecterDef casterEffect;
+    public MentalStateDef mentalState;
 }
