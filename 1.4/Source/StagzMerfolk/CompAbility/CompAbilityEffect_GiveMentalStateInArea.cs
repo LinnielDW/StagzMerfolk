@@ -43,6 +43,12 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
             effecter.Trigger(this.parent.pawn, null, -1);
             effecter.Cleanup();
         }
+        if (this.Props.targetEffect != null)
+        {
+            Effecter effecter2 = this.Props.targetEffect.SpawnAttached(this.parent.pawn, this.parent.pawn.MapHeld, 1f);
+            effecter2.Trigger(target.ToTargetInfo(this.parent.pawn.Map), null, -1);
+            effecter2.Cleanup();
+        }
 
     }
     
@@ -75,5 +81,6 @@ public class CompProperties_AbilityGiveMentalStateInArea : CompProperties_Abilit
     }		
     
     public EffecterDef casterEffect;
+    public EffecterDef targetEffect;
     public MentalStateDef mentalState;
 }
