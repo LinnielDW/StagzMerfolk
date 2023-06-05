@@ -69,8 +69,8 @@
                 <fleckDef>Stagz_SirenCall_Fleck</fleckDef>
                 <chancePerTick>0.15</chancePerTick>
                 <scale>0.6~0.7</scale>
-                <rotationRate>-90~90</rotationRate>
-                <speed>0.2~0.7</speed>
+                <rotationRate>-30~30</rotationRate>
+                <speed>0.2~0.6</speed>
                 <spawnLocType>OnSource</spawnLocType>
                 <positionLerpFactor>2.5</positionLerpFactor>
                 <positionRadius>2</positionRadius>
@@ -83,18 +83,18 @@
         <randomGraphics>
             <li>
                 <texPath>Things/Motes/SirenCall/Note_a</texPath>
-                <shaderType>Mote</shaderType>
+                <shaderType>MoteGlow</shaderType>
                 <graphicClass>Graphic_Fleck</graphicClass>
                 <drawSize>(1,1)</drawSize>
             </li>
             <li>
                 <texPath>Things/Motes/SirenCall/Note_b</texPath>
-                <shaderType>Mote</shaderType>
+                <shaderType>MoteGlow</shaderType>
                 <graphicClass>Graphic_Fleck</graphicClass>
                 <drawSize>(1,1)</drawSize>
             </li>
         </randomGraphics>
-        <altitudeLayer>MetaOverlays</altitudeLayer>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
         <fadeInTime>0.05</fadeInTime>
         <solidTime>1.25</solidTime>
         <fadeOutTime>0.2</fadeOutTime>
