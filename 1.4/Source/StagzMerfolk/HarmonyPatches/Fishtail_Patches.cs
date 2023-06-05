@@ -12,19 +12,14 @@ public static class TailHelpers
 {
     public static BodyPartGroupDef[] LegsOrFeetGroups = new[] { BodyPartGroupDefOf.Legs, StagzDefOf.Feet };
 
-    public static bool GroupsContainsLegsOrFeet(this IEnumerable<BodyPartGroupDef> bodyPartGroups)
+    public static bool GroupsContainsLegsOrFeet(this List<BodyPartGroupDef> bodyPartGroups)
     {
-        return bodyPartGroups.Intersect(LegsOrFeetGroups).Any();
+        return bodyPartGroups.Exists(group => LegsOrFeetGroups.Contains(group));
     }
-    
+
     public static bool CoversMoreThanJustLegs(this List<BodyPartGroupDef> bodyPartGroups)
     {
         return bodyPartGroups.Any(group => !LegsOrFeetGroups.Contains(group));
-    }
-
-    public static bool GroupContainsLegsOrFeet(this BodyPartGroupDef bodyPartGroup)
-    {
-        return GroupsContainsLegsOrFeet(new[] { bodyPartGroup });
     }
 }
 
@@ -88,8 +83,8 @@ public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
         if (__instance.pawn.genes != null && __instance.pawn.genes.HasGene(StagzDefOf.Stagz_Gene_Tail_Fish))
         {
             var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData;
-            var color = (Color) AccessTools.Method(typeof(GeneGraphicData), "GetColorFor").Invoke(tailColors, new object[]{__instance.pawn});
-            
+            var color = (Color)AccessTools.Method(typeof(GeneGraphicData), "GetColorFor").Invoke(tailColors, new object[] { __instance.pawn });
+
             __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(
                 __instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn),
                 ShaderDatabase.CutoutComplex, Vector2.one,
