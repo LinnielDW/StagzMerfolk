@@ -23,7 +23,7 @@
             <range>49.9</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
-            <warmupEffecter>Stagz_SirenCall_Cast</warmupEffecter>
+            <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter>
             <targetParams>
                 <canTargetLocations>true</canTargetLocations>
                 <canTargetPawns>true</canTargetPawns>
@@ -45,7 +45,7 @@
     </AbilityDef>
     
     <EffecterDef>
-        <defName>Stagz_SirenCall_Cast</defName>
+        <defName>Stagz_SirenCall_Warmup</defName>
         <children>
             <!-- <li> -->
             <!--     <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass> -->
