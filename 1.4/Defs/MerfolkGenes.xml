@@ -172,4 +172,21 @@
             <drawOffsetEast>(-0.07, 0.2, -0.15)</drawOffsetEast>
         </graphicData>
     </GeneDef>
+    
+    <GeneDef>
+        <defName>Stagz_Nimbleness</defName>
+        <label>naturally nimble</label>
+        <labelShortAdj>nimble</labelShortAdj>
+        <description>Carriers of this gene are agile fighters, they are quick and light in motion.</description>
+        <iconPath>UI/Icons/Genes/Gene_Nimbleness</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>60</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+                <def>Nimble</def>
+            </li>
+        </forcedTraits>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+    </GeneDef>
 </Defs>
