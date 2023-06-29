@@ -100,14 +100,15 @@
     <AbilityDef>
         <defName>Stagz_DeepDive</defName>
         <label>deep dive</label>
+        <!-- TODO: finalize desc -->
         <description>TODO</description>
         <iconPath>UI/Abilities/Invisibility</iconPath>
-        <cooldownTicksRange>60000</cooldownTicksRange>
+        <cooldownTicksRange>60</cooldownTicksRange>
         <hostile>false</hostile>
         <targetRequired>False</targetRequired>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>5</warmupTime>
+            <warmupTime>1</warmupTime>
             <range>-1</range>
             <targetParams>
                 <canTargetSelf>True</canTargetSelf>
@@ -133,6 +134,7 @@
     <HediffDef>
         <defName>Stagz_DeepDiving</defName>
         <label>deep diving</label>
+        <!-- TODO: finalize desc -->
         <description>TODO.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>

@@ -4,11 +4,11 @@
         <defName>Stagz_Gene_Tail_Fish</defName>
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
-        <!--        TODO: finish desc-->
-        <description>Carriers of this gene have fin-like ears.</description>
+        <description>Carriers of this gene grow extra fins and a fish-like tail below their waist instead of human legs.</description>
         <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <endogeneCategory>BodyType</endogeneCategory>
+        <displayCategory>Cosmetic_Body</displayCategory>
         <abilities>
             <li>Stagz_DeepDive</li>
         </abilities>
