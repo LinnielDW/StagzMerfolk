@@ -9,12 +9,11 @@
     <GeneDef>
         <defName>Stagz_WebbedHands</defName>
         <label>webbed hands</label>
-        <!--        TODO: finalize desc-->
-        <description>TODO.</description>
+        <description>Carriers of this gene have webbed hands.</description>
         <iconPath>UI/Icons/Genes/Gene_HandsWebbed</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <selectionWeight>0</selectionWeight>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Miscellaneous</displayCategory>
         <minAgeActive>3</minAgeActive>
         <biostatCpx>0</biostatCpx>
         <biostatMet>1</biostatMet>
@@ -24,6 +23,9 @@
                 <postFactor>0.95</postFactor>
             </li>
         </capMods>
+        <exclusionTags>
+            <li>Hands</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef>
