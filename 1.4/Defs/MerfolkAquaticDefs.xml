@@ -3,12 +3,12 @@
     <GeneDef>
         <defName>Stagz_Aquatic</defName>
         <label>aquatic</label>
-        <!--        TODO: finish desc-->
-        <description>todo.</description>
+        <description>Carriers of this gene mostly live underwater, they have developed special compounds in their skin to retain water and produce mucus from epidermis for their land trips.</description>
         <iconPath>UI/Icons/Genes/Gene_Aquatic</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Miscellaneous</displayCategory>
         <causesNeed>Stagz_NeedAquatic</causesNeed>
         <biostatMet>3</biostatMet>
+        <biostatCpx>2</biostatCpx>
         <minAgeActive>3</minAgeActive>
         <symbolPack>
             <prefixSymbols>
@@ -22,6 +22,10 @@
                 <li><symbol>folk</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>FireSpew</li>
+            <li>FireWeakness</li>
+        </exclusionTags>
     </GeneDef>
     <NeedDef>
         <defName>Stagz_NeedAquatic</defName>
