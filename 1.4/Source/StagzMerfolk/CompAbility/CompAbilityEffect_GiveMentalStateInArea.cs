@@ -19,7 +19,7 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
     public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {
         base.Apply(target, dest);
-        var things = GenRadial.RadialDistinctThingsAround(target.Cell, this.parent.pawn.Map, this.parent.def.EffectRadius, true);
+        var things = GenRadial.RadialDistinctThingsAround(this.parent.pawn.Position, this.parent.pawn.Map, this.parent.def.EffectRadius, true);
         foreach (var thing in things)
         {
             if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.Faction != Faction.OfPlayer)
@@ -42,12 +42,6 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
             Effecter effecter = this.Props.casterEffect.SpawnAttached(this.parent.pawn, this.parent.pawn.MapHeld, 1f);
             effecter.Trigger(this.parent.pawn, null, -1);
             effecter.Cleanup();
-        }
-        if (this.Props.targetEffect != null)
-        {
-            Effecter effecter2 = this.Props.targetEffect.SpawnAttached(this.parent.pawn, this.parent.pawn.MapHeld, 1f);
-            effecter2.Trigger(target.ToTargetInfo(this.parent.pawn.Map), null, -1);
-            effecter2.Cleanup();
         }
 
     }
@@ -81,6 +75,5 @@ public class CompProperties_AbilityGiveMentalStateInArea : CompProperties_Abilit
     }		
     
     public EffecterDef casterEffect;
-    public EffecterDef targetEffect;
     public MentalStateDef mentalState;
 }

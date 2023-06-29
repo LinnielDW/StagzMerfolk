@@ -31,7 +31,6 @@
             <li Class="StagzMerfolk.CompAbility.CompProperties_AbilityGiveMentalStateInArea">
                 <compClass>StagzMerfolk.CompAbility.CompAbilityEffect_GiveMentalStateInArea</compClass>
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
-                <!-- <targetEffect>AnimalWarcall_CastOnTarget</targetEffect> -->
                 <mentalState>BerserkWarcall</mentalState>
             </li>
         </comps>

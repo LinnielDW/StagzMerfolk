@@ -31,6 +31,18 @@
                 <positionLerpFactor>2.5</positionLerpFactor>
                 <positionRadius>2</positionRadius>
             </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <fleckDef>Stagz_SirenCall_Fleck</fleckDef>
+                <chancePerTick>0.75</chancePerTick>
+                <burstCount>1~3</burstCount>
+                <scale>0.3~0.5</scale>
+                <rotationRate>-30~30</rotationRate>
+                <speed>0.2~0.6</speed>
+                <spawnLocType>OnSource</spawnLocType>
+                <positionLerpFactor>1.5</positionLerpFactor>
+                <positionRadius>49</positionRadius>
+            </li>
         </children>
     </EffecterDef>
     
