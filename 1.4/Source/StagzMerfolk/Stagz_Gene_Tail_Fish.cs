@@ -8,7 +8,7 @@ namespace StagzMerfolk;
 
 public class Stagz_Gene_Tail_Fish : Gene_Healing
 {
-    private int ticksToHeal;
+    /*private int ticksToHeal;
     private static readonly IntRange HealingIntervalTicksRange = new IntRange(900000, 1800000);
 
     public override void Tick()
@@ -60,7 +60,7 @@ public class Stagz_Gene_Tail_Fish : Gene_Healing
         }
 
         yield break;
-    }
+    }*/
 
 
     public override void PostAdd()
