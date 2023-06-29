@@ -23,8 +23,7 @@
             </suffixSymbols>
         </symbolPack>
         <exclusionTags>
-            <li>FireSpew</li>
-            <li>FireWeakness</li>
+            <li>FireDamage</li>
         </exclusionTags>
     </GeneDef>
     <NeedDef>
