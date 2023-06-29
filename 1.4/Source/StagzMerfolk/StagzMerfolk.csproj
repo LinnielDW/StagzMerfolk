@@ -61,7 +61,7 @@
     <Compile Include="HarmonyPatches\Fishtail_Patches.cs" />
     <Compile Include="HarmonyPatches\KeenReflexes_Patches.cs" />
     <Compile Include="HediffComp_RemovedWhenGeneRemoved.cs" />
-    <!-- <Compile Include="HarmonyPatches\Pawn_PathFollower_Patches.cs" /> -->
+    <Compile Include="HarmonyPatches\Pawn_PathFollower_Patches.cs" />
     <Compile Include="JobDriver_HydrateAquatic.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
