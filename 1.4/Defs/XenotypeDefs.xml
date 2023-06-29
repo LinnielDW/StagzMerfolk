@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>Stagz_Merfolk_Coastal</defName>
+    <label>coastal merfolk</label>
+    <!-- TODO: finalize desc -->
+    <description>TODO.</description>
+    <descriptionShort>TODO.</descriptionShort>
+    <!-- TODO: finalize icon -->
+    <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
+    <inheritable>true</inheritable>
+    <!-- <nameMaker>NamerPersonDirtmole_Male</nameMaker> -->
+    <!-- <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale> -->
+    <!-- <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
+    <genes>
+      <li>Stagz_SirenSong</li>
+      <li>Stagz_WebbedHands</li>
+      <li>Stagz_RainVeil</li>
+      <li>Stagz_Gene_Tail_Fish</li>
+      <li>Stagz_FinEars</li>
+      <li>Stagz_Aquatic</li>
+      <li>NakedSpeed</li>
+      <li>RobustDigestion</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li>AptitudePoor_Cooking</li>
+      <li>Stagz_SwiftSwim</li>
+      <li>PsychicBonding</li>
+      <li>KindInstinct</li>
+      <li>AptitudeStrong_Animals</li>
+      <li>Beauty_Pretty</li>
+      <!-- TODO: nimbleness gene -->
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>Stagz_Merfolk_Abyssal</defName>
+    <label>abyssal merfolk</label>
+    <!-- TODO: finalize desc -->
+    <description>TODO.</description>
+    <descriptionShort>TODO.</descriptionShort>
+    <!-- TODO: finalize icon -->
+    <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
+    <inheritable>true</inheritable>
+    <!-- <nameMaker>NamerPersonDirtmole_Male</nameMaker> -->
+    <!-- <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale> -->
+    <!-- <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
+    <genes>
+      <li>Stagz_SirenSong</li>
+      <li>Stagz_WebbedHands</li>
+      <li>Stagz_RainVeil</li>
+      <li>Stagz_Gene_Tail_Fish</li>
+      <li>Stagz_FinEars</li>
+      <li>Stagz_Aquatic</li>
+      <li>NakedSpeed</li>
+      <li>RobustDigestion</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li>AptitudeTerrible_Cooking</li>
+      <li>Stagz_Raincaller</li>
+      <li>DarkVision</li>
+      <li>Nearsighted</li>
+      <li>Aggression_Aggressive</li>
+      <li>UVSensitivity_Intense</li>
+      <li>Beauty_Pretty</li>
+      <li>PsychicAbility_Extreme</li>
+    </genes>
+  </XenotypeDef>
+
+  
+
+</Defs>
