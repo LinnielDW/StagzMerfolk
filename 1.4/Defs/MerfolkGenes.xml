@@ -31,10 +31,9 @@
     <GeneDef>
         <defName>Stagz_SwiftSwim</defName>
         <label>swift swim</label>
-        <!--        TODO: finalize desc-->
-        <description>Carriers of this gene move faster in the rain.</description>
+        <description>Carriers of this gene are natural swimmers, when in water, they can move quickly with grace.</description>
         <iconPath>UI/Icons/Genes/Gene_SwiftSwim</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Movement</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
         <conditionalStatAffecters>
             <li Class="StagzMerfolk.ConditionalStatEffector_WaterOrRain">
@@ -44,8 +43,12 @@
                 </statFactors>
             </li>
         </conditionalStatAffecters>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
+        <exclusionTags>
+            <li>FireSpew</li>
+            <li>FireWeakness</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef>
