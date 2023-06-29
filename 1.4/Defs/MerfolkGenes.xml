@@ -54,10 +54,9 @@
     <GeneDef>
         <defName>Stagz_RainVeil</defName>
         <label>rain veil</label>
-        <!--        TODO: finalize desc-->
-        <description>todo.</description>
+        <description>Carriers of this gene are able to camouflage themselves during rainy weather, making it difficult for enemies to land a hit.</description>
         <iconPath>UI/Icons/Genes/Gene_RainVeil</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Miscellaneous</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
         <conditionalStatAffecters>
             <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
@@ -70,8 +69,12 @@
                 </statFactors>
             </li>
         </conditionalStatAffecters>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
+        <exclusionTags>
+            <li>FireSpew</li>
+            <li>FireWeakness</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef>
