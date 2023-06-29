@@ -14,6 +14,9 @@ public class Stagz_Need_Aquatic: Need
             0.1f
         };
     }
+
+    private const float FallRate = 0.0003f;
+    private float tempFallRate;
     
     //TODO: add bad hygiene integration
     public override void NeedInterval()
@@ -26,7 +29,13 @@ public class Stagz_Need_Aquatic: Need
         }
         else
         {
-            this.CurLevel -= 0.0003f;
+            tempFallRate = FallRate;
+            if (pawn.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.HeatWave))
+            {
+                tempFallRate *= 2;
+            }
+
+            this.CurLevel -= tempFallRate;
         }
         
         if (this.CurLevel < 0.1f)
