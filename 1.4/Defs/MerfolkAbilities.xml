@@ -2,36 +2,34 @@
 <Defs>
     <AbilityDef>
         <defName>Stagz_SirenCall</defName>
-        <label>siren call</label>
+        <label>siren song</label>
 <!--        TODO: finish desc-->
         <description>With a powerful bellow and psychic connection, call an animal to fight your enemies for a few hours.</description>
         <iconPath>UI/Abilities/SirenCall</iconPath>
-        <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>300000</cooldownTicksRange><!-- 5 days -->
         <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <groupAbility>true</groupAbility>
         <statBases>
             <Ability_Duration>500</Ability_Duration>
-            <Ability_EffectRadius>5.9</Ability_EffectRadius>
+            <Ability_EffectRadius>49.9</Ability_EffectRadius>
         </statBases>
-        <charges>2</charges>
-        <cooldownPerCharge>true</cooldownPerCharge>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <label>warcall</label>
-            <warmupTime>2</warmupTime>
-            <range>49.9</range>
+            <label>siren song</label>
+            <warmupTime>3</warmupTime>
+            <range>-1</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
             <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter>
             <targetParams>
-                <canTargetLocations>true</canTargetLocations>
-                <canTargetPawns>true</canTargetPawns>
-                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
                 <canTargetBuildings>false</canTargetBuildings>
-                <canTargetHumans>true</canTargetHumans>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
                 <canTargetMechs>false</canTargetMechs>
-                <canTargetSelf>false</canTargetSelf>
             </targetParams>
         </verbProperties>
         <comps>

@@ -97,17 +97,15 @@
     <GeneDef>
         <defName>Stagz_SirenSong</defName>
         <label>siren song</label>
-        <!--        TODO: finalize desc-->
-        <description>todo.</description>
+        <description>Carriers of this gene hum a wordless, haunting melody enchanted with psychic energy, anyone who hears the song will become obsessed with the songster/songstress.</description>
         <iconPath>UI/Icons/Genes/Gene_SirenCall</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Ability</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
-<!--        TODO: add siren song ability-->
         <abilities>
             <li>Stagz_SirenCall</li>
         </abilities>
-        <biostatCpx>2</biostatCpx>
-        <biostatMet>-3</biostatMet>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
     </GeneDef>
 
 <!--    TODO: custom description, +20% dodge (ignoring cap).-->
