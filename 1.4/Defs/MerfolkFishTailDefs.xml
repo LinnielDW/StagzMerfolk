@@ -29,9 +29,9 @@
     
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>Stagz_Tail</defName>
-        <label>merfolk fish tail</label>
-        <labelNoun>part of a merfolk tail</labelNoun>
-        <description>Part of a merfolk tail.</description>
+        <label>fish tail</label>
+        <labelNoun>part of a fish tail</labelNoun>
+        <description>Part of a fish tail.</description>
         <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
         <addedPartProps>
             <solid>true</solid>
