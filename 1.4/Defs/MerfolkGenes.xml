@@ -129,16 +129,19 @@
     <GeneDef ParentName="GeneEarsBase">
         <defName>Stagz_FinEars</defName>
         <label>fin ears</label>
-<!--        TODO: finish desc-->
-        <description>Carriers of this gene have fin-like ears.</description>
+        <description>Carriers of this gene have fin ears that are covered in scales.</description>
 <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
-<!--        TODO: add graphics-->
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MerfolkEars/ears</graphicPath>
             <colorType>Skin</colorType>
             <colorRGBPostFactor>0.9</colorRGBPostFactor>
         </graphicData>
+        <endogeneCategory>Ears</endogeneCategory>
+        <displayCategory>Cosmetic</displayCategory>
+        <exclusionTags>
+            <li>Ears</li>
+        </exclusionTags>
 <!--        TODO: finalize token symbols-->
         <symbolPack>
             <prefixSymbols>
