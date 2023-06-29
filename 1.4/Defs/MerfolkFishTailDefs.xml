@@ -7,11 +7,13 @@
         <description>Carriers of this gene grow extra fins and a fish-like tail below their waist instead of human legs.</description>
         <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
-        <endogeneCategory>BodyType</endogeneCategory>
-        <displayCategory>Cosmetic_Body</displayCategory>
+        <prerequisite>Stagz_Aquatic</prerequisite>
+        <displayCategory>Miscellaneous</displayCategory>
         <abilities>
             <li>Stagz_DeepDive</li>
         </abilities>
+        <biostatMet>-2</biostatMet>
+        <biostatCpx>2</biostatCpx>
         <!--        TODO: add graphics-->
         <bodyType>Standard</bodyType>
         <graphicData>
@@ -20,6 +22,9 @@
             <colorType>Custom</colorType>
             <color>(0, 126.5, 126.5)</color>
         </graphicData>
+        <exclusionTags>
+            <li>Fur</li>
+        </exclusionTags>
     </GeneDef>
     
     <HediffDef ParentName="AddedBodyPartBase">
