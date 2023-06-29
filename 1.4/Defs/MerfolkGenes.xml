@@ -15,7 +15,7 @@
         <selectionWeight>0</selectionWeight>
         <displayCategory>Miscellaneous</displayCategory>
         <minAgeActive>3</minAgeActive>
-        <biostatCpx>0</biostatCpx>
+        <biostatCpx>1</biostatCpx>
         <biostatMet>1</biostatMet>
         <capMods>
             <li>
@@ -114,7 +114,7 @@
         <displayCategory>Movement</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
         <biostatCpx>2</biostatCpx>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>-4</biostatMet>
         <biostatArc>1</biostatArc>
     </GeneDef>
 
