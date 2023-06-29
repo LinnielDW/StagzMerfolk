@@ -42,7 +42,7 @@
                     <MeleeDodgeChance>2</MeleeDodgeChance>
                 </statFactors>
             </li>
-            <li Class="StagzMerfolk.ConditionalStatEffector_NotWaterOrRain">
+            <li Class="StagzMerfolk.ConditionalStatEffector_NotWater">
                 <statOffsets>
                     <MoveSpeed>-0.5</MoveSpeed>
                 </statOffsets>
