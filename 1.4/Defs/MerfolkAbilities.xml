@@ -19,17 +19,12 @@
             <verbClass>Verb_CastAbility</verbClass>
             <label>siren song</label>
             <warmupTime>3</warmupTime>
-            <range>-1</range>
+            <range>49.9</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
             <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter>
             <targetParams>
                 <canTargetSelf>True</canTargetSelf>
-                <canTargetPawns>false</canTargetPawns>
-                <canTargetBuildings>false</canTargetBuildings>
-                <canTargetAnimals>false</canTargetAnimals>
-                <canTargetHumans>false</canTargetHumans>
-                <canTargetMechs>false</canTargetMechs>
             </targetParams>
         </verbProperties>
         <comps>
