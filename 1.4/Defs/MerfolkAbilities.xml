@@ -102,7 +102,7 @@
         <label>deep dive</label>
         <!-- TODO: finalize desc -->
         <description>TODO</description>
-        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <iconPath>UI/Abilities/DeepDive</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <hostile>false</hostile>
         <targetRequired>False</targetRequired>
