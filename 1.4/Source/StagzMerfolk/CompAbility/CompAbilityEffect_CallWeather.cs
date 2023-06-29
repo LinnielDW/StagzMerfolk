@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -19,12 +20,13 @@ public class CompAbilityEffect_CallWeather: CompAbilityEffect
         base.Apply(target, dest);
         
         //sets weather
-        this.parent.pawn.Map.weatherManager.TransitionTo(Props.weatherDef);
+        var weather = Props.weatherDefs.RandomElement();
+        this.parent.pawn.Map.weatherManager.TransitionTo(weather);
         //forces duration
         AccessTools.FieldRefAccess<int>(typeof(WeatherDecider),"curWeatherDuration").Invoke(this.parent.pawn.Map.weatherDecider) = Props.weatherDuration;
         
         //todo: move this to translation
-        Messages.Message(this.parent.pawn.LabelShort + " has called forth a thunderstorm. It will begin shortly...", this.parent.pawn, MessageTypeDefOf.NeutralEvent, true);
+        Messages.Message(this.parent.pawn.LabelShort + " has called forth a " + weather.label + ". It will begin shortly...", this.parent.pawn, MessageTypeDefOf.NeutralEvent, true);
         
         
         if (this.Props.casterEffect != null)
@@ -43,6 +45,6 @@ public class CompProperties_AbilityCallWeather : CompProperties_AbilityEffect
     }		
     
     public EffecterDef casterEffect;
-    public WeatherDef weatherDef;
+    public List<WeatherDef> weatherDefs;
     public int weatherDuration;
 }
