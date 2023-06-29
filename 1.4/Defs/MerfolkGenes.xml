@@ -45,10 +45,6 @@
         </conditionalStatAffecters>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
-        <exclusionTags>
-            <li>FireSpew</li>
-            <li>FireWeakness</li>
-        </exclusionTags>
     </GeneDef>
 
     <GeneDef>
@@ -71,10 +67,6 @@
         </conditionalStatAffecters>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
-        <exclusionTags>
-            <li>FireSpew</li>
-            <li>FireWeakness</li>
-        </exclusionTags>
     </GeneDef>
 
     <GeneDef>
@@ -84,10 +76,6 @@
         <iconPath>UI/Icons/Genes/Gene_Raincaller</iconPath>
         <displayCategory>Archite</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
-        <exclusionTags>
-            <li>FireSpew</li>
-            <li>FireWeakness</li>
-        </exclusionTags>
         <conditionalStatAffecters>
             <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
                 <statOffsets>
@@ -121,11 +109,9 @@
     <GeneDef>
         <defName>Stagz_KeenReflexes</defName>
         <label>keen reflexes</label>
-        <!--        TODO: finalize desc-->
-        <description>todo.</description>
-        <!--        TODO: Add icon-->
+        <description>Carriers of this gene have extremely fast reflexes. They can dodge most income hits even from a distance.</description>
         <iconPath>UI/Icons/Genes/Gene_KeenReflex</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Movement</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-1</biostatMet>
