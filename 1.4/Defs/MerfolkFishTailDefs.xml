@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <GeneDef>
+        <defName>Stagz_Gene_Tail_Fish</defName>
+        <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
+        <label>fish tail</label>
+        <!--        TODO: finish desc-->
+        <description>Carriers of this gene have fin-like ears.</description>
+        <!--        TODO: add icon-->
+        <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+        <displayCategory>StagzMerfolk</displayCategory>
+        <abilities>
+            <li>Stagz_DeepDive</li>
+        </abilities>
+        <!--        TODO: add graphics-->
+        <bodyType>Standard</bodyType>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(0, 126.5, 126.5)</color>
+        </graphicData>
+    </GeneDef>
+    
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>Stagz_Tail</defName>
+        <label>merfolk fish tail</label>
+        <labelNoun>part of a merfolk tail</labelNoun>
+        <description>Part of a merfolk tail.</description>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+            <li Class="StagzMerfolk.HediffCompProperties_RemovedWhenGeneRemoved">
+                <compClass>StagzMerfolk.HediffComp_RemovedWhenGeneRemoved</compClass>
+                <geneDef>Stagz_Gene_Tail_Fish</geneDef>
+            </li>
+        </comps>
+    </HediffDef>
+    
+    <FurDef>
+        <defName>Stagz_TailFur</defName>
+        <noGraphic>true</noGraphic>
+        <bodyTypeGraphicPaths>
+            <Female>Things/Pawn/Humanlike/Bodies/MerfolkBodies/female</Female>
+            <Male>Things/Pawn/Humanlike/Bodies/MerfolkBodies/male</Male>
+        </bodyTypeGraphicPaths>
+    </FurDef>
+</Defs>

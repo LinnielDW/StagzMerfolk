@@ -44,62 +44,6 @@
         </comps>
     </AbilityDef>
     
-    <EffecterDef>
-        <defName>Stagz_SirenCall_Warmup</defName>
-        <children>
-            <!-- <li> -->
-            <!--     <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass> -->
-            <!--     <spawnLocType>OnSource</spawnLocType> -->
-            <!--     <soundDef>AnimalWarcall_Cast</soundDef> -->
-            <!-- </li> -->
-            <!-- <li> -->
-            <!--     <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass> -->
-            <!--     <moteDef>Mote_AnimalWarcallDistortion</moteDef> -->
-            <!--     <color>(160, 108, 189)</color> -->
-            <!--     <spawnLocType>OnSource</spawnLocType> -->
-            <!-- </li> -->
-            <li>
-                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-                <moteDef>Mote_AnimalWarcallTarget</moteDef>
-                <spawnLocType>OnSource</spawnLocType>
-            </li>
-            
-            <li>
-                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-                <fleckDef>Stagz_SirenCall_Fleck</fleckDef>
-                <chancePerTick>0.15</chancePerTick>
-                <scale>0.6~0.7</scale>
-                <rotationRate>-30~30</rotationRate>
-                <speed>0.2~0.6</speed>
-                <spawnLocType>OnSource</spawnLocType>
-                <positionLerpFactor>2.5</positionLerpFactor>
-                <positionRadius>2</positionRadius>
-            </li>
-        </children>
-    </EffecterDef>
-    
-    <FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
-        <defName>Stagz_SirenCall_Fleck</defName>
-        <randomGraphics>
-            <li>
-                <texPath>Things/Motes/SirenCall/Note_a</texPath>
-                <shaderType>MoteGlow</shaderType>
-                <graphicClass>Graphic_Fleck</graphicClass>
-                <drawSize>(1,1)</drawSize>
-            </li>
-            <li>
-                <texPath>Things/Motes/SirenCall/Note_b</texPath>
-                <shaderType>MoteGlow</shaderType>
-                <graphicClass>Graphic_Fleck</graphicClass>
-                <drawSize>(1,1)</drawSize>
-            </li>
-        </randomGraphics>
-        <altitudeLayer>MoteOverhead</altitudeLayer>
-        <fadeInTime>0.05</fadeInTime>
-        <solidTime>1.25</solidTime>
-        <fadeOutTime>0.2</fadeOutTime>
-    </FleckDef>
-    
     <!-- <ThingDef ParentName="MoteBase"> -->
     <!--     <defName>Mote_AnimalWarcallTarget</defName> -->
     <!--     <thingClass>MoteAttached</thingClass> -->
