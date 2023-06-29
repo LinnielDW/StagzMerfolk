@@ -92,7 +92,7 @@
                 <compClass>StagzMerfolk.CompAbility.CompAbilityEffect_CallWeather</compClass>
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <weatherDef>RainyThunderstorm</weatherDef>
-                <weatherDuration>450000</weatherDuration>
+                <weatherDuration>900000</weatherDuration>
             </li>
         </comps>
     </AbilityDef>

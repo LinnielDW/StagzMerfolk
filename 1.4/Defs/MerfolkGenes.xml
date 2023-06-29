@@ -72,12 +72,14 @@
     <GeneDef>
         <defName>Stagz_Raincaller</defName>
         <label>raincaller</label>
-        <!--        TODO: finalize desc-->
-        <description>todo.</description>
-        <!--        TODO: Add icon-->
+        <description>Carriers of this gene are able to manipulate local water particles on a mass scale. This usually leads to heavy rainy weather in which they thrive.</description>
         <iconPath>UI/Icons/Genes/Gene_Raincaller</iconPath>
-        <displayCategory>StagzMerfolk</displayCategory>
+        <displayCategory>Archite</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
+        <exclusionTags>
+            <li>FireSpew</li>
+            <li>FireWeakness</li>
+        </exclusionTags>
         <conditionalStatAffecters>
             <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
                 <statOffsets>
@@ -85,12 +87,11 @@
                 </statOffsets>
             </li>
         </conditionalStatAffecters>
-<!--        TODO: add raincaller ability-->
         <abilities>
             <li>Stagz_CallRain</li>
         </abilities>
-        <biostatCpx>2</biostatCpx>
-        <biostatMet>-1</biostatMet>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-5</biostatMet>
         <biostatArc>1</biostatArc>
     </GeneDef>
 
