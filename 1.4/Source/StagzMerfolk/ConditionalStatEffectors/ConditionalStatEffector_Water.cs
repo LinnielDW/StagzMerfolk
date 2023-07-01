@@ -24,6 +24,6 @@ public class ConditionalStatEffector_Water : ConditionalStatAffecter
 
     public override string Label
     {
-        get { return "StagzMerfolk_ConditionalStatEffector_WaterOrRain".Translate(); }
+        get { return "StagzMerfolk_ConditionalStatEffector_Water".Translate(); }
     }
 }

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+    <StagzMerfolk_ConditionalStatEffector_Water>in water</StagzMerfolk_ConditionalStatEffector_Water>
     <StagzMerfolk_ConditionalStatEffector_WaterOrRain>in water or rain</StagzMerfolk_ConditionalStatEffector_WaterOrRain>
     <StagzMerfolk_ConditionalStatEffector_NotWater>not in water</StagzMerfolk_ConditionalStatEffector_NotWater>
     <StagzMerfolk_ConditionalStatEffector_Rain>in rain</StagzMerfolk_ConditionalStatEffector_Rain>

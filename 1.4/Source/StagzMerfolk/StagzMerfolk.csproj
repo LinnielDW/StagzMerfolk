@@ -57,7 +57,6 @@
     <Compile Include="CompAbility\CompAbility_RequiresOnWater.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_NotWater.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
-    <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_River.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Water.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
     <Compile Include="HarmonyPatches\Fishtail_Patches.cs" />
