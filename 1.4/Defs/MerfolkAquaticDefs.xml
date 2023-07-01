@@ -159,4 +159,16 @@
         <prioritizeSustains>true</prioritizeSustains>
         <tendToHumanlikesOnly>true</tendToHumanlikesOnly>
     </WorkGiverDef>
+    
+    <JobDef>
+        <defName>Stagz_GotoWaterCell</defName>
+        <driverClass>JobDriver_Goto</driverClass>
+        <reportString>seeking aquatic terrain.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+    <JobDef>
+        <defName>Stagz_Wait_Hydrate</defName>
+        <driverClass>JobDriver_Wait</driverClass>
+        <reportString>hydrating in a pool of water.</reportString>
+    </JobDef>
 </Defs>

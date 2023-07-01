@@ -64,6 +64,7 @@
     <Compile Include="HediffComp_RemovedWhenGeneRemoved.cs" />
     <Compile Include="HarmonyPatches\Pawn_PathFollower_Patches.cs" />
     <Compile Include="JobDriver_HydrateAquatic.cs" />
+    <Compile Include="JobGiver_SeekHydration.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

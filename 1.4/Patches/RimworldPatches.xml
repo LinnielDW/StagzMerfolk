@@ -12,4 +12,10 @@
             <li>Stagz_Gene_Tail_Fish</li>
         </value>
     </Operation>
+    <Operation Class="PatchOperationInsert">
+        <xpath>*/ThinkTreeDef[defName = "MainColonistBehaviorCore"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+        <value>
+            <li Class="StagzMerfolk.JobGiver_SeekHydration"/>
+        </value>
+    </Operation>
 </Patch>

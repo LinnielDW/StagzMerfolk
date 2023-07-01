@@ -18,4 +18,7 @@ public class StagzDefOf
 
     public static BodyPartGroupDef Feet;
     public static HediffDef Stagz_Tail;
+
+    public static JobDef Stagz_GotoWaterCell;
+    public static JobDef Stagz_Wait_Hydrate;
 }
