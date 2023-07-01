@@ -7,7 +7,7 @@
         <iconPath>UI/Icons/Genes/Gene_Aquatic</iconPath>
         <displayCategory>Miscellaneous</displayCategory>
         <causesNeed>Stagz_NeedAquatic</causesNeed>
-        <biostatMet>3</biostatMet>
+        <biostatMet>4</biostatMet>
         <biostatCpx>2</biostatCpx>
         <minAgeActive>3</minAgeActive>
         <symbolPack>

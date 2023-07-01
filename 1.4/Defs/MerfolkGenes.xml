@@ -20,9 +20,16 @@
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>0.95</postFactor>
+                <postFactor>0.9</postFactor>
             </li>
         </capMods>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
         <exclusionTags>
             <li>Hands</li>
         </exclusionTags>
@@ -42,9 +49,9 @@
                     <MeleeDodgeChance>2</MeleeDodgeChance>
                 </statFactors>
             </li>
-            <li Class="StagzMerfolk.ConditionalStatEffector_NotWater">
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
                 <statOffsets>
-                    <MoveSpeed>-0.5</MoveSpeed>
+                    <MoveSpeed>0.8</MoveSpeed>
                 </statOffsets>
             </li>
         </conditionalStatAffecters>
@@ -163,9 +170,13 @@
         <iconPath>UI/Icons/Genes/Gene_TailFurry</iconPath>
         <iconColor>(0.75, 0.75, 0.75)</iconColor>
         <displayOrderInCategory>1000</displayOrderInCategory>
-        <!--<statOffsets>
-            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-        </statOffsets>-->
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
         <biostatCpx>1</biostatCpx>
         <biostatMet>0</biostatMet>
         <graphicData>
