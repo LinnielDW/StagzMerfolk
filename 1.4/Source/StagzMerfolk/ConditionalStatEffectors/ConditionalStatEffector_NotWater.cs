@@ -3,7 +3,7 @@ using Verse;
 
 namespace StagzMerfolk;
 
-public class ConditionalStatEffector_WaterOrRain : ConditionalStatAffecter
+public class ConditionalStatEffector_NotWater : ConditionalStatAffecter
 {
     public override bool Applies(StatRequest req)
     {
@@ -18,11 +18,11 @@ public class ConditionalStatEffector_WaterOrRain : ConditionalStatAffecter
         if (!req.HasThing || pawn?.Map == null) return false;
 
         //Check if pawn is in water or in rain
-        return pawn.IsWet();
+        return !pawn.OnWater();
     }
 
     public override string Label
     {
-        get { return "StagzMerfolk_ConditionalStatEffector_WaterOrRain".Translate(); }
+        get { return "StagzMerfolk_ConditionalStatEffector_NotWater".Translate(); }
     }
 }
