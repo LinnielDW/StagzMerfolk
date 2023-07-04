@@ -6,13 +6,13 @@ using Verse;
 
 namespace StagzMerfolk.CompAbility;
 
-public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
+public class CompAbilityEffect_SirenSong : CompAbilityEffect
 {
-    private new CompProperties_AbilityGiveMentalStateInArea Props
+    private new CompProperties_AbilitySirenSong Props
     {
         get
         {
-            return (CompProperties_AbilityGiveMentalStateInArea)this.props;
+            return (CompProperties_AbilitySirenSong)this.props;
         }
     }
 
@@ -22,18 +22,17 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
         var things = GenRadial.RadialDistinctThingsAround(this.parent.pawn.Position, this.parent.pawn.Map, this.parent.def.EffectRadius, true);
         foreach (var thing in things)
         {
-            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.Faction != Faction.OfPlayer)
+            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.Faction.HostileTo(Faction.OfPlayer))
             {
-                if (Rand.Chance(0.2f))
+                if (Rand.Chance(Props.chanceForMentalState))
                 {
-                    // Log.Message("effected " + pawn.Label);
                     pawn.jobs.StopAll();
                     pawn.mindState.mentalStateHandler.TryStartMentalState(Props.mentalState);
                 }
-                // else
-                // {
-                //     Log.Message("did not effect " + pawn.Label);
-                // }
+                else
+                {
+                    pawn.health.AddHediff(Props.hediff);
+                }
 
             }
         }
@@ -67,13 +66,16 @@ public class CompAbilityEffect_GiveMentalStateInArea : CompAbilityEffect
     }
 }
 
-public class CompProperties_AbilityGiveMentalStateInArea : CompProperties_AbilityEffect
+public class CompProperties_AbilitySirenSong : CompProperties_AbilityEffect
 {
-    public CompProperties_AbilityGiveMentalStateInArea()
+    public CompProperties_AbilitySirenSong()
     {
-        this.compClass = typeof(CompAbilityEffect_GiveMentalStateInArea);
+        this.compClass = typeof(CompAbilityEffect_SirenSong);
     }		
     
     public EffecterDef casterEffect;
+    
     public MentalStateDef mentalState;
+    public HediffDef hediff;
+    public float chanceForMentalState;
 }

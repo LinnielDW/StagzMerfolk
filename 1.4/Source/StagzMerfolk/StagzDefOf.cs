@@ -21,4 +21,6 @@ public class StagzDefOf
 
     public static JobDef Stagz_GotoWaterCell;
     public static JobDef Stagz_Wait_Hydrate;
+    
+    public static MentalStateDef Stagz_Charmed;
 }
