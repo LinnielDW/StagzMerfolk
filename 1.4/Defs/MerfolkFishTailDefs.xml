@@ -5,6 +5,12 @@
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
         <description>Carriers of this gene grow extra fins and a fish-like tail below their waist instead of human legs.</description>
+        <customEffectDescriptions>
+            <li>Replaces the pawn's legs with a fish tail.</li>
+            <li>Ignores terrain pathing costs while in water.</li>
+            <li>Prevents the pawn from wearing clothes that only cover leg slots.</li>
+            <li>This gene is lost if the fish tail is destroyed.</li>
+        </customEffectDescriptions>
         <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
