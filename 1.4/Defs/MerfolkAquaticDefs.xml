@@ -38,12 +38,10 @@
         <onlyIfCausedByGene>true</onlyIfCausedByGene>
     </NeedDef>
     
-<!--    TODO: finish dehydration hediff-->
     <HediffDef>
         <defName>Stagz_Dehydration</defName>
         <label>dehydration</label>
-<!--        TODO: finish desc-->
-        <description>todo.</description>
+        <description>Insufficient fluid levels in surface organs, leading to reduced consciousness and moving.</description>
         <lethalSeverity>1</lethalSeverity>
         <scenarioCanAdd>false</scenarioCanAdd>
         <stages>
