@@ -51,6 +51,7 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcceptJoiner_Charmed.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_CallWeather.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_DeepDiveEffect.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_SirenSong.cs" />

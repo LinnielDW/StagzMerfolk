@@ -39,8 +39,7 @@
     <HediffDef>
         <defName>Stagz_Infatuated</defName>
         <label>infatuated</label>
-        <!-- TODO: finalize desc -->
-        <description>todo.</description>
+        <description>Possessed by strong and conflicting emotions, resulting in reduced combat performance.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <stages>
@@ -60,8 +59,7 @@
         </comps>
     </HediffDef>
     
-    <!-- TODO: change recruit on end to request to join -->
-    <MentalStateDef ParentName="BaseMentalState">
+    <MentalStateDef ParentName="BaseMentalState" Name="Stagz_Charmed">
         <defName>Stagz_Charmed</defName>
         <stateClass>StagzMerfolk.MentalState_Charmed</stateClass>
         <label>charmed</label>
@@ -74,9 +72,19 @@
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
         <recoverFromSleep>true</recoverFromSleep>
         <inCaravanCanDo>true</inCaravanCanDo>
-        <minTicksBeforeRecovery>60000</minTicksBeforeRecovery>
-        <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+        <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>10000</maxTicksBeforeRecovery>
     </MentalStateDef>
+    
+    <MentalStateDef ParentName="Stagz_Charmed">
+        <defName>Stagz_VeryCharmed</defName>
+        <stateClass>StagzMerfolk.MentalState_VeryCharmed</stateClass>
+    </MentalStateDef>
+
+    <LetterDef ParentName="CustomChoiceLetterBase">
+        <defName>Stagz_AcceptCharmedJoiner</defName>
+        <letterClass>StagzMerfolk.AcceptJoiner_Charmed</letterClass>
+    </LetterDef>
     
     <!-- <ThingDef ParentName="MoteBase"> -->
     <!--     <defName>Mote_AnimalWarcallTarget</defName> -->
