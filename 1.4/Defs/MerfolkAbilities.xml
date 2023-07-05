@@ -11,7 +11,7 @@
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <groupAbility>true</groupAbility>
         <statBases>
-            <Ability_Duration>500</Ability_Duration>
+            <Ability_Duration>164</Ability_Duration>
             <Ability_EffectRadius>49.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
@@ -36,6 +36,52 @@
             </li>
         </comps>
     </AbilityDef>
+    
+    <AbilityDef>
+        <defName>Stagz_SirenCallCharm</defName>
+        <label>siren charm</label>
+        <!-- TODO: finalize desc -->
+        <description>todo.</description>
+        <iconPath>UI/Abilities/Charm</iconPath>
+        <targetRequired>true</targetRequired>
+        <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <groupAbility>true</groupAbility>
+        <statBases>
+            <Ability_Duration>164</Ability_Duration>
+            <Ability_EffectRadius>-1</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>siren charm</label>
+            <warmupTime>0</warmupTime>
+            <range>3.9</range>
+            <drawAimPie>true</drawAimPie>
+            <requireLineOfSight>true</requireLineOfSight>
+            <!-- <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter> -->
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetAnimals>false</canTargetAnimals>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>            
+            <li Class = "CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>Stagz_VeryCharmed</stateDef>
+                <goodwillImpact>-75</goodwillImpact>
+                <!-- TODO: change sounds -->
+                <soundMale>BerserkTrance_Resolve_Male</soundMale>
+                <soundFemale>BerserkTrance_Resolve_Female</soundFemale>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+    
     <HediffDef>
         <defName>Stagz_Infatuated</defName>
         <label>infatuated</label>
@@ -59,7 +105,7 @@
         </comps>
     </HediffDef>
     
-    <MentalStateDef ParentName="BaseMentalState" Name="Stagz_Charmed">
+    <MentalStateDef ParentName="BaseMentalState">
         <defName>Stagz_Charmed</defName>
         <stateClass>StagzMerfolk.MentalState_Charmed</stateClass>
         <label>charmed</label>
@@ -76,9 +122,21 @@
         <maxTicksBeforeRecovery>10000</maxTicksBeforeRecovery>
     </MentalStateDef>
     
-    <MentalStateDef ParentName="Stagz_Charmed">
+    <MentalStateDef ParentName="BaseMentalState">
         <defName>Stagz_VeryCharmed</defName>
         <stateClass>StagzMerfolk.MentalState_VeryCharmed</stateClass>
+        <label>charmed</label>
+        <category>Aggro</category>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <nameColor>(0.9,0.2,0.5)</nameColor>
+        <beginLetter>{0} has been roused by a sonorous song.\n\n[PAWN_pronoun] will attack their own faction.</beginLetter>
+        <recoveryMessage>{0}'s charm has come to an end and will join the colony.</recoveryMessage>
+        <baseInspectLine>Mental state: Charmed</baseInspectLine>
+        <stateEffecter>AnimalWarcallMentalState</stateEffecter>
+        <recoverFromSleep>true</recoverFromSleep>
+        <inCaravanCanDo>true</inCaravanCanDo>
+        <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>10000</maxTicksBeforeRecovery>
     </MentalStateDef>
 
     <LetterDef ParentName="CustomChoiceLetterBase">

@@ -116,6 +116,20 @@
         <biostatCpx>1</biostatCpx>
         <biostatMet>-2</biostatMet>
     </GeneDef>
+    
+    <GeneDef>
+        <defName>Stagz_SirenCharm</defName>
+        <label>siren charm</label>
+        <description>Carriers of this gene have an irresistibly charming gaze. Anyone who hears their song will fall under their spell completely.</description>
+        <iconPath>UI/Icons/Genes/Gene_Charm</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <abilities>
+            <li>Stagz_SirenCallCharm</li>
+        </abilities>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
+    </GeneDef>
 
     <GeneDef>
         <defName>Stagz_KeenReflexes</defName>

@@ -23,6 +23,12 @@ public class StagzDefOf
     public static JobDef Stagz_Wait_Hydrate;
     
     public static MentalStateDef Stagz_Charmed;
+    public static MentalStateDef Stagz_VeryCharmed;
 
     public static LetterDef Stagz_AcceptCharmedJoiner;
+}
+
+public static class StagzCollections
+{
+    public static readonly MentalStateDef[] StateDefs = { StagzDefOf.Stagz_Charmed, StagzDefOf.Stagz_VeryCharmed };
 }

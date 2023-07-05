@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Linq;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -15,7 +16,7 @@ public static class GenHostility_HostileTo_Patch
         }
 
         if (a is Pawn { Faction: not null } aPawn && b is Pawn { Faction: not null } bPawn &&
-            (aPawn.MentalState != null && aPawn.MentalState.def == StagzDefOf.Stagz_Charmed || bPawn.MentalState != null && bPawn.MentalState.def == StagzDefOf.Stagz_Charmed)
+            (aPawn.MentalState != null && StagzCollections.StateDefs.Contains(aPawn.MentalState.def) || bPawn.MentalState != null && StagzCollections.StateDefs.Contains(bPawn.MentalState.def))
            )
         {
             __result = aPawn.Faction == bPawn.Faction;
@@ -33,7 +34,7 @@ public static class GenHostility_HostileToFaction_Patch
             return;
         }
 
-        if (t is Pawn { Faction: not null, MentalState: not null } pawn && pawn.MentalState.def == StagzDefOf.Stagz_Charmed)
+        if (t is Pawn { Faction: not null, MentalState: not null } pawn && StagzCollections.StateDefs.Contains(pawn.MentalState.def))
         {
             __result = pawn.Faction == fac;
         }
