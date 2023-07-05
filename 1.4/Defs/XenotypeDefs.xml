@@ -4,9 +4,8 @@
   <XenotypeDef>
     <defName>Stagz_Merfolk_Coastal</defName>
     <label>coastal merfolk</label>
-    <!-- TODO: finalize desc -->
-    <description>TODO.</description>
-    <descriptionShort>TODO.</descriptionShort>
+    <description>A hermit xenotype that comes from the ocean. Despite being fierce and graceful fighters in the water, they like to swim aimlessly and sing on reef rocks in hopes of finding a love for life. They are apparently a friendly race towards other humanoids, as many survivors of space shipwreck on ocean planets have reported being saved by coastal merfolks.</description>
+    <descriptionShort>A hermit xenotype that comes from the ocean. Despite being fierce and graceful fighters in the water, they like to swim aimlessly and sing on reef rocks in hopes of finding a love for life. They are apparently a friendly race towards other humanoids, as many survivors of space shipwreck on ocean planets have reported being saved by coastal merfolks.</descriptionShort>
     <!-- TODO: finalize icon -->
     <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
     <inheritable>true</inheritable>
@@ -36,9 +35,8 @@
   <XenotypeDef>
     <defName>Stagz_Merfolk_Abyssal</defName>
     <label>abyssal merfolk</label>
-    <!-- TODO: finalize desc -->
-    <description>TODO.</description>
-    <descriptionShort>TODO.</descriptionShort>
+    <description>The spiritual leaders of the merfolk people, young coastal merfolk sometimes visit them in the deepsea for their life advice. However, they are usually hostile toward non-merfolks as their habitat is scarce of resources. It is said they wield the power of rain with sea fret and storms being common in their presence.</description>
+    <descriptionShort>The spiritual leaders of the merfolk people, young coastal merfolk sometimes visit them in the deepsea for their life advice. However, they are usually hostile toward non-merfolks as their habitat is scarce of resources. It is said they wield the power of rain with sea fret and storms being common in their presence.</descriptionShort>
     <!-- TODO: finalize icon -->
     <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
     <inheritable>true</inheritable>

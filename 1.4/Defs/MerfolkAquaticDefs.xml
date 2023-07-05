@@ -30,8 +30,7 @@
         <defName>Stagz_NeedAquatic</defName>
         <needClass>StagzMerfolk.Stagz_Need_Aquatic</needClass>
         <label>aquatic hydration</label>
-        <!--        TODO: finish desc-->
-        <description>todo. This need will decay twice as fast during a heatwave.</description>
+        <description>Hydration is the need for aquatic creatures to regularly access water. Standing in rain or passing water bodies such as marsh and river are the most effective way to replenish the need. Pawn wil try to find a water body if the need runs low. If it is at zero, an aquatic creature will become increasingly dehydrated and eventually die.</description>
         <baseLevel>0.01</baseLevel>
         <listPriority>600</listPriority>
         <major>true</major>

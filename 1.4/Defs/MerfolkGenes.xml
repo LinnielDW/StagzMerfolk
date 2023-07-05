@@ -166,8 +166,7 @@
     <GeneDef ParentName="GeneTailBase">
         <defName>Stagz_BodyFin</defName>
         <label>body fins</label>
-        <!-- TODO: finalize description -->
-        <description>TODO.</description>
+        <description>Carriers of this gene develop fins near their waist area.</description>
         <!--        TODO: add icon-->
         <iconPath>UI/Icons/Genes/Gene_TailFurry</iconPath>
         <iconColor>(0.75, 0.75, 0.75)</iconColor>
