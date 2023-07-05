@@ -109,27 +109,27 @@
         <stages>
             <li>
                 <label>dry</label>
-                <description>todo.</description>
+                <description>Mild dehydration, a glass of water would be nice.</description>
                 <baseMoodEffect>-2</baseMoodEffect>
             </li>
             <li>
                 <label>very dry</label>
-                <description>todo.</description>
+                <description>I'm showing noticeable signs of dehydration and dry skin. This is uncomfortable.</description>
                 <baseMoodEffect>-4</baseMoodEffect>
             </li>
             <li>
                 <label>dehydrated</label>
-                <description>todo.</description>
+                <description>My skin is losing elasticity, and it's hard to move. I need to find water.</description>
                 <baseMoodEffect>-8</baseMoodEffect>
             </li>
             <li>
                 <label>badly dehydrated</label>
-                <description>todo.</description>
+                <description>I'm in real danger of drying out completely. Water... I need it!</description>
                 <baseMoodEffect>-16</baseMoodEffect>
             </li>
             <li>
                 <label>dangerously dehydrated</label>
-                <description>todo.</description>
+                <description>wa... ter...</description>
                 <baseMoodEffect>-20</baseMoodEffect>
             </li>
         </stages>
