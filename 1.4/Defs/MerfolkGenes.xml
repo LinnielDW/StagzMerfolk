@@ -117,13 +117,15 @@
         <biostatMet>-2</biostatMet>
     </GeneDef>
 
-<!--    TODO: custom description, +20% dodge (ignoring cap).-->
     <GeneDef>
         <defName>Stagz_KeenReflexes</defName>
         <label>keen reflexes</label>
         <description>Carriers of this gene have extremely fast reflexes. They can dodge most income hits even from a distance.</description>
+        <customEffectDescriptions>
+            <li>Adds +20% to melee and ranged dodge chance, ignoring the usual 50% dodge cap.</li>
+        </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_KeenReflex</iconPath>
-        <displayCategory>Movement</displayCategory>
+        <displayCategory>Archite</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
         <biostatCpx>2</biostatCpx>
         <biostatMet>-5</biostatMet>
