@@ -38,7 +38,7 @@
     <GeneDef>
         <defName>Stagz_SwiftSwim</defName>
         <label>swift swim</label>
-        <description>Carriers of this gene are natural swimmers, when in water, they can move quickly with grace.</description>
+        <description>Carriers of this gene are natural swimmers. When in water, they can move quickly and with grace.</description>
         <iconPath>UI/Icons/Genes/Gene_SwiftSwim</iconPath>
         <displayCategory>Movement</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
@@ -106,7 +106,7 @@
     <GeneDef>
         <defName>Stagz_SirenSong</defName>
         <label>siren song</label>
-        <description>Carriers of this gene hum a wordless, haunting melody enchanted with psychic energy, anyone who hears the song will become obsessed with the songster/songstress.</description>
+        <description>Carriers of this gene hum a wordless, haunting melody enchanted with psychic energy. Anyone who hears the song will become obsessed with the songster/songstress.</description>
         <iconPath>UI/Icons/Genes/Gene_SirenCall</iconPath>
         <displayCategory>Ability</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
