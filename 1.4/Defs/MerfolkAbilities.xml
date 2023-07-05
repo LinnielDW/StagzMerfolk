@@ -61,6 +61,7 @@
         </comps>
     </HediffDef>
     
+    <!-- TODO: change recruit on end to request to join -->
     <MentalStateDef ParentName="BaseMentalState">
         <defName>Stagz_Charmed</defName>
         <stateClass>StagzMerfolk.MentalState_Charmed</stateClass>
