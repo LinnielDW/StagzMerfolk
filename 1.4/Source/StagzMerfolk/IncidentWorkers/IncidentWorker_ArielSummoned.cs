@@ -20,10 +20,12 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
         Map map = (Map)parms.target;
         Pawn pawn = this.GeneratePawn();
         this.SpawnJoiner(map, pawn, parms.spawnCenter);
-        
+        pawn.health.AddHediff(StagzDefOf.Stagz_Mute);
+
         foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
         {
-            TendUtility.DoTend(pawn,parms.controllerPawn, null);
+            Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal,parms.spawnCenter, map);
+            TendUtility.DoTend(pawn,parms.controllerPawn, medicine);
         }
 
         TaggedString label = ("LetterLabelArielJoins").Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
