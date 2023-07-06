@@ -8,8 +8,7 @@ namespace StagzMerfolk.HarmonyPatches;
 [HarmonyPatch(typeof(Pawn_HealthTracker), "MakeDowned")]
 public static class Pawn_HealthTracker_Patches
 {
-    private static readonly float spawnChance = 1f;
-
+    private static float spawnChance = StagzDefOf.Stagz_ArielSummoned.HasModExtension<ArielSpawnModExtension>() ? StagzDefOf.Stagz_ArielSummoned.GetModExtension<ArielSpawnModExtension>().SpawnChance : 0f;
     private static void Postfix(ref Pawn ___pawn)
     {
         if (!___pawn.Spawned)
@@ -18,6 +17,7 @@ public static class Pawn_HealthTracker_Patches
         }
 
         var mapTemp = ___pawn.Map;
+        // if random chance AND pawn downed near water
         if (Rand.Chance(spawnChance) && mapTemp != null && ___pawn.GetRegion().Cells.Any(c => mapTemp.terrainGrid.TerrainAt(c).IsWater))
         {
             var incidentParams = StorytellerUtility.DefaultParmsNow(StagzDefOf.Stagz_ArielSummoned.category, mapTemp);
