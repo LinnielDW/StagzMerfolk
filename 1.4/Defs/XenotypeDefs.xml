@@ -9,9 +9,9 @@
     <!-- TODO: finalize icon -->
     <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
     <inheritable>true</inheritable>
-    <!-- <nameMaker>NamerPersonDirtmole_Male</nameMaker> -->
-    <!-- <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale> -->
-    <!-- <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
+    <nameMaker>NamerPersonMerfolk_Male</nameMaker>
+    <nameMakerFemale>NamerPersonMerfolk_Female</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
       <li>Stagz_SirenSong</li>
       <li>Stagz_WebbedHands</li>
@@ -40,9 +40,9 @@
     <!-- TODO: finalize icon -->
     <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
     <inheritable>true</inheritable>
-    <!-- <nameMaker>NamerPersonDirtmole_Male</nameMaker> -->
-    <!-- <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale> -->
-    <!-- <chanceToUseNameMaker>1</chanceToUseNameMaker> -->
+    <nameMaker>NamerPersonMerfolk_Male</nameMaker>
+    <nameMakerFemale>NamerPersonMerfolk_Female</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
       <li>Stagz_SirenSong</li>
       <li>Stagz_WebbedHands</li>
@@ -67,4 +67,82 @@
 
   
 
+  <RulePackDef Name="NamerMerfolkBase" Abstract="True">
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstName] [Syl][End]</li>
+        
+        <li>Syl->oceo</li>
+        <li>Syl->ocean</li>
+        <li>Syl->aqua</li>
+        <li>Syl->cryo</li>
+        <li>Syl->sea</li>
+        <li>Syl->rain</li>
+        <li>Syl->tear</li>
+        <li>Syl->tide</li>
+        <li>Syl->deep</li>
+        <li>Syl->pond</li>
+        <li>Syl->puddle</li>
+        <li>Syl->blue</li>
+        <li>Syl->brine</li>
+        <li>Syl->high</li>
+        <li>Syl->reef</li>
+        <li>Syl->storm</li>
+        <li>Syl->murk</li>
+        <li>Syl->abyss</li>
+        <li>Syl->flot</li>
+        <li>Syl->jet</li>
+        <li>Syl->sail</li>
+        <li>Syl->fish</li>
+        <li>Syl->clam</li>
+        <li>Syl->eel</li>
+        <li>Syl->squid</li>
+        <li>Syl->octo</li>
+        <li>Syl->fin</li>
+        <li>Syl->shark</li>
+        <li>Syl->bubble</li>
+        <li>Syl->jelly</li>
+
+        <li>End->tail</li>
+        <li>End->pond</li>
+        <li>End->wind</li>
+        <li>End->reef</li>
+        <li>End->fall</li>
+        <li>End->sail</li>
+        <li>End->jet</li>
+        <li>End->fish</li>
+        <li>End->eel</li>
+        <li>End->angler</li>
+        <li>End->shark</li>
+        <li>End->sting</li>
+        <li>End->fin</li>
+        <li>End->bubble</li>
+        <li>End->jelly</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef ParentName="NamerMerfolkBase">
+    <defName>NamerPersonMerfolk_Male</defName>
+    <rulePack>
+      <rulesRaw>
+        <li Class="Rule_NamePerson">
+          <keyword>firstName</keyword>
+          <gender>Male</gender>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef ParentName="NamerMerfolkBase">
+    <defName>NamerPersonMerfolk_Female</defName>
+    <rulePack>
+      <rulesRaw>
+        <li Class="Rule_NamePerson">
+          <keyword>firstName</keyword>
+          <gender>Female</gender>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
 </Defs>
