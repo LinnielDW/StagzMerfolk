@@ -34,7 +34,7 @@
         </modExtensions>
     </IncidentDef>
     
-    <IncidentDef>
+    <IncidentDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">
         <defName>Stagz_VirtuosoSummoned</defName>
         <label>merfolk virtuoso</label>
         <category>Special</category>

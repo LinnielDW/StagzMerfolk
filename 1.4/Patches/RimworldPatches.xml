@@ -18,7 +18,7 @@
             <li Class="StagzMerfolk.JobGiver_SeekHydration"/>
         </value>
     </Operation>
-    <Operation Class="PatchOperationAdd">
+    <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
         <xpath>Defs/*[defName="WatermillGenerator"]/comps</xpath>
         <value>
             <li Class="CompProperties_MeditationFocus">
@@ -34,7 +34,7 @@
             </li>
         </value>
     </Operation>
-    <Operation Class="PatchOperationAdd">
+    <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
         <xpath>Defs/*[defName="HydroponicsBasin"]/comps</xpath>
         <value>
             <li Class="CompProperties_MeditationFocus">
