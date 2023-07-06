@@ -44,6 +44,7 @@
         <description>todo.</description>
         <iconPath>UI/Abilities/Charm</iconPath>
         <targetRequired>true</targetRequired>
+        <hostile>true</hostile>
         <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
         <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
@@ -68,7 +69,7 @@
             </targetParams>
         </verbProperties>
         <comps>            
-            <li Class = "CompProperties_AbilityGiveMentalState">
+            <li Class="CompProperties_AbilityGiveMentalState">
                 <compClass>CompAbilityEffect_GiveMentalState</compClass>
                 <stateDef>Stagz_VeryCharmed</stateDef>
                 <goodwillImpact>-75</goodwillImpact>
