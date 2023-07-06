@@ -39,9 +39,8 @@
     
     <AbilityDef>
         <defName>Stagz_SirenCallCharm</defName>
-        <label>siren charm</label>
-        <!-- TODO: finalize desc -->
-        <description>todo.</description>
+        <label>charm person</label>
+        <description>The caster attempts to charm a neutral or enemy unit. Upon succession, the charmed unit will turn against their own allies and join the player faction after the effect wears off. This is considered a hostile action.</description>
         <iconPath>UI/Abilities/Charm</iconPath>
         <targetRequired>true</targetRequired>
         <hostile>true</hostile>
@@ -55,7 +54,7 @@
         </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <label>siren charm</label>
+            <label>charm person</label>
             <warmupTime>0</warmupTime>
             <range>3.9</range>
             <drawAimPie>true</drawAimPie>

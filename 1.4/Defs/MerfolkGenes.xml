@@ -143,8 +143,8 @@
     
     <GeneDef>
         <defName>Stagz_SirenCharm</defName>
-        <label>siren charm</label>
-        <description>Carriers of this gene have an irresistibly charming gaze. Anyone who hears their song will fall under their spell completely.</description>
+        <label>charm</label>
+        <description>Carrier of this gene has an irresistible charming aura. By inducing their presence with psychic energy, they can easily put others under their spell.</description>
         <iconPath>UI/Icons/Genes/Gene_Charm</iconPath>
         <displayCategory>Ability</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
