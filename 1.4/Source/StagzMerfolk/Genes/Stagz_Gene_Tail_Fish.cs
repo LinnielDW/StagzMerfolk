@@ -6,7 +6,7 @@ using Verse;
 
 namespace StagzMerfolk;
 
-public class Stagz_Gene_Tail_Fish : Gene_Healing
+public class Stagz_Gene_Tail_Fish : Gene
 {
     /*private int ticksToHeal;
     private static readonly IntRange HealingIntervalTicksRange = new IntRange(900000, 1800000);
