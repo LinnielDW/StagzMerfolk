@@ -76,6 +76,7 @@
     <Compile Include="Stagz_Gene_Tail_Fish.cs" />
     <Compile Include="Stagz_Need_Aquatic.cs" />
     <Compile Include="Stagz_ThoughtWorker_NeedHydration.cs" />
+    <Compile Include="ThoughtWorker_Charming.cs" />
     <Compile Include="WorkGiver_HydrateAquatic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
