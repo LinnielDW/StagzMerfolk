@@ -25,6 +25,28 @@
         <letterText>Sensing trouble, a mysterious [PAWN_kind] has arrived.\n\nWill [PAWN_pronoun] be able to set things right in these parts?</letterText>
         <baseChance>0</baseChance>
         <minRefireDays>60</minRefireDays>
+        <pawnHediff>Stagz_Mute</pawnHediff>
+        <pawnKind>Stagz_Ariel</pawnKind>
+        <modExtensions>
+            <li Class="StagzMerfolk.ArielSpawnModExtension">
+                <SpawnChance>1</SpawnChance>
+            </li>
+        </modExtensions>
+    </IncidentDef>
+    
+    <IncidentDef>
+        <defName>Stagz_VirtuosoSummoned</defName>
+        <label>merfolk virtuoso</label>
+        <category>Special</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>StagzMerfolk.IncidentWorker_VirtuosoSummoned</workerClass>
+        <letterLabel>Virtuoso merfolk</letterLabel>
+        <letterText>Sensing trouble, a mysterious [PAWN_kind] has arrived.\n\nWill [PAWN_pronoun] be able to set things right in these parts?</letterText>
+        <baseChance>0</baseChance>
+        <pawnKind>Stagz_Ariel</pawnKind>
+        <minRefireDays>60</minRefireDays>
         <modExtensions>
             <li Class="StagzMerfolk.ArielSpawnModExtension">
                 <SpawnChance>1</SpawnChance>

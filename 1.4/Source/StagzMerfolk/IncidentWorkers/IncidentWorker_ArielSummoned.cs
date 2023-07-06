@@ -5,9 +5,12 @@ namespace StagzMerfolk;
 
 public class IncidentWorker_ArielSummoned : IncidentWorker
 {
-    private Pawn GeneratePawn()
+    public virtual string letterlabeljoins => "LetterLabelArielJoins";
+    public virtual string letterjoins => "LetterArielJoins";
+    
+    private Pawn GeneratePawn(PawnKindDef pawnKindDef)
     {
-        return PawnGenerator.GeneratePawn(StagzDefOf.Stagz_Ariel, Faction.OfAncients);
+        return PawnGenerator.GeneratePawn(pawnKindDef, Faction.OfAncients);
     }
     
     public void SpawnJoiner(Map map, Pawn pawn, IntVec3 center)
@@ -18,9 +21,12 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
     protected override bool TryExecuteWorker(IncidentParms parms)
     {
         Map map = (Map)parms.target;
-        Pawn pawn = this.GeneratePawn();
+        Pawn pawn = this.GeneratePawn(parms.pawnKind);
         this.SpawnJoiner(map, pawn, parms.spawnCenter);
-        pawn.health.AddHediff(StagzDefOf.Stagz_Mute);
+        if (this.def.pawnHediff != null)
+        {
+            pawn.health.AddHediff(this.def.pawnHediff);
+        }
 
         foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
         {
@@ -28,11 +34,11 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
             TendUtility.DoTend(pawn,parms.controllerPawn, medicine);
         }
 
-        TaggedString label = ("LetterLabelArielJoins").Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
-        TaggedString taggedString = ("LetterArielJoins").Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        TaggedString label = letterlabeljoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        TaggedString taggedString = letterjoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
         PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedString, ref label, pawn);
         
-        var letter = (ChoiceLetter_AcceptAriel)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptAriel, null, null);
+        var letter = MakeAcceptLetter(label, taggedString);
         letter.asker = pawn;
         letter.lookTargets = new LookTargets(pawn);
         letter.requiresAliveAsker = true;
@@ -40,5 +46,10 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
 
         Find.LetterStack.ReceiveLetter(letter, null);
         return true;
+    }
+
+    public virtual ChoiceLetter_AcceptCharmedJoiner MakeAcceptLetter(TaggedString label, TaggedString taggedString)
+    {
+        return (ChoiceLetter_AcceptAriel)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptAriel, null, null);
     }
 }

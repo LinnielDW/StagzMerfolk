@@ -23,6 +23,7 @@ public static class Pawn_HealthTracker_Patches
             var incidentParams = StorytellerUtility.DefaultParmsNow(StagzDefOf.Stagz_ArielSummoned.category, mapTemp);
             incidentParams.controllerPawn = ___pawn;
             incidentParams.spawnCenter = ___pawn.Position;
+            incidentParams.pawnKind = StagzDefOf.Stagz_ArielSummoned.pawnKind;
 
             if (StagzDefOf.Stagz_ArielSummoned.Worker.CanFireNow(incidentParams) && StagzDefOf.Stagz_ArielSummoned.Worker.TryExecute(incidentParams))
             {
