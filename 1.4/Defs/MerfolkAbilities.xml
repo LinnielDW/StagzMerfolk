@@ -126,11 +126,6 @@
         <defName>Stagz_VeryCharmed</defName>
         <stateClass>StagzMerfolk.MentalState_VeryCharmed</stateClass>
     </MentalStateDef>
-
-    <LetterDef ParentName="CustomChoiceLetterBase">
-        <defName>Stagz_AcceptCharmedJoiner</defName>
-        <letterClass>StagzMerfolk.AcceptJoiner_Charmed</letterClass>
-    </LetterDef>
     
     <!-- <ThingDef ParentName="MoteBase"> -->
     <!--     <defName>Mote_AnimalWarcallTarget</defName> -->

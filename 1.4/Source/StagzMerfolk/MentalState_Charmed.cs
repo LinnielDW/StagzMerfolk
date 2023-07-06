@@ -43,13 +43,14 @@ public class MentalState_Charmed : MentalState
         }
     }
 
-    public void SendAskToJoinLetter(Pawn p)
+    public void SendAskToJoinLetter(Pawn p, string text = "WandererJoins")
     {
         //TODO: change letter strings
-        TaggedString label = "LetterLabelWandererJoins".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
-        TaggedString taggedString = "LetterWandererJoins".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        TaggedString label = ("LetterLabel" + text).Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        TaggedString taggedString = ("Letter" + text).Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref label, ref taggedString, pawn);
 
-        var letter = (AcceptJoiner_Charmed)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptCharmedJoiner, null, null);
+        var letter = (ChoiceLetter_AcceptCharmedJoiner)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptCharmedJoiner, null, null);
         letter.asker = p;
         letter.lookTargets = new LookTargets(p);
         letter.requiresAliveAsker = true;

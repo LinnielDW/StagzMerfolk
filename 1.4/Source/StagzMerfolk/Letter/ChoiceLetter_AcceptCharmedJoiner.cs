@@ -4,7 +4,7 @@ using Verse;
 
 namespace StagzMerfolk;
 
-public class AcceptJoiner_Charmed : ChoiceLetter
+public class ChoiceLetter_AcceptCharmedJoiner : ChoiceLetter
 {
     public Pawn asker;
     public bool requiresAliveAsker;
@@ -64,20 +64,25 @@ public class AcceptJoiner_Charmed : ChoiceLetter
                 },
                 resolveTree = true
             };
-            var reject = new DiaOption("Reject")
-            {
-                action = delegate
-                {
-                    asker.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.PanicFlee);
-                    Find.LetterStack.RemoveLetter(this);
-                },
-                resolveTree = true
-            };
+            var reject = RejectOption();
 
             yield return accept;
             yield return reject;
             yield return base.Option_Postpone;
         }
+    }
+
+    public virtual DiaOption RejectOption()
+    {
+        return new DiaOption("Reject")
+        {
+            action = delegate
+            {
+                asker.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.PanicFlee);
+                Find.LetterStack.RemoveLetter(this);
+            },
+            resolveTree = true
+        };
     }
 
     public override void ExposeData()

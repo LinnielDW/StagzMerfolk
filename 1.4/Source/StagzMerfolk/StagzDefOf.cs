@@ -27,6 +27,10 @@ public class StagzDefOf
     public static MentalStateDef Stagz_VeryCharmed;
 
     public static LetterDef Stagz_AcceptCharmedJoiner;
+    public static LetterDef Stagz_AcceptAriel;
+
+    public static PawnKindDef Stagz_Ariel;
+    public static IncidentDef Stagz_ArielSummoned;
 }
 
 public static class StagzCollections

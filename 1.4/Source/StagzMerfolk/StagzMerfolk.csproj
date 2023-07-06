@@ -51,7 +51,6 @@
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcceptJoiner_Charmed.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_CallWeather.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_DeepDiveEffect.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_SirenSong.cs" />
@@ -64,10 +63,14 @@
     <Compile Include="HarmonyPatches\Fishtail_Patches.cs" />
     <Compile Include="HarmonyPatches\GenHostility_Patches.cs" />
     <Compile Include="HarmonyPatches\KeenReflexes_Patches.cs" />
+    <Compile Include="HarmonyPatches\Pawn_HealthTracker_Patches.cs" />
     <Compile Include="HediffComp_RemovedWhenGeneRemoved.cs" />
     <Compile Include="HarmonyPatches\Pawn_PathFollower_Patches.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_ArielSummoned.cs" />
     <Compile Include="JobDriver_HydrateAquatic.cs" />
     <Compile Include="JobGiver_SeekHydration.cs" />
+    <Compile Include="Letter\ChoiceLetter_AcceptAriel.cs" />
+    <Compile Include="Letter\ChoiceLetter_AcceptCharmedJoiner.cs" />
     <Compile Include="MentalState_Charmed.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
