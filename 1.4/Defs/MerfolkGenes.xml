@@ -175,7 +175,8 @@
         <label>keen reflexes</label>
         <description>Carriers of this gene have extremely fast reflexes. They can dodge most income hits even from a distance.</description>
         <customEffectDescriptions>
-            <li>Adds +20% to melee and ranged dodge chance, ignoring the usual 50% dodge cap.</li>
+            <li>75% of melee dodge chance is applied to ranged dodge chance.</li>
+            <li>Adds an addtional +20% to melee and ranged dodge chance, ignoring the usual 50% melee dodge chance cap.</li>
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_KeenReflex</iconPath>
         <displayCategory>Archite</displayCategory>
