@@ -91,7 +91,9 @@
         <conditionalStatAffecters>
             <li Class="StagzMerfolk.ConditionalStatEffector_Rain">
                 <statOffsets>
-                    <PsychicSensitivity>0.8</PsychicSensitivity>
+                    <PsychicSensitivity>0.4</PsychicSensitivity>
+                    <MeditationFocusGain>0.2</MeditationFocusGain>
+                    <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
                 </statOffsets>
             </li>
         </conditionalStatAffecters>
@@ -101,8 +103,30 @@
         <biostatCpx>3</biostatCpx>
         <biostatMet>-5</biostatMet>
         <biostatArc>1</biostatArc>
+        <forcedTraits>
+            <li>
+                <def>Stagz_WaterTuned</def>
+            </li>
+        </forcedTraits>
     </GeneDef>
 
+    <MeditationFocusDef>
+        <defName>Stagz_Water</defName>
+        <label>water</label>
+    </MeditationFocusDef>
+    
+    <TraitDef>
+        <defName>Stagz_WaterTuned</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>water attuned</label>
+                <description>{PAWN_nameDef} is attuned to the water. {PAWN_pronoun} can use the flow of water as a focus to recharge their psyfocus.</description>
+                <allowedMeditationFocusTypes><li>Stagz_Water</li></allowedMeditationFocusTypes>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
     <GeneDef>
         <defName>Stagz_SirenSong</defName>
         <label>siren song</label>

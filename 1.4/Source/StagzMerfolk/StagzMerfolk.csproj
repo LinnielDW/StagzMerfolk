@@ -60,6 +60,7 @@
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Water.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
+    <Compile Include="FocusStrengthOffset_BuildingDefsPowered.cs" />
     <Compile Include="HarmonyPatches\Fishtail_Patches.cs" />
     <Compile Include="HarmonyPatches\GenHostility_Patches.cs" />
     <Compile Include="HarmonyPatches\KeenReflexes_Patches.cs" />

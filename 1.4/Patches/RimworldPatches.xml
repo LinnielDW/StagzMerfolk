@@ -18,4 +18,46 @@
             <li Class="StagzMerfolk.JobGiver_SeekHydration"/>
         </value>
     </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="WatermillGenerator"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_MeditationFocus">
+                <statDef>MeditationFocusStrength</statDef>
+                <focusTypes>
+                    <li>Stagz_Water</li>
+                </focusTypes>
+                <offsets>
+                    <li Class="StagzMerfolk.FocusStrengthOffset_Powered">
+                        <offset>0.28</offset>
+                    </li>
+                </offsets>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="HydroponicsBasin"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_MeditationFocus">
+                <statDef>MeditationFocusStrength</statDef>
+                <focusTypes>
+                    <li>Stagz_Water</li>
+                </focusTypes>
+                <offsets>
+                    <li Class="StagzMerfolk.FocusStrengthOffset_Powered">
+                        <offset>0.1</offset>
+                    </li>
+                    <li Class="StagzMerfolk.FocusStrengthOffset_BuildingDefsPowered">
+                        <defs>
+                            <li>HydroponicsBasin</li>
+                        </defs>
+                        <offsetPerBuilding>0.06</offsetPerBuilding>
+                        <radius>9.9</radius>
+                        <maxBuildings>3</maxBuildings>
+                        <explanationKey>MeditationFocusPerAnimusStone</explanationKey>
+                        <explanationKeyAbstract>MeditationFocusPerAnimusStoneAbstract</explanationKeyAbstract>
+                    </li>
+                </offsets>
+            </li>
+        </value>
+    </Operation>
 </Patch>
