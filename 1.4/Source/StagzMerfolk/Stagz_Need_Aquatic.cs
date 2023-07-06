@@ -30,7 +30,7 @@ public class Stagz_Need_Aquatic: Need
         else
         {
             tempFallRate = FallRate;
-            if (pawn.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.HeatWave))
+            if (pawn.Map != null && pawn.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.HeatWave))
             {
                 tempFallRate *= 2;
             }
