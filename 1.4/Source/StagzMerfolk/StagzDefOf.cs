@@ -31,6 +31,7 @@ public class StagzDefOf
 
     public static PawnKindDef Stagz_Ariel;
     public static IncidentDef Stagz_ArielSummoned;
+    public static HediffDef Stagz_Mute;
 }
 
 public static class StagzCollections

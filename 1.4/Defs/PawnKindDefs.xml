@@ -31,6 +31,12 @@
         <requiredWorkTags>
             <li>Caring</li>
         </requiredWorkTags>
+        <skills>
+            <li>
+                <skill>Medicine</skill>
+                <range>4~8</range>
+            </li>
+        </skills>
         <techHediffsMoney>50~50</techHediffsMoney>
         <techHediffsTags>
             <li>Poor</li>
@@ -49,5 +55,28 @@
         </inventoryOptions>
     </PawnKindDef>
     
+    <HediffDef>
+        <defName>Stagz_Mute</defName>
+        <label>mute</label>
+        <!-- todo: finish description -->
+        <description>todo</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800000~3600000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <postFactor>0</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
     
 </Defs>
