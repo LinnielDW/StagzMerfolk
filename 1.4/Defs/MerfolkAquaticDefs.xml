@@ -10,6 +10,13 @@
         <biostatMet>4</biostatMet>
         <biostatCpx>2</biostatCpx>
         <minAgeActive>3</minAgeActive>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
         <symbolPack>
             <prefixSymbols>
                 <li><symbol>water</symbol></li>

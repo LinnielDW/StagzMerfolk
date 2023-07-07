@@ -49,11 +49,6 @@
                     <MeleeDodgeChance>2</MeleeDodgeChance>
                 </statFactors>
             </li>
-            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
-                <statOffsets>
-                    <MoveSpeed>0.8</MoveSpeed>
-                </statOffsets>
-            </li>
         </conditionalStatAffecters>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
