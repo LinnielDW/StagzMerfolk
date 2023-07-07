@@ -19,7 +19,7 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-        <xpath>Defs/*[defName="WatermillGenerator"]/comps</xpath>
+        <xpath>Defs/ThingDef[defName="WatermillGenerator"]/comps</xpath>
         <value>
             <li Class="CompProperties_MeditationFocus">
                 <statDef>MeditationFocusStrength</statDef>
