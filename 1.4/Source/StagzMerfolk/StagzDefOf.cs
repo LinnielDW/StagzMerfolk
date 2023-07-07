@@ -10,6 +10,9 @@ public class StagzDefOf
     public static GeneDef Stagz_KeenReflexes;
     public static GeneDef Stagz_Gene_Tail_Fish;
     public static GeneDef Stagz_Charming;
+    public static GeneDef Stagz_RainVeil;
+
+    public static MeditationFocusDef Stagz_Water;
 
     public static HediffDef Stagz_Dehydration;
     public static NeedDef Stagz_NeedAquatic;
