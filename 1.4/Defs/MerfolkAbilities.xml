@@ -112,7 +112,7 @@
         <category>Aggro</category>
         <blockRandomInteraction>true</blockRandomInteraction>
         <nameColor>(0.9,0.2,0.5)</nameColor>
-        <beginLetter>{0} has been roused by a sonorous song.\n\n[PAWN_pronoun] will attack their own faction.</beginLetter>
+        <beginLetter>{0} has been roused by a magic charm.\n\n[PAWN_pronoun] will attack their own faction.</beginLetter>
         <recoveryMessage>{0}'s charm has come to an end and will join the colony.</recoveryMessage>
         <baseInspectLine>Mental state: Charmed</baseInspectLine>
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
