@@ -36,10 +36,14 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
             pawn.health.AddHediff(this.def.pawnHediff);
         }
 
-        foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
+        //tend pawn that was downed to call this incident
+        if (parms.controllerPawn != null)
         {
-            Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal,parms.spawnCenter, map);
-            TendUtility.DoTend(pawn,parms.controllerPawn, medicine);
+            foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
+            {
+                Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal, parms.spawnCenter, map);
+                TendUtility.DoTend(pawn, parms.controllerPawn, medicine);
+            }
         }
 
         TaggedString label = letterlabeljoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
