@@ -37,7 +37,6 @@ public class MentalState_Charmed : MentalState
 
     public void SendAskToJoinLetter(Pawn p, string text = "CharmedJoins")
     {
-        //TODO: change letter strings
         TaggedString label = ("StagzMerfolk_LetterLabel" + text).Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
         TaggedString taggedString = ("StagzMerfolk_Letter" + text).Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
         PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref label, ref taggedString, pawn);
