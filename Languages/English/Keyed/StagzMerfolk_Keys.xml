@@ -6,4 +6,5 @@
     <StagzMerfolk_ConditionalStatEffector_Rain>in rain</StagzMerfolk_ConditionalStatEffector_Rain>
     <AbilityDisabledNotOnWater>must be stood on a water tile</AbilityDisabledNotOnWater>
     <StagzMerfolk_CannotWearBecauseOfTail>{0} tried to wear clothing that covers legs, but could not because they have a tail</StagzMerfolk_CannotWearBecauseOfTail>
+    <StagzMerfolk_KeenReflexes>keen reflexes</StagzMerfolk_KeenReflexes>
 </LanguageData>

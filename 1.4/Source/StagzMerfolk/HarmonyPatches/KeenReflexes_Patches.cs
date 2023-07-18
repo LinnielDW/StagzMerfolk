@@ -27,8 +27,7 @@ public static class Pawn_SpecialDisplayStats_Patch
     {
         if (__instance != null && __instance.RaceProps.Humanlike && __instance.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
         {
-            //todo: translation strings
-            var keenReflexesStatDrawEntry = new StatDrawEntry(StatCategoryDefOf.PawnCombat, "keen reflexes","+20%", "added dodge, can exceed the usual 50% limit", 410000);
+            var keenReflexesStatDrawEntry = new StatDrawEntry(StatCategoryDefOf.PawnCombat, "StagzMerfolk_KeenReflexes".Translate(),"+20%", "added dodge, can exceed the usual 50% limit", 410000);
             return __result.Concat(keenReflexesStatDrawEntry);
         }
 
@@ -62,8 +61,7 @@ public static class ShotReport_GetTextReadout_Patch
         var pawn = ___target.Thing as Pawn;
         if (pawn != null && pawn.RaceProps.Humanlike && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes))
         {
-            //TODO: translation strings
-            __result += "   keen reflexes " + ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * 0.75f).ToStringPercent()+"\n";
+            __result += "   " + "StagzMerfolk_KeenReflexes".Translate() + " " + ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * 0.75f).ToStringPercent() + "\n";
         }
     }
 }
