@@ -40,12 +40,35 @@
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Orange</defName>
         <label>fish tail (orange)</label>
-        <iconColor>(0.98, 0.54, 0.03)</iconColor>
+        <iconColor>(0.94, 0.39, 0.14)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
             <colorType>Custom</colorType>
-            <color>(253,139,8)</color>
+            <color>(241, 99, 35)</color>
+        </graphicData>
+    </GeneDef>
+    
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Black</defName>
+        <label>fish tail (black)</label>
+        <iconColor>(0.16, 0.16, 0.16)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(43,43,43)</color>
+        </graphicData>
+    </GeneDef>
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_White</defName>
+        <label>fish tail (white)</label>
+        <iconColor>(0.95, 0.95, 0.95)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(242, 243, 244)</color>
         </graphicData>
     </GeneDef>
     
