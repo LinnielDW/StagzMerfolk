@@ -214,6 +214,7 @@
                 <onlyApplyToSelf>True</onlyApplyToSelf>
                 <hediffDef>Stagz_DeepDiving</hediffDef>
                 <psychic>False</psychic>
+                <sound>StagzMerfolk_DeepDiveSound</sound>
             </li>
         </comps>
     </AbilityDef>

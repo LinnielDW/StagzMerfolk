@@ -3,11 +3,11 @@
     <EffecterDef>
         <defName>Stagz_SirenCall_Warmup</defName>
         <children>
-            <!-- <li> -->
-            <!--     <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass> -->
-            <!--     <spawnLocType>OnSource</spawnLocType> -->
-            <!--     <soundDef>AnimalWarcall_Cast</soundDef> -->
-            <!-- </li> -->
+            <li>
+                <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+                <spawnLocType>OnSource</spawnLocType>
+                <soundDef>StagzMerfolk_SirenSongSound</soundDef>
+            </li>
             <!-- <li> -->
             <!--     <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass> -->
             <!--     <moteDef>Mote_AnimalWarcallDistortion</moteDef> -->
@@ -67,4 +67,39 @@
         <solidTime>1.25</solidTime>
         <fadeOutTime>0.2</fadeOutTime>
     </FleckDef>
+    
+    <SoundDef>
+        <defName>StagzMerfolk_DeepDiveSound</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>5</maxSimultaneous>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Pawn/Abilities/DeepDive</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>70</volumeRange>
+                <distRange>10~70</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    <SoundDef>
+        <defName>StagzMerfolk_SirenSongSound</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Pawn/Abilities/SirenSong</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>70~100</volumeRange>
+                <distRange>10~70</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
 </Defs>
