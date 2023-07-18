@@ -11,4 +11,8 @@ public class IncidentWorker_VirtuosoSummoned : IncidentWorker_ArielSummoned
     {
         return (ChoiceLetter_AcceptCharmedJoiner)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptCharmedJoiner, null, null);
     }
+
+    protected override void ControllerPawnEffects(IncidentParms parms, Map map, Pawn pawn)
+    {
+    }
 }

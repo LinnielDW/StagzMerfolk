@@ -37,14 +37,7 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
         }
 
         //tend pawn that was downed to call this incident
-        if (parms.controllerPawn != null)
-        {
-            foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
-            {
-                Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal, parms.spawnCenter, map);
-                TendUtility.DoTend(pawn, parms.controllerPawn, medicine);
-            }
-        }
+        ControllerPawnEffects(parms, map, pawn);
 
         TaggedString label = letterlabeljoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
         TaggedString taggedString = letterjoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
@@ -71,5 +64,17 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
     public virtual ChoiceLetter_AcceptCharmedJoiner MakeAcceptLetter(TaggedString label, TaggedString taggedString)
     {
         return (ChoiceLetter_AcceptAriel)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptAriel, null, null);
+    }
+
+    protected virtual void ControllerPawnEffects(IncidentParms parms, Map map, Pawn pawn)
+    {
+        if (parms.controllerPawn != null)
+        {
+            foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
+            {
+                Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal, parms.spawnCenter, map);
+                TendUtility.DoTend(pawn, parms.controllerPawn, medicine);
+            }
+        }
     }
 }
