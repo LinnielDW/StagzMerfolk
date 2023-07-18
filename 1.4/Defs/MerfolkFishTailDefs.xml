@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <GeneDef>
-        <defName>Stagz_Gene_Tail_Fish</defName>
+    <GeneDef Name="Stagz_FishTail"  Abstract="True">
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fish tail</label>
         <description>Carriers of this gene grow a fish-like tail below their waist instead of human legs.</description>
@@ -13,6 +12,7 @@
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
+        <randomChosen>true</randomChosen>
         <displayCategory>Miscellaneous</displayCategory>
         <abilities>
             <li>Stagz_DeepDive</li>
@@ -20,15 +20,33 @@
         <biostatMet>-2</biostatMet>
         <biostatCpx>2</biostatCpx>
         <bodyType>Standard</bodyType>
+        <exclusionTags>
+            <li>Fur</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Teal</defName>
+        <label>fish tail (teal)</label>
+        <iconColor>(0, 0.49, 0.49)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
             <colorType>Custom</colorType>
             <color>(0, 126.5, 126.5)</color>
         </graphicData>
-        <exclusionTags>
-            <li>Fur</li>
-        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Orange</defName>
+        <label>fish tail (orange)</label>
+        <iconColor>(0.98, 0.54, 0.03)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(253,139,8)</color>
+        </graphicData>
     </GeneDef>
     
     <HediffDef ParentName="AddedBodyPartBase">
@@ -45,7 +63,6 @@
         <comps>
             <li Class="StagzMerfolk.HediffCompProperties_RemovedWhenGeneRemoved">
                 <compClass>StagzMerfolk.HediffComp_RemovedWhenGeneRemoved</compClass>
-                <geneDef>Stagz_Gene_Tail_Fish</geneDef>
             </li>
         </comps>
     </HediffDef>

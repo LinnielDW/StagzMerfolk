@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using StagzMerfolk.HarmonyPatches;
+using UnityEngine;
 using Verse;
 
 namespace StagzMerfolk;
+
+public static class TailColourHelper
+{
+    public static List<Color> tailColours = new List<Color>()
+    {
+        new(0, 0.49f, 0.49f),
+        new(0.86f, 0.55f, 0)
+    };
+}
 
 public class Stagz_Gene_Tail_Fish : Gene
 {
@@ -62,10 +71,22 @@ public class Stagz_Gene_Tail_Fish : Gene
         yield break;
     }*/
 
+    // public Color tailColour;
+    // public override void ExposeData()
+    // {
+    //     base.ExposeData();
+    //     Scribe_Values.Look<Color>(ref this.tailColour, "tailColour");
+    // }
 
     public override void PostAdd()
     {
         base.PostAdd();
+        // if (tailColour == Color.clear)
+        // {
+        //     tailColour = TailColourHelper.tailColours.RandomElement();
+        //     ExposeData();
+        // }
+
         foreach (var leg in pawn.RaceProps.body.AllParts.Where(x => x.def == BodyPartDefOf.Leg))
         {
             pawn.health.AddHediff(StagzDefOf.Stagz_Tail, leg);

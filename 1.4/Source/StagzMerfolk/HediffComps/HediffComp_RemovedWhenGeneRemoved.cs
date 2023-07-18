@@ -1,4 +1,7 @@
-﻿using Verse;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using Verse;
 
 namespace StagzMerfolk;
 
@@ -16,14 +19,16 @@ public class HediffComp_RemovedWhenGeneRemoved : HediffComp
     {
         base.CompPostPostRemoved();
         {
-            parent.pawn.genes.RemoveGene(parent.pawn.genes.GetGene(this.Props.geneDef));
+            foreach (var gene in parent.pawn.genes.GenesListForReading.OfType<Stagz_Gene_Tail_Fish>())
+            {
+                parent.pawn.genes.RemoveGene(gene);
+            }
         }
     }
 }
 
 public class HediffCompProperties_RemovedWhenGeneRemoved : HediffCompProperties
 {
-    public GeneDef geneDef;
     
     public HediffCompProperties_RemovedWhenGeneRemoved()
     {
