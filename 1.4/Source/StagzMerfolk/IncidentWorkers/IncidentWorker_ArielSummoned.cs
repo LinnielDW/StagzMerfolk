@@ -7,8 +7,8 @@ namespace StagzMerfolk;
 
 public class IncidentWorker_ArielSummoned : IncidentWorker
 {
-    public virtual string letterlabeljoins => "LetterLabelArielJoins";
-    public virtual string letterjoins => "LetterArielJoins";
+    public virtual string letterlabeljoins => "StagzMerfolk_LetterLabelArielJoins";
+    public virtual string letterjoins => "StagzMerfolk_LetterArielJoins";
 
     private Pawn GeneratePawn(PawnKindDef pawnKindDef)
     {
@@ -39,8 +39,8 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
         //tend pawn that was downed to call this incident
         ControllerPawnEffects(parms, map, pawn);
 
-        TaggedString label = letterlabeljoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
-        TaggedString taggedString = letterjoins.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
+        TaggedString label = letterlabeljoins.Translate(pawn.Named("PAWN"), parms.controllerPawn.Named("SUBJECT")).AdjustedFor(pawn, "PAWN", true).AdjustedFor(parms.controllerPawn, "SUBJECT", true);
+        TaggedString taggedString = letterjoins.Translate(pawn.Named("PAWN"), parms.controllerPawn.Named("SUBJECT")).AdjustedFor(pawn, "PAWN", true).AdjustedFor(parms.controllerPawn, "SUBJECT", true);
         PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedString, ref label, pawn);
 
         var letter = MakeAcceptLetter(label, taggedString);
@@ -61,7 +61,7 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
         LordMaker.MakeNewLord(parms.faction, lordJobVisitColony, map, list);
     }
 
-    public virtual ChoiceLetter_AcceptCharmedJoiner MakeAcceptLetter(TaggedString label, TaggedString taggedString)
+    protected virtual ChoiceLetter_AcceptCharmedJoiner MakeAcceptLetter(TaggedString label, TaggedString taggedString)
     {
         return (ChoiceLetter_AcceptAriel)LetterMaker.MakeLetter(label, taggedString, StagzDefOf.Stagz_AcceptAriel, null, null);
     }
