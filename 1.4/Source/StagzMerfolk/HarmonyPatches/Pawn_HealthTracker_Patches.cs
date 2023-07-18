@@ -17,8 +17,8 @@ public static class Pawn_HealthTracker_Patches
         }
 
         var mapTemp = ___pawn.Map;
-        // if random chance AND pawn downed near water
-        if (Rand.Chance(spawnChance) && mapTemp != null && ___pawn.GetRegion().Cells.Any(c => mapTemp.terrainGrid.TerrainAt(c).IsWater))
+        // if random chance AND pawn is of player faction AND pawn downed near water
+        if (Rand.Chance(spawnChance) && mapTemp != null && ___pawn.Faction == Faction.OfPlayer && ___pawn.GetRegion().Cells.Any(c => mapTemp.terrainGrid.TerrainAt(c).IsWater))
         {
             var incidentParams = StorytellerUtility.DefaultParmsNow(StagzDefOf.Stagz_ArielSummoned.category, mapTemp);
             incidentParams.controllerPawn = ___pawn;
