@@ -171,8 +171,7 @@
         <defName>Stagz_FinEars</defName>
         <label>fin ears</label>
         <description>Carriers of this gene have fin ears that are covered in scales.</description>
-<!--        TODO: add icon-->
-        <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_EarFin</iconPath>
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MerfolkEars/ears</graphicPath>
             <colorType>Skin</colorType>
@@ -202,8 +201,7 @@
         <defName>Stagz_BodyFin</defName>
         <label>body fins</label>
         <description>Carriers of this gene develop fins near their waist area.</description>
-        <!--        TODO: add icon-->
-        <iconPath>UI/Icons/Genes/Gene_TailFurry</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_FishFin</iconPath>
         <iconColor>(0.75, 0.75, 0.75)</iconColor>
         <displayOrderInCategory>1000</displayOrderInCategory>
         <conditionalStatAffecters>

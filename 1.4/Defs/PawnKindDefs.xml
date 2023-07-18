@@ -58,8 +58,7 @@
     <HediffDef>
         <defName>Stagz_Mute</defName>
         <label>mute</label>
-        <!-- todo: finish description -->
-        <description>todo</description>
+        <description>Through an unfortunate twist of fate this character has lost their voice.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Disappears">

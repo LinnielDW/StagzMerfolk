@@ -11,8 +11,7 @@
             <li>Prevents the pawn from wearing clothes that only cover leg slots.</li>
             <li>This gene is lost if the fish tail is destroyed.</li>
         </customEffectDescriptions>
-        <!--        TODO: add icon-->
-        <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
         <displayCategory>Miscellaneous</displayCategory>
         <abilities>
@@ -20,7 +19,6 @@
         </abilities>
         <biostatMet>-2</biostatMet>
         <biostatCpx>2</biostatCpx>
-        <!--        TODO: add graphics-->
         <bodyType>Standard</bodyType>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -58,6 +56,8 @@
         <bodyTypeGraphicPaths>
             <Female>Things/Pawn/Humanlike/Bodies/MerfolkBodies/female</Female>
             <Male>Things/Pawn/Humanlike/Bodies/MerfolkBodies/male</Male>
+            <Child>Things/Pawn/Humanlike/Bodies/baby</Child>
+            <Baby>Things/Pawn/Humanlike/Bodies/baby</Baby><!-- Always covered by swaddled graphic -->
         </bodyTypeGraphicPaths>
     </FurDef>
 </Defs>
