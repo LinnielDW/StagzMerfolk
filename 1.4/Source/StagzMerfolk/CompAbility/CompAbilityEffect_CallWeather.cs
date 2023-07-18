@@ -25,8 +25,7 @@ public class CompAbilityEffect_CallWeather: CompAbilityEffect
         //forces duration
         AccessTools.FieldRefAccess<int>(typeof(WeatherDecider),"curWeatherDuration").Invoke(this.parent.pawn.Map.weatherDecider) = Props.weatherDuration;
         
-        //todo: move this to translation
-        Messages.Message(this.parent.pawn.LabelShort + " has called forth a " + weather.label + ". It will begin shortly...", this.parent.pawn, MessageTypeDefOf.NeutralEvent, true);
+        Messages.Message("StagzMerfolk_RainCall".Translate(this.parent.pawn.LabelShort, weather.label) , this.parent.pawn, MessageTypeDefOf.NeutralEvent, true);
         
         
         if (this.Props.casterEffect != null)
