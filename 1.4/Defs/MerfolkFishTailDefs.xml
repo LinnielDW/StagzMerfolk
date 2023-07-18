@@ -56,8 +56,8 @@
         <bodyTypeGraphicPaths>
             <Female>Things/Pawn/Humanlike/Bodies/MerfolkBodies/female</Female>
             <Male>Things/Pawn/Humanlike/Bodies/MerfolkBodies/male</Male>
-            <Child>Things/Pawn/Humanlike/Bodies/baby</Child>
-            <Baby>Things/Pawn/Humanlike/Bodies/baby</Baby><!-- Always covered by swaddled graphic -->
+            <Child>Things/Pawn/Humanlike/Bodies/MerfolkBodies/baby</Child>
+            <Baby>Things/Pawn/Humanlike/Bodies/MerfolkBodies/baby</Baby>
         </bodyTypeGraphicPaths>
     </FurDef>
 </Defs>
