@@ -38,6 +38,7 @@ public static class Pawn_SpecialDisplayStats_Patch
 [HarmonyPatch(typeof(ShotReport), "AimOnTargetChance_IgnoringPosture", MethodType.Getter)]
 public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
 {
+    private static float meleeToRangeCoefficient = StagzDefOf.Stagz_KeenReflexes.HasModExtension<KeenReflexModExtension>() ? StagzDefOf.Stagz_KeenReflexes.GetModExtension<KeenReflexModExtension>().MeleeToRangeCoefficient : 0f;
     private static void Postfix(ref float __result, ref TargetInfo ___target)
     {
         if (___target == null) return;
@@ -45,8 +46,7 @@ public static class ShotReport_AimOnTargetChance_IgnoringPosture_Patch
         var pawn = ___target.Thing as Pawn;
         if (pawn != null && pawn.RaceProps.Humanlike && pawn.genes.HasGene(StagzDefOf.Stagz_KeenReflexes) && __result < 1f)
         {
-            //todo: 0.75 multiplier can be changed later
-            __result = Math.Max(__result - ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * 0.75f), 0.02f);
+            __result = Math.Max(__result - ((pawn.GetStatValue(StatDefOf.MeleeDodgeChance, true, -1) + 0.2f) * meleeToRangeCoefficient), 0.02f);
         }
     }
 }

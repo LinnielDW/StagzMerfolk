@@ -156,8 +156,8 @@
         <label>keen reflexes</label>
         <description>Carriers of this gene have extremely fast reflexes. They can dodge most income hits even from a distance.</description>
         <customEffectDescriptions>
+            <li>Adds an addtional +20% to melee dodge chance, ignoring the usual 50% melee dodge chance cap.</li>
             <li>75% of melee dodge chance is applied to ranged dodge chance.</li>
-            <li>Adds an addtional +20% to melee and ranged dodge chance, ignoring the usual 50% melee dodge chance cap.</li>
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_KeenReflex</iconPath>
         <displayCategory>Archite</displayCategory>
@@ -165,6 +165,12 @@
         <biostatCpx>2</biostatCpx>
         <biostatMet>-5</biostatMet>
         <biostatArc>1</biostatArc>
+        <modExtensions>
+            <!-- The % of melee dodge chance to be added as ranged 'dodge' chance -->
+            <li Class="StagzMerfolk.KeenReflexModExtension">
+                <MeleeToRangeCoefficient>0.75</MeleeToRangeCoefficient>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <GeneDef ParentName="GeneEarsBase">

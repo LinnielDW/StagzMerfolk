@@ -81,6 +81,7 @@
     <Compile Include="Letters\ChoiceLetter_AcceptCharmedJoiner.cs" />
     <Compile Include="MentalStates\MentalState_Charmed.cs" />
     <Compile Include="MentalStates\MentalState_VeryCharmed.cs" />
+    <Compile Include="ModExtensions\KeenReflexModExtension.cs" />
     <Compile Include="Needs\Stagz_Need_Aquatic.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
