@@ -100,3 +100,15 @@ public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
         }
     }
 }
+
+[HarmonyPatch(typeof(GeneGraphicData), "GetColorFor")]
+public static class GeneGraphicData_GetColorFor_Patch
+{
+    public static void Postfix(Pawn pawn, ref Color __result, GeneGraphicData __instance)
+    {
+        if (pawn.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_BodyFin) && __instance.graphicPath == "Things/Pawn/Humanlike/BodyAttachments/MerfolkFins/fins")
+        {
+            __result = pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData.color.GetValueOrDefault();
+        }
+    }
+}
