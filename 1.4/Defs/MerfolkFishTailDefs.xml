@@ -2,13 +2,13 @@
 <Defs>
     <GeneDef Name="Stagz_FishTail"  Abstract="True">
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
-        <label>fish tail</label>
+        <label>fishtail</label>
         <description>Carriers of this gene grow a fish-like tail below their waist instead of human legs.</description>
         <customEffectDescriptions>
-            <li>Replaces the pawn's legs with a fish tail.</li>
+            <li>Replaces the pawn's legs with a fishtail.</li>
             <li>Ignores terrain pathing costs while in water.</li>
             <li>Prevents the pawn from wearing clothes that only cover leg slots.</li>
-            <li>This gene is lost if the fish tail is destroyed.</li>
+            <li>This gene is lost if the fishtail is destroyed.</li>
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
@@ -27,7 +27,7 @@
     
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Teal</defName>
-        <label>fish tail (teal)</label>
+        <label>fishtail (teal)</label>
         <iconColor>(0, 0.49, 0.49)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -39,7 +39,7 @@
     
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Orange</defName>
-        <label>fish tail (orange)</label>
+        <label>fishtail (orange)</label>
         <iconColor>(0.94, 0.39, 0.14)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -51,7 +51,7 @@
     
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Black</defName>
-        <label>fish tail (black)</label>
+        <label>fishtail (black)</label>
         <iconColor>(0.16, 0.16, 0.16)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -62,7 +62,7 @@
     </GeneDef>
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_White</defName>
-        <label>fish tail (white)</label>
+        <label>fishtail (white)</label>
         <iconColor>(0.95, 0.95, 0.95)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -74,9 +74,9 @@
     
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>Stagz_Tail</defName>
-        <label>fish tail</label>
-        <labelNoun>part of a fish tail</labelNoun>
-        <description>Part of a fish tail.</description>
+        <label>fishtail</label>
+        <labelNoun>part of a fishtail</labelNoun>
+        <description>Part of a fishtail.</description>
         <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
         <addedPartProps>
             <solid>true</solid>

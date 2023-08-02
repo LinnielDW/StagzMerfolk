@@ -208,7 +208,7 @@
         <label>body fins</label>
         <description>Carriers of this gene develop fins near their waist area.</description>
         <customEffectDescriptions>
-            <li>Will be coloured the same colour as the fish tail if the fish tail gene is present.</li>
+            <li>Will be coloured the same colour as the fishtail if the fishtail gene is present.</li>
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_FishFin</iconPath>
         <!-- <iconColor>(0.75, 0.75, 0.75)</iconColor> -->
