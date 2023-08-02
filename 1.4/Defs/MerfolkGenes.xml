@@ -156,7 +156,7 @@
     <GeneDef>
         <defName>Stagz_KeenReflexes</defName>
         <label>keen reflexes</label>
-        <description>Carriers of this gene have extremely fast reflexes. They can dodge most income hits even from a distance.</description>
+        <description>Carriers of this gene have extremely fast reflexes. They can dodge most incoming hits even from a distance.</description>
         <customEffectDescriptions>
             <li>Adds an addtional +20% to melee dodge chance, ignoring the usual 50% melee dodge chance cap.</li>
             <li>75% of melee dodge chance is applied to ranged dodge chance.</li>
