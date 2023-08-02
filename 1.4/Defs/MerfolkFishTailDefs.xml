@@ -6,10 +6,16 @@
         <description>Carriers of this gene grow a fish-like tail below their waist instead of human legs.</description>
         <customEffectDescriptions>
             <li>Replaces the pawn's legs with a fishtail.</li>
-            <li>Ignores terrain pathing costs while in water.</li>
             <li>Prevents the pawn from wearing clothes that only cover leg slots.</li>
             <li>This gene is lost if the fishtail is destroyed.</li>
         </customEffectDescriptions>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
         <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
         <randomChosen>true</randomChosen>

@@ -11,6 +11,7 @@ public class StagzDefOf
     public static GeneDef Stagz_Charming;
     public static GeneDef Stagz_RainVeil;
     public static GeneDef Stagz_BodyFin;
+    public static GeneDef Stagz_Aquatic;
 
     public static MeditationFocusDef Stagz_Water;
 

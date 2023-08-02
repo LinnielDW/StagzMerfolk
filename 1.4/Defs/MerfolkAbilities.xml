@@ -179,7 +179,7 @@
                     <li>RainyThunderstorm</li>
                     <li>FoggyRain</li>
                 </weatherDefs>
-                <weatherDuration>900000</weatherDuration>
+                <weatherDuration>300000</weatherDuration>
             </li>
         </comps>
     </AbilityDef>
