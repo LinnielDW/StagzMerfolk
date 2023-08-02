@@ -157,7 +157,7 @@
         <description>Causes the weather on the local map to become foggy rain or rainy thunderstorm. This weather effect has a lower priority and will be overridden by weather triggered by quest or event.</description>
         <iconPath>UI/Abilities/Raincalling</iconPath>
         <targetRequired>False</targetRequired>
-        <cooldownTicksRange>900000</cooldownTicksRange>
+        <cooldownTicksRange>300000</cooldownTicksRange>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>5</warmupTime>
