@@ -3,7 +3,7 @@
 <Defs>
     <PawnKindDef ParentName="TribalBase">
         <defName>Stagz_Ariel</defName>
-        <label>wayward merfolk</label>
+        <label>wayward merren</label>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
                 <Stagz_Merfolk_Coastal>50</Stagz_Merfolk_Coastal>

@@ -15,13 +15,13 @@
 
     <IncidentDef>
         <defName>Stagz_ArielSummoned</defName>
-        <label>wayward merfolk</label>
+        <label>wayward merren</label>
         <category>Special</category>
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
         <workerClass>StagzMerfolk.IncidentWorker_ArielSummoned</workerClass>
-        <letterLabel>Wayward merfolk</letterLabel>
+        <letterLabel>Wayward merren</letterLabel>
         <letterText>Sensing trouble, a mysterious [PAWN_kind] has arrived.\n\nWill [PAWN_pronoun] be able to set things right in these parts?</letterText>
         <baseChance>0</baseChance>
         <minRefireDays>60</minRefireDays>
@@ -36,13 +36,13 @@
     
     <IncidentDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">
         <defName>Stagz_VirtuosoSummoned</defName>
-        <label>merfolk virtuoso</label>
+        <label>merren virtuoso</label>
         <category>Special</category>
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
         <workerClass>StagzMerfolk.IncidentWorker_VirtuosoSummoned</workerClass>
-        <letterLabel>Virtuoso merfolk</letterLabel>
+        <letterLabel>Virtuoso merren</letterLabel>
         <letterText>Sensing trouble, a mysterious [PAWN_kind] has arrived.\n\nWill [PAWN_pronoun] be able to set things right in these parts?</letterText>
         <baseChance>0</baseChance>
         <pawnKind>Stagz_Ariel</pawnKind>

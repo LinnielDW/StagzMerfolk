@@ -2,7 +2,7 @@
 <Defs>
     <GeneCategoryDef>
         <defName>StagzMerfolk</defName>
-        <label>Merfolk</label>
+        <label>Merren</label>
         <displayPriorityInXenotype>511</displayPriorityInXenotype>
     </GeneCategoryDef>
 
@@ -199,7 +199,7 @@
             <suffixSymbols>
                 <li><symbol>frill</symbol></li>
                 <li><symbol>folk</symbol></li>
-                <li><symbol>merfolk</symbol></li>
+                <li><symbol>merren</symbol></li>
                 <li><symbol>ear</symbol></li>
             </suffixSymbols>
         </symbolPack>
