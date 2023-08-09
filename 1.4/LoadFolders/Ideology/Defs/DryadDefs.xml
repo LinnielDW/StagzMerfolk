@@ -53,8 +53,10 @@
 		</race>
 		<comps>
 			<li Class="StagzMerfolk.CompProperties_SpawnerFromThingSetOnWater">
-				<thingSetMakerDef>MapGen_DefaultStockpile</thingSetMakerDef>
-				<ticksToSpawn>6000</ticksToSpawn>
+				<thingSetMakerDef>MapGen_AncientTempleContents</thingSetMakerDef>
+				<ticksToSpawnRange>3000~6000</ticksToSpawnRange>
+				<marketValueRange>750~2000</marketValueRange>
+				<thingsToSpawn>1~1</thingsToSpawn>
 			</li>
 		</comps>
 	</ThingDef>
