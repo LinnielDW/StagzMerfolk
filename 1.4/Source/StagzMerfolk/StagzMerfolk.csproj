@@ -55,6 +55,7 @@
     <Compile Include="CompAbility\CompAbilityEffect_DeepDiveEffect.cs" />
     <Compile Include="CompAbility\CompAbilityEffect_SirenSong.cs" />
     <Compile Include="CompAbility\CompAbility_RequiresOnWater.cs" />
+    <Compile Include="Comps\CompSpawnerFromThingSetOnWater.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_NotWater.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Water.cs" />
