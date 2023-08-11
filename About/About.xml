@@ -23,6 +23,9 @@
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Biotech</li>
     <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>VanillaExpanded.VPlantsE</li>
+    <li>VanillaExpanded.VPlantsEMore</li>
   </loadAfter>
 </ModMetaData>
 
