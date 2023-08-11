@@ -3,7 +3,7 @@
     <ThingDef Name="TorchLamp" ParentName="BuildingBase">
         <defName>Stagz_WaterCandle</defName>
         <label>torch lamp</label>
-        <description> A specially-treated wooden lantern that produces a dim light over a medium area while floating on water. Can be automatically refuelled with wood. Produce a tiny amount of heat.</description>
+        <description>A specially-treated wooden lantern that produces a dim light over a medium area while floating on water. Can be automatically refuelled with wood. Produce a tiny amount of heat.</description>
         <category>Building</category>
         <graphicData>
             <texPath>Things/Building/FloatingLamp/Lamp</texPath>
