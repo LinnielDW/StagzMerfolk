@@ -60,6 +60,7 @@
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Rain.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_Water.cs" />
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
+    <Compile Include="Genes\Stagz_Gene_Tail_Fish_Randomizer.cs" />
     <Compile Include="HarmonyPatches\Building_MusicalInstrument_Patches.cs" />
     <Compile Include="HarmonyPatches\MeditationFocus_Patches.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_VirtuosoSummoned.cs" />

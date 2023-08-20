@@ -1,5 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <GeneDef>
+        <defName>Stagz_Gene_Tail_Fish_Random</defName>
+        <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish_Randomizer</geneClass>
+        <label>fishtail (random color)</label>
+        <description>Carriers of this gene grow a fish-like tail below their waist instead of human legs.</description>
+        <customEffectDescriptions>
+            <li>Replaced by a random colored tail when added to a pawn</li>
+            <li>Replaces the pawn's legs with a fishtail.</li>
+            <li>Prevents the pawn from wearing clothes that only cover leg slots.</li>
+            <li>This gene is lost if the fishtail is destroyed.</li>
+        </customEffectDescriptions>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
+        <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
+        <prerequisite>Stagz_Aquatic</prerequisite>
+        <displayCategory>Miscellaneous</displayCategory>
+        <abilities>
+            <li>Stagz_DeepDive</li>
+        </abilities>
+        <biostatMet>-2</biostatMet>
+        <biostatCpx>2</biostatCpx>
+        <bodyType>Standard</bodyType>
+        <exclusionTags>
+            <li>Fur</li>
+        </exclusionTags>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(0, 126.5, 126.5)</color>
+        </graphicData>
+    </GeneDef>
+    
     <GeneDef Name="Stagz_FishTail"  Abstract="True">
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fishtail</label>
