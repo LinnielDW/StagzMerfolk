@@ -11,7 +11,7 @@ public class MentalState_Charmed : MentalState
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look<float>(ref this.charmChance, "charmChance", 0.2f, false);
+        Scribe_Values.Look<float>(ref this.charmChance, "charmChance", 0.1f, false);
     }
 
     public MentalState_Charmed()
