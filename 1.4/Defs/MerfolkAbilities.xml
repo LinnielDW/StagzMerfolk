@@ -64,6 +64,7 @@
                 <canTargetSelf>false</canTargetSelf>
                 <canTargetPawns>true</canTargetPawns>
                 <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
                 <neverTargetIncapacitated>True</neverTargetIncapacitated>
             </targetParams>
         </verbProperties>
