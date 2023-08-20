@@ -207,7 +207,7 @@
     
     <GeneDef ParentName="GeneTailBase">
         <defName>Stagz_BodyFin</defName>
-        <label>body fins</label>
+        <label>pelvic fins</label>
         <description>Carriers of this gene develop fins near their waist area.</description>
         <customEffectDescriptions>
             <li>Will be coloured the same colour as the fishtail if the fishtail gene is present.</li>
