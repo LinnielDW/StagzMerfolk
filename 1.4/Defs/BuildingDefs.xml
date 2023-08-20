@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingDef Name="TorchLamp" ParentName="BuildingBase">
+    <ThingDef Name="Stagz_WaterCandle" ParentName="BuildingBase">
         <defName>Stagz_WaterCandle</defName>
-        <label>torch lamp</label>
+        <label>floating lantern</label>
         <description>A specially-treated wooden lantern that produces a dim light over a medium area while floating on water. Can be automatically refuelled with wood. Produce a tiny amount of heat.</description>
         <category>Building</category>
         <graphicData>
@@ -27,13 +27,14 @@
         <statBases>
             <MaxHitPoints>75</MaxHitPoints>
             <WorkToBuild>100</WorkToBuild>
-            <Flammability>0</Flammability>
+            <Flammability>100</Flammability>
+            <Beauty>2</Beauty>
             <MeditationFocusStrength>0.0</MeditationFocusStrength>
             <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
         </statBases>
         <selectable>true</selectable>
         <costList>
-            <WoodLog>20</WoodLog>
+            <WoodLog>10</WoodLog>
         </costList>
         <building>
             <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
@@ -61,8 +62,8 @@
                 <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
             </li>
             <li Class="CompProperties_Glower">
-                <glowRadius>10</glowRadius>
-                <glowColor>(184,136,83,0)</glowColor>
+                <glowRadius>7</glowRadius>
+                <glowColor>(252, 187, 113)</glowColor>
             </li>
             <li Class="CompProperties_HeatPusher">
                 <compClass>CompHeatPusherPowered</compClass>
