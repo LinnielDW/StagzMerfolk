@@ -7,6 +7,7 @@
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
 		</statBases>
+		<uiIconScale>1</uiIconScale>
 		<verbs>
 			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<verbClass>Verb_Shoot</verbClass>
