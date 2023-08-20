@@ -1,91 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
 namespace StagzMerfolk;
 
-public static class TailColourHelper
-{
-    public static List<Color> tailColours = new List<Color>()
-    {
-        new(0, 0.49f, 0.49f),
-        new(0.86f, 0.55f, 0)
-    };
-}
-
 public class Stagz_Gene_Tail_Fish : Gene
 {
-    /*private int ticksToHeal;
-    private static readonly IntRange HealingIntervalTicksRange = new IntRange(900000, 1800000);
-
-    public override void Tick()
-    {
-        base.Tick();
-        this.ticksToHeal--;
-        if (this.ticksToHeal <= 0)
-        {
-            HealLegFootScar(this.LabelCap);
-            this.ResetInterval();
-        }
-    }
-
-    private void ResetInterval()
-    {
-        this.ticksToHeal = HealingIntervalTicksRange.RandomInRange;
-    }
-
-    public void HealLegFootScar(string cause)
-    {
-        Hediff hediff;
-        if (!(from hd in pawn.health.hediffSet.hediffs
-                where (hd.IsPermanent() || hd.def.chronic) && hd.Part.groups.GroupsContainsLegsOrFeet()
-                select hd).TryRandomElement(out hediff))
-        {
-            return;
-        }
-
-        HealthUtility.Cure(hediff);
-        if (PawnUtility.ShouldSendNotificationAbout(pawn))
-        {
-            Messages.Message("MessagePermanentWoundHealed".Translate(cause, pawn.LabelShort, hediff.Label, pawn.Named("PAWN")), pawn, MessageTypeDefOf.PositiveEvent, true);
-        }
-    }
-
-    public override IEnumerable<Gizmo> GetGizmos()
-    {
-        if (DebugSettings.ShowDevGizmos)
-        {
-            yield return new Command_Action
-            {
-                defaultLabel = "DEV: Heal permanent tail wound",
-                action = delegate()
-                {
-                    HealLegFootScar(this.LabelCap);
-                    this.ResetInterval();
-                }
-            };
-        }
-
-        yield break;
-    }*/
-
-    // public Color tailColour;
-    // public override void ExposeData()
-    // {
-    //     base.ExposeData();
-    //     Scribe_Values.Look<Color>(ref this.tailColour, "tailColour");
-    // }
-
     public override void PostAdd()
     {
         base.PostAdd();
-        // if (tailColour == Color.clear)
-        // {
-        //     tailColour = TailColourHelper.tailColours.RandomElement();
-        //     ExposeData();
-        // }
 
         foreach (var leg in pawn.RaceProps.body.AllParts.Where(x => x.def == BodyPartDefOf.Leg))
         {
