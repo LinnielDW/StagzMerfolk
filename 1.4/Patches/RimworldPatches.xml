@@ -38,7 +38,7 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-        <xpath>Defs/*[defName="HydroponicsBasin"]/comps</xpath>
+        <xpath>Defs/*[defName="HydroponicsBasin" or defName="Stagz_WaterCandle"]/comps</xpath>
         <value>
             <li Class="CompProperties_MeditationFocus">
                 <statDef>MeditationFocusStrength</statDef>
@@ -52,6 +52,7 @@
                     <li Class="StagzMerfolk.FocusStrengthOffset_BuildingDefsPowered">
                         <defs>
                             <li>HydroponicsBasin</li>
+                            <li>Stagz_WaterCandle</li>
                         </defs>
                         <offsetPerBuilding>0.06</offsetPerBuilding>
                         <radius>9.9</radius>
