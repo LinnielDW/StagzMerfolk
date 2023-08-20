@@ -82,12 +82,6 @@ public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
     {
         if (__instance.pawn.genes != null && __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>() != null)
         {
-            /*var color = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().tailColour;
-            if (color == Color.clear)
-            {
-                __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().tailColour = TailColourHelper.tailColours.RandomElement();
-            }*/
-            
             var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData;
             var color = (Color)AccessTools.Method(typeof(GeneGraphicData), "GetColorFor").Invoke(tailColors, new object[] { __instance.pawn });
 
