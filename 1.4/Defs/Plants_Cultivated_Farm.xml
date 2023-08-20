@@ -50,26 +50,26 @@
         <pathCost>30</pathCost>
         <ingestible/>
         <plant>
+            <growMinGlow>0.3</growMinGlow>
             <fertilitySensitivity>0</fertilitySensitivity>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestedThingDef>Stagz_RawDarkAlgae</harvestedThingDef>
             <harvestYield>3</harvestYield>
             <fertilityMin>0</fertilityMin>
-            <blockAdjacentSow>true</blockAdjacentSow>
             <sowWork>340</sowWork>
             <sowMinSkill>6</sowMinSkill>
-            <maxMeshCount>4</maxMeshCount>
             <sowTags>
                 <li>VCE_Aquatic</li>
                 <li>Hydroponic</li>
             </sowTags>
             <topWindExposure>0</topWindExposure>
             <growDays>1.55</growDays>
-            <visualSizeRange>0.3~0.8</visualSizeRange>
+            <visualSizeRange>1~1</visualSizeRange>
             <wildOrder>2</wildOrder>
             <purpose>Food</purpose>
             <humanFoodPlant>true</humanFoodPlant>
+            <immatureGraphicPath>Things/Plant/Crops/Stagz_DarkAlgae_Immature</immatureGraphicPath>
         </plant>
     </ThingDef>
 
