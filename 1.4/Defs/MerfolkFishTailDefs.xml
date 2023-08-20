@@ -18,7 +18,7 @@
                 </statOffsets>
             </li>
         </conditionalStatAffecters>
-        <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_FishTail2</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
         <displayCategory>Miscellaneous</displayCategory>
         <abilities>
@@ -54,7 +54,7 @@
                 </statOffsets>
             </li>
         </conditionalStatAffecters>
-        <iconPath>UI/Icons/Genes/Gene_FishTail</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_FishTail2</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
         <randomChosen>true</randomChosen>
         <displayCategory>Miscellaneous</displayCategory>
