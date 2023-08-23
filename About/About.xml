@@ -6,7 +6,9 @@
     <li>1.4</li>
   </supportedVersions>
   <packageId>Arquebus.StagzMerfolk</packageId>
-  <description>Put Stuff Here</description>
+  <description>This mod adds two merfolk inspired xenotypes. Inspired by tales of mermaids and sirens, these races thrive in the water and rain.
+    
+This mod adds new genes that interact with water, new abilities themed around water or being in water, a new focus type for psycasters, and (if VPE:More Plants is installed) new waterborne plants.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
