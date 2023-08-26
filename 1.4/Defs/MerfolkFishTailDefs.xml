@@ -115,6 +115,39 @@
             <color>(242, 243, 244)</color>
         </graphicData>
     </GeneDef>
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Cyan</defName>
+        <label>fishtail (cyan)</label>
+        <iconColor>(106, 231, 254)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(106, 231, 254)</color>
+        </graphicData>
+    </GeneDef>
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Magenta</defName>
+        <label>fishtail (magenta)</label>
+        <iconColor>(180,78,175)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(180,78,175)</color>
+        </graphicData>
+    </GeneDef>
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Red</defName>
+        <label>fishtail (red)</label>
+        <iconColor>(212,76,73)</iconColor>
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(212,76,73)</color>
+        </graphicData>
+    </GeneDef>
     
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>Stagz_Tail</defName>
