@@ -27,6 +27,7 @@
         </abilities>
         <biostatMet>-2</biostatMet>
         <biostatCpx>2</biostatCpx>
+        <displayOrderInCategory>401</displayOrderInCategory>
         <bodyType>Standard</bodyType>
         <exclusionTags>
             <li>Fur</li>
@@ -65,6 +66,7 @@
         </abilities>
         <biostatMet>-2</biostatMet>
         <biostatCpx>2</biostatCpx>
+        <displayOrderInCategory>402</displayOrderInCategory>
         <bodyType>Standard</bodyType>
         <exclusionTags>
             <li>Fur</li>
