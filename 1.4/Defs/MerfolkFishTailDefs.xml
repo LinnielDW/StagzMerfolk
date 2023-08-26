@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!--  Fishtail Color Randomizer  -->
     <GeneDef>
         <defName>Stagz_Gene_Tail_Fish_Random</defName>
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish_Randomizer</geneClass>
@@ -37,8 +38,9 @@
             <color>(0, 126.5, 126.5)</color>
         </graphicData>
     </GeneDef>
-    
-    <GeneDef Name="Stagz_FishTail"  Abstract="True">
+
+    <!--  Fishtails  -->
+    <GeneDef Name="Stagz_FishTail" Abstract="True">
         <geneClass>StagzMerfolk.Stagz_Gene_Tail_Fish</geneClass>
         <label>fishtail</label>
         <description>Carriers of this gene grow a fish-like tail below their waist instead of human legs.</description>
@@ -68,7 +70,8 @@
             <li>Fur</li>
         </exclusionTags>
     </GeneDef>
-    
+
+    <!--  Template  -->
     <!--
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Template</defName>    rename def
@@ -82,11 +85,11 @@
         </graphicData>
     </GeneDef>
     -->
-    
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Teal</defName>
         <label>fishtail (teal)</label>
-        <iconColor>(0, 0.49, 0.49)</iconColor>
+        <iconColor>(0, 126.5, 126.5)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
@@ -94,11 +97,11 @@
             <color>(0, 126.5, 126.5)</color>
         </graphicData>
     </GeneDef>
-    
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Orange</defName>
         <label>fishtail (orange)</label>
-        <iconColor>(0.94, 0.39, 0.14)</iconColor>
+        <iconColor>(241, 99, 35)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
@@ -106,11 +109,11 @@
             <color>(241, 99, 35)</color>
         </graphicData>
     </GeneDef>
-    
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Black</defName>
         <label>fishtail (black)</label>
-        <iconColor>(0.16, 0.16, 0.16)</iconColor>
+        <iconColor>(43,43,43)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
@@ -118,10 +121,11 @@
             <color>(43,43,43)</color>
         </graphicData>
     </GeneDef>
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_White</defName>
         <label>fishtail (white)</label>
-        <iconColor>(0.95, 0.95, 0.95)</iconColor>
+        <iconColor>(242, 243, 244)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
             <fur>Stagz_TailFur</fur>
@@ -129,6 +133,7 @@
             <color>(242, 243, 244)</color>
         </graphicData>
     </GeneDef>
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Cyan</defName>
         <label>fishtail (cyan)</label>
@@ -140,6 +145,7 @@
             <color>(106, 231, 254)</color>
         </graphicData>
     </GeneDef>
+
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Magenta</defName>
         <label>fishtail (magenta)</label>
@@ -151,9 +157,10 @@
             <color>(180,78,175)</color>
         </graphicData>
     </GeneDef>
+
     <GeneDef ParentName="Stagz_FishTail">
-        <defName>Stagz_Gene_Tail_Fish_Red</defName>
-        <label>fishtail (red)</label>
+        <defName>Stagz_Gene_Tail_Fish_Salmon</defName>
+        <label>fishtail (salmon)</label>
         <iconColor>(212,76,73)</iconColor>
         <graphicData>
             <useSkinShader>false</useSkinShader>
@@ -162,7 +169,7 @@
             <color>(212,76,73)</color>
         </graphicData>
     </GeneDef>
-    
+
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>Stagz_Tail</defName>
         <label>fishtail</label>
@@ -180,7 +187,7 @@
             </li>
         </comps>
     </HediffDef>
-    
+
     <FurDef>
         <defName>Stagz_TailFur</defName>
         <noGraphic>true</noGraphic>
