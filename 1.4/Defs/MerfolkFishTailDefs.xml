@@ -69,6 +69,20 @@
         </exclusionTags>
     </GeneDef>
     
+    <!--
+    <GeneDef ParentName="Stagz_FishTail">
+        <defName>Stagz_Gene_Tail_Fish_Template</defName>    rename def
+        <label>fishtail (template)</label>                  rename label
+        <iconColor>(0, 255, 126.5)</iconColor>              rgb values between 0 and 255, accepts decimals 
+        <graphicData>
+            <useSkinShader>false</useSkinShader>
+            <fur>Stagz_TailFur</fur>
+            <colorType>Custom</colorType>
+            <color>(0, 255, 126.5)</color>                  rgb values between 0 and 255, accepts decimals 
+        </graphicData>
+    </GeneDef>
+    -->
+    
     <GeneDef ParentName="Stagz_FishTail">
         <defName>Stagz_Gene_Tail_Fish_Teal</defName>
         <label>fishtail (teal)</label>
