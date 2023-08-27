@@ -22,9 +22,6 @@
         <iconPath>UI/Icons/Genes/Gene_FishTail2</iconPath>
         <prerequisite>Stagz_Aquatic</prerequisite>
         <displayCategory>Miscellaneous</displayCategory>
-        <abilities>
-            <li>Stagz_DeepDive</li>
-        </abilities>
         <biostatMet>-2</biostatMet>
         <biostatCpx>2</biostatCpx>
         <displayOrderInCategory>401</displayOrderInCategory>

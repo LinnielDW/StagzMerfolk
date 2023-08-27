@@ -23,6 +23,9 @@
             <li>Stagz_Gene_Tail_Fish_Orange</li>
             <li>Stagz_Gene_Tail_Fish_Black</li>
             <li>Stagz_Gene_Tail_Fish_White</li>
+            <li>Stagz_Gene_Tail_Fish_Cyan</li>
+            <li>Stagz_Gene_Tail_Fish_Magenta</li>
+            <li>Stagz_Gene_Tail_Fish_Salmon</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationInsert">
