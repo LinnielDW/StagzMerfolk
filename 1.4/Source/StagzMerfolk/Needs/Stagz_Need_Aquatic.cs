@@ -5,8 +5,8 @@ using Verse;
 
 namespace StagzMerfolk;
 
-public class Stagz_Need_Aquatic: Need
-{		
+public class Stagz_Need_Aquatic : Need
+{
     public Stagz_Need_Aquatic(Pawn pawn) : base(pawn)
     {
         this.threshPercents = new List<float>
@@ -17,12 +17,20 @@ public class Stagz_Need_Aquatic: Need
 
     private const float FallRate = 0.0003f;
     private float tempFallRate;
-    
+
     //TODO: add bad hygiene integration
     public override void NeedInterval()
     {
-        if(pawn == null) return;
-        if(pawn.IsWet())
+        if (pawn == null) return;
+
+        //If suspended, no need fall
+        if (IsFrozen)
+        {
+            return;
+        }
+
+        //Need level adjustments
+        if (pawn.IsWet())
         {
             //TODO: change numbers
             this.CurLevel += 0.0075f;
@@ -37,7 +45,8 @@ public class Stagz_Need_Aquatic: Need
 
             this.CurLevel -= tempFallRate;
         }
-        
+
+        //Dehydration level control
         if (this.CurLevel < 0.1f)
         {
             //TODO: finalize dehydration tick severity increase
@@ -51,9 +60,13 @@ public class Stagz_Need_Aquatic: Need
                 dehydrationHediff.Severity -= 0.15f;
             }
         }
-        
     }
-    
+
+    protected override bool IsFrozen
+    {
+        get { return base.IsFrozen || this.pawn.Deathresting; }
+    }
+
     public override int GUIChangeArrow
     {
         get
@@ -62,9 +75,11 @@ public class Stagz_Need_Aquatic: Need
             {
                 return 1;
             }
+
             return -1;
         }
     }
+
     public void Hydrate(float val)
     {
         this.CurLevel = Mathf.Min(CurLevel + val, 1f);
