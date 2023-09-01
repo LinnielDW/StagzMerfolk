@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BadHygiene">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\836308268\1.4\Assemblies\BadHygiene.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +66,7 @@
     <Compile Include="ConditionalStatEffectors\ConditionalStatEffector_WaterOrRain.cs" />
     <Compile Include="Genes\Stagz_Gene_Tail_Fish_Randomizer.cs" />
     <Compile Include="HarmonyPatches\Building_MusicalInstrument_Patches.cs" />
+    <Compile Include="HarmonyPatches\DbhHygieneCleanPatches.cs" />
     <Compile Include="HarmonyPatches\MeditationFocus_Patches.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_VirtuosoSummoned.cs" />
     <Compile Include="ModExtensions\ArielSpawnModExtension.cs" />
