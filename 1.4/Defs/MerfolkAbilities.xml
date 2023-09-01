@@ -12,13 +12,13 @@
         <groupAbility>true</groupAbility>
         <statBases>
             <Ability_Duration>164</Ability_Duration>
-            <Ability_EffectRadius>49.9</Ability_EffectRadius>
+            <Ability_EffectRadius>30.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <label>siren song</label>
             <warmupTime>3</warmupTime>
-            <range>49.9</range>
+            <range>30.9</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
             <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter>
