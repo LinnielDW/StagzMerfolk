@@ -15,7 +15,7 @@ public class MeditationFocusDef_EnablingThingsExplanation_Patch
         {
             if (pawn.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_RainVeil))
             {
-                __result += "\n  - " + "Stagz_UnlockedByGeneRainVeil".Translate() + ".";
+                __result += "\n  - " + "Stagz_UnlockedByGene".Translate() + " " + StagzDefOf.Stagz_RainVeil.LabelCap + ".";
             }
         }
     }

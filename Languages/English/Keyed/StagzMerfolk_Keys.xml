@@ -17,4 +17,5 @@
     
     <StagzMerfolk_LetterLabelVirtuosoJoins>Virtuoso's Calling: {PAWN_nameDef}</StagzMerfolk_LetterLabelVirtuosoJoins>
     <StagzMerfolk_LetterVirtuosoJoins>As the final notes of {SUBJECT_nameDef}'s recital echo through the map, a {PAWN_title} named {PAWN_nameDef} emerges from the nearby depths. Lured by the captivating melody, they are eager to sing along to a new song.\n\nYou can choose to turn {PAWN_objective} down and send {PAWN_objective} away.</StagzMerfolk_LetterVirtuosoJoins>
+    <Stagz_UnlockedByGene>has gene</Stagz_UnlockedByGene>
 </LanguageData>
