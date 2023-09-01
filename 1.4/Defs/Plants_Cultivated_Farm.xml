@@ -50,7 +50,6 @@
         <pathCost>30</pathCost>
         <ingestible/>
         <plant>
-            <growMinGlow>0.3</growMinGlow>
             <fertilitySensitivity>0</fertilitySensitivity>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
