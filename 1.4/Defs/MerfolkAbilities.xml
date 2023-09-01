@@ -3,7 +3,7 @@
     <AbilityDef>
         <defName>Stagz_SirenCall</defName>
         <label>siren song</label>
-        <description>The caster releases an enchanting song centred around themselves. Enemies within range will become infatuated (lowering their accuracy). In severe cases, they may become charmed to attack their allies. Charmed enemies will request to join the player after the charm effect ends.</description>
+        <description>The caster releases an enchanting song centred around themselves. Enemies within range will become infatuated (lowering their accuracy). In severe cases, they may become charmed to attack their allies. Charmed enemies might request to join the player after the charm effect ends, or flee in shame.</description>
         <iconPath>UI/Abilities/SirenCall</iconPath>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>300000</cooldownTicksRange><!-- 5 days -->
