@@ -34,7 +34,7 @@
         </plant>
     </ThingDef>
     
-    <ThingDef ParentName="CavePlantBase" MayRequire="VanillaExpanded.VPlantsEMore">
+    <ThingDef ParentName="PlantBase" MayRequire="VanillaExpanded.VPlantsEMore">
         <defName>Stagz_DarkAlgae</defName>
         <label>quackweed</label>
         <description>An aquatic plant that requires only low light to grow. They are extremely fast to sow and harvest.</description>
@@ -50,6 +50,7 @@
         <pathCost>30</pathCost>
         <ingestible/>
         <plant>
+            <growMinGlow>0.3</growMinGlow>
             <fertilitySensitivity>0</fertilitySensitivity>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
@@ -75,7 +76,7 @@
     <ThingDef ParentName="PlantFoodRawBase" MayRequire="VanillaExpanded.VPlantsEMore">
         <defName>Stagz_RawDarkAlgae</defName>
         <label>raw quackweed</label>
-        <description>An aquatic plant that requires only low light to grow. They are extremely fast to sow and harvest.</description>
+        <description>An aquatic plant that is commonly consumed by water fowls. Surprisingly, it is edible for humans. It has a neutral to mild taste but some also claim it tastes like sweet cabbage.</description>
         <graphicData>
             <texPath>Things/Items/Raw/Stagz_RawDarkAlgae</texPath>
         </graphicData>
