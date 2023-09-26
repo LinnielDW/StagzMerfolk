@@ -31,12 +31,6 @@
         <requiredWorkTags>
             <li>Caring</li>
         </requiredWorkTags>
-        <skills>
-            <li>
-                <skill>Medicine</skill>
-                <range>4~8</range>
-            </li>
-        </skills>
         <techHediffsMoney>50~50</techHediffsMoney>
         <techHediffsTags>
             <li>Poor</li>
