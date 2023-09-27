@@ -13,9 +13,9 @@ public class MeditationFocusDef_EnablingThingsExplanation_Patch
 
         if (__instance == StagzDefOf.Stagz_Water)
         {
-            if (pawn.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_RainVeil))
+            if (pawn.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_Raincaller))
             {
-                __result += "\n  - " + "Stagz_UnlockedByGene".Translate() + " " + StagzDefOf.Stagz_RainVeil.LabelCap + ".";
+                __result += "\n  - " + "Stagz_UnlockedByGene".Translate() + " " + StagzDefOf.Stagz_Raincaller.LabelCap + ".";
             }
         }
     }

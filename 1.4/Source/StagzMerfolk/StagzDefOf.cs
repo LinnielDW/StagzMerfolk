@@ -10,6 +10,7 @@ public class StagzDefOf
     public static GeneDef Stagz_KeenReflexes;
     public static GeneDef Stagz_Charming;
     public static GeneDef Stagz_RainVeil;
+    public static GeneDef Stagz_Raincaller;
     public static GeneDef Stagz_BodyFin;
     public static GeneDef Stagz_Aquatic;
 
