@@ -30,7 +30,7 @@ public class MeditationFocusTypeAvailabilityCache_PawnCanUseInt_Patch
 
         if (type == StagzDefOf.Stagz_Water)
         {
-            if (p.genes != null && p.genes.HasGene(StagzDefOf.Stagz_RainVeil))
+            if (p.genes != null && p.genes.HasGene(StagzDefOf.Stagz_Raincaller))
             {
                 __result = true;
             }
