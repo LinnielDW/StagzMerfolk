@@ -24,7 +24,7 @@ public class DbhHygieneCleanPatches
     [HarmonyPostfix]
     private static void Postfix(float val, ref Pawn ___pawn)
     {
-        if (___pawn?.genes != null && ___pawn.genes.HasGene(StagzDefOf.Stagz_Aquatic) && StagzMerfolkSettings.dbhCleaningCountsAsHydration)
+        if (StagzMerfolkSettings.dbhCleaningCountsAsHydration && ___pawn?.genes != null && ___pawn.genes.HasGene(StagzDefOf.Stagz_Aquatic) && ___pawn.needs.TryGetNeed(StagzDefOf.Stagz_NeedAquatic) != null)
         {
             ___pawn.needs.TryGetNeed(StagzDefOf.Stagz_NeedAquatic).CurLevel = Math.Min(___pawn.needs.TryGetNeed(StagzDefOf.Stagz_NeedAquatic).CurLevel + val, 1f);
         }
