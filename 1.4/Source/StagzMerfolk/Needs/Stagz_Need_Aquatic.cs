@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using RimWorld;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
@@ -24,7 +25,7 @@ public class Stagz_Need_Aquatic : Need
         if (pawn == null) return;
 
         //If suspended, no need fall
-        if (IsFrozen)
+        if (IsFrozen || pawn.IsCaravanMember())
         {
             return;
         }
@@ -71,6 +72,11 @@ public class Stagz_Need_Aquatic : Need
     {
         get
         {
+            if (IsFrozen || pawn.IsCaravanMember())
+            {
+                return 0;
+            }
+
             if (pawn.IsWet())
             {
                 return 1;
