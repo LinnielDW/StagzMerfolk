@@ -22,7 +22,7 @@ public class CompAbilityEffect_SirenSong : CompAbilityEffect
         var things = GenRadial.RadialDistinctThingsAround(this.parent.pawn.Position, this.parent.pawn.Map, this.parent.def.EffectRadius, true);
         foreach (var thing in things)
         {
-            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy.PsychicSensitivity >= 0.1f && pawn.Faction.HostileTo(Faction.OfPlayer))
+            if (thing is Pawn pawn && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing) && pawn.psychicEntropy?.PsychicSensitivity >= 0.1f && pawn.Faction.HostileTo(Faction.OfPlayer))
             {
                 if (Rand.Chance(Props.chanceForMentalState))
                 {
