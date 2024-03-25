@@ -70,7 +70,7 @@ public class IncidentWorker_ArielSummoned : IncidentWorker
     {
         if (parms.controllerPawn != null)
         {
-            foreach (var _ in parms.controllerPawn.health.hediffSet.GetInjuriesTendable())
+            foreach (var _ in parms.controllerPawn.health.hediffSet.GetHediffsTendable())
             {
                 Medicine medicine = (Medicine)GenSpawn.Spawn(ThingDefOf.MedicineHerbal, parms.spawnCenter, map);
                 TendUtility.DoTend(pawn, parms.controllerPawn, medicine);

@@ -74,35 +74,3 @@ public static class PawnGenerator_GeneratePawn_FishtailPatch
         }
     }
 }
-
-[HarmonyPatch(typeof(PawnGraphicSet), "ResolveAllGraphics")]
-public static class PawnGraphicSet_ResolveAllGraphics_FishtailPatch
-{
-    public static void Postfix(PawnGraphicSet __instance)
-    {
-        if (__instance.pawn.genes != null && __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>() != null)
-        {
-            var tailColors = __instance.pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData;
-            var color = (Color)AccessTools.Method(typeof(GeneGraphicData), "GetColorFor").Invoke(tailColors, new object[] { __instance.pawn });
-
-            __instance.furCoveredGraphic = GraphicDatabase.Get<Graphic_Multi>(
-                __instance.pawn.story.furDef.GetFurBodyGraphicPath(__instance.pawn),
-                ShaderDatabase.CutoutComplex, Vector2.one,
-                __instance.pawn.story.SkinColor,
-                color
-            );
-        }
-    }
-}
-
-[HarmonyPatch(typeof(GeneGraphicData), "GetColorFor")]
-public static class GeneGraphicData_GetColorFor_Patch
-{
-    public static void Postfix(Pawn pawn, ref Color __result, GeneGraphicData __instance)
-    {
-        if (pawn.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_BodyFin) && __instance.graphicPath == "Things/Pawn/Humanlike/BodyAttachments/MerfolkFins/fins" && pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>() != null)
-        {
-            __result = pawn.genes.GetFirstGeneOfType<Stagz_Gene_Tail_Fish>().def.graphicData.color.GetValueOrDefault();
-        }
-    }
-}

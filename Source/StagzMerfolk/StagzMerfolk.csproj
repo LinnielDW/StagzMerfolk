@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,8 +51,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4042-beta" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.1.1" ExcludeAssets="runtime"/>
+    <PackageReference Include="Krafs.Publicizer" Version="2.2.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <Publicize Include="Assembly-CSharp:Verse.PawnRenderNode::props" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompAbility\CompAbilityEffect_CallWeather.cs" />
@@ -90,6 +95,8 @@
     <Compile Include="MentalStates\MentalState_VeryCharmed.cs" />
     <Compile Include="ModExtensions\KeenReflexModExtension.cs" />
     <Compile Include="Needs\Stagz_Need_Aquatic.cs" />
+    <Compile Include="PawnRenderNode\PawnRenderNode_Fishfin.cs" />
+    <Compile Include="PawnRenderNode\PawnRenderNode_Fishtail.cs" />
     <Compile Include="StagzDefOf.cs" />
     <Compile Include="StagzMerfolk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
