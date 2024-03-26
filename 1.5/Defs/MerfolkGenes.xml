@@ -200,6 +200,13 @@
         </renderNodeProperties>
         <endogeneCategory>Ears</endogeneCategory>
         <displayCategory>Cosmetic</displayCategory>
+        <conditionalStatAffecters>
+            <li Class="StagzMerfolk.ConditionalStatEffector_Water">
+                <statOffsets>
+                    <MoveSpeed>0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+        </conditionalStatAffecters>
         <exclusionTags>
             <li>Ears</li>
         </exclusionTags>
