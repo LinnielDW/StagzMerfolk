@@ -286,6 +286,6 @@
             </li>
         </forcedTraits>
         <biostatCpx>1</biostatCpx>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>-2</biostatMet>
     </GeneDef>
 </Defs>
