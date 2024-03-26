@@ -12,13 +12,13 @@
         <groupAbility>true</groupAbility>
         <statBases>
             <Ability_Duration>164</Ability_Duration>
-            <Ability_EffectRadius>27.9</Ability_EffectRadius>
+            <Ability_EffectRadius>16.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <label>siren song</label>
             <warmupTime>3</warmupTime>
-            <range>27.9</range>
+            <range>16.9</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
             <warmupEffecter>Stagz_SirenCall_Warmup</warmupEffecter>
@@ -32,7 +32,7 @@
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <mentalState>Stagz_Charmed</mentalState>
                 <hediff>Stagz_Infatuated</hediff>
-                <chanceForMentalState>0.25</chanceForMentalState>
+                <chanceForMentalState>0.125</chanceForMentalState>
             </li>
         </comps>
     </AbilityDef>
@@ -159,6 +159,8 @@
         <iconPath>UI/Abilities/Raincalling</iconPath>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>300000</cooldownTicksRange>
+        <charges>2</charges>
+        <cooldownPerCharge>true</cooldownPerCharge>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>5</warmupTime>
@@ -180,7 +182,7 @@
                     <li>RainyThunderstorm</li>
                     <li>FoggyRain</li>
                 </weatherDefs>
-                <weatherDuration>300000</weatherDuration>
+                <weatherDuration>9000</weatherDuration>
             </li>
         </comps>
     </AbilityDef>
