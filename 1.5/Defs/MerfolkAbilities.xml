@@ -72,7 +72,7 @@
             <li Class="CompProperties_AbilityGiveMentalState">
                 <compClass>CompAbilityEffect_GiveMentalState</compClass>
                 <stateDef>Stagz_VeryCharmed</stateDef>
-                <goodwillImpact>-75</goodwillImpact>
+                <goodwillImpact>-15</goodwillImpact>
                 <!-- TODO: change sounds -->
                 <soundMale>BerserkTrance_Resolve_Male</soundMale>
                 <soundFemale>BerserkTrance_Resolve_Female</soundFemale>
