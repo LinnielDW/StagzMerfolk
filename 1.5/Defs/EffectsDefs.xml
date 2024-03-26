@@ -41,7 +41,7 @@
                 <speed>0.2~0.6</speed>
                 <spawnLocType>OnSource</spawnLocType>
                 <positionLerpFactor>1.5</positionLerpFactor>
-                <positionRadius>28</positionRadius>
+                <positionRadius>17</positionRadius>
             </li>
         </children>
     </EffecterDef>
