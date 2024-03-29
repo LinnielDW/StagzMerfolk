@@ -16,7 +16,7 @@ public class MentalState_Charmed : MentalState
 
     public MentalState_Charmed()
     {
-        this.charmChance = 0.2f;
+        this.charmChance = 0.01f;
     }
 
     public override RandomSocialMode SocialModeMax()

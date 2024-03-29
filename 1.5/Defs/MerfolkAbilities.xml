@@ -32,7 +32,7 @@
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <mentalState>Stagz_Charmed</mentalState>
                 <hediff>Stagz_Infatuated</hediff>
-                <chanceForMentalState>0.25</chanceForMentalState>
+                <chanceForMentalState>0.9</chanceForMentalState>
             </li>
         </comps>
     </AbilityDef>
