@@ -228,8 +228,8 @@
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <comps>
-            <li Class="HediffCompProperties">
-                <compClass>HediffComp_Invisibility</compClass>
+            <li Class="HediffCompProperties_Invisibility">
+                <visibleToPlayer>true</visibleToPlayer>
             </li>
             <li Class="StagzMerfolk.CompAbility.HediffCompProperties_DisappearsOnLeavingWater"/>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
