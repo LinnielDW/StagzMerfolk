@@ -11,8 +11,9 @@ public class Stagz_Gene_Tail_Fish : Gene
     {
         base.PostAdd();
 
-        foreach (var leg in pawn.RaceProps.body.AllParts.Where(x => x.def == BodyPartDefOf.Leg))
+        foreach (var leg in pawn.RaceProps.body.GetPartsWithDef(BodyPartDefOf.Leg))
         {
+            pawn.health.RestorePart(leg, null, false);
             pawn.health.AddHediff(StagzDefOf.Stagz_Tail, leg);
         }
     }
@@ -21,7 +22,8 @@ public class Stagz_Gene_Tail_Fish : Gene
     {
         base.PostRemove();
 
-        List<Hediff> parts = pawn.health.hediffSet.hediffs.Where(h => h.def == StagzDefOf.Stagz_Tail).ToList();
+        List<Hediff> parts = pawn.health.hediffSet.hediffs
+            .Where(h => h.def == StagzDefOf.Stagz_Tail).ToList();
 
         foreach (var part in parts)
         {
