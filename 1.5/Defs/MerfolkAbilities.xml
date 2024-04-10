@@ -3,7 +3,7 @@
     <AbilityDef>
         <defName>Stagz_SirenCall</defName>
         <label>siren song</label>
-        <description>The caster releases an enchanting song centred around themselves. Enemies within range will become infatuated (lowering their accuracy). In severe cases, they may become charmed to attack their allies. Charmed enemies might request to join the player after the charm effect ends, or flee in shame.</description>
+        <description>The caster releases an enchanting song centred around themselves. Enemies within range will become infatuated (lowering their accuracy).\n\nIn severe cases, they may become charmed to attack their allies. Charmed enemies might request to join the player after the charm effect ends.</description>
         <iconPath>UI/Abilities/SirenCall</iconPath>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>300000</cooldownTicksRange><!-- 5 days -->
@@ -40,7 +40,7 @@
     <AbilityDef>
         <defName>Stagz_SirenCallCharm</defName>
         <label>charm person</label>
-        <description>The caster attempts to charm a neutral or enemy unit. Upon succession, the charmed unit will turn against their own allies and join the player faction after the effect wears off. This is considered a hostile action.</description>
+        <description>The caster attempts to charm a neutral or enemy unit. Upon success, the charmed unit will turn against their own allies and join the player faction after the effect wears off. This is considered a hostile action.</description>
         <iconPath>UI/Abilities/Charm</iconPath>
         <targetRequired>true</targetRequired>
         <hostile>true</hostile>
@@ -155,7 +155,7 @@
     <AbilityDef ParentName="AbilityTouchBase">
         <defName>Stagz_CallRain</defName>
         <label>call rain</label>
-        <description>Causes the weather on the local map to become foggy rain or rainy thunderstorm. This weather effect has a lower priority and will be overridden by weather triggered by quest or event.</description>
+        <description>Causes the weather on the local map to become foggy rain or rainy thunderstorm.\n\nThis weather effect has a lower priority and will be overridden by weather triggered by quest or event.</description>
         <iconPath>UI/Abilities/Raincalling</iconPath>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>300000</cooldownTicksRange>
