@@ -113,7 +113,7 @@
     <GeneDef>
         <defName>Stagz_SirenSong</defName>
         <label>siren song</label>
-        <description>Carriers of this gene hum a wordless, haunting melody enchanted with psychic energy. Anyone who hears the song will become obsessed with the songster/songstress.</description>
+        <description>Carriers of this gene can hum a wordless, haunting melody enchanted with psychic energy. Anyone who hears the song will become obsessed with the songster/songstress.</description>
         <iconPath>UI/Icons/Genes/Gene_SirenCall</iconPath>
         <displayCategory>Ability</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
@@ -127,7 +127,7 @@
     <GeneDef>
         <defName>Stagz_Charming</defName>
         <label>charming</label>
-        <description>Carrier of this gene has an irresistible charming aura. By inducing their presence with psychic energy, they can easily put others under their spell.</description>
+        <description>Carriers of this gene have an irresistible charming aura. By inducing their presence with psychic energy, they can easily put others under their spell.</description>
         <iconPath>UI/Icons/Genes/Gene_Charm</iconPath>
         <displayCategory>Ability</displayCategory>
         <displayOrderInCategory>500</displayOrderInCategory>
@@ -178,7 +178,7 @@
     <GeneDef ParentName="GeneEarsBase">
         <defName>Stagz_FinEars</defName>
         <label>fin ears</label>
-        <description>Carriers of this gene have fin ears that are covered in scales.</description>
+        <description>Carriers of this gene have finned ears that are covered in scales.</description>
         <iconPath>UI/Icons/Genes/Gene_EarFin</iconPath>        
         <renderNodeProperties>
             <li>
@@ -228,9 +228,9 @@
     <GeneDef ParentName="GeneTailBase">
         <defName>Stagz_BodyFin</defName>
         <label>pelvic fins</label>
-        <description>Carriers of this gene develop fins near their waist area.</description>
+        <description>Carriers of this gene develop a pair of fins near their waist.</description>
         <customEffectDescriptions>
-            <li>Will be colored the same color as the fishtail if the fishtail gene is present.</li>
+            <li>Will be colored the same as the fishtail if the fishtail gene is present.</li>
         </customEffectDescriptions>
         <iconPath>UI/Icons/Genes/Gene_FishFin</iconPath>
         <!-- <iconColor>(0.75, 0.75, 0.75)</iconColor> -->
