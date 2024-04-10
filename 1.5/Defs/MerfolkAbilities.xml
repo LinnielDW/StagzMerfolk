@@ -224,7 +224,7 @@
     <HediffDef>
         <defName>Stagz_DeepDiving</defName>
         <label>deep diving</label>
-        <description>This person can breathe underneath water. They are lurking in water and waiting for the right moment to come.</description>
+        <description>This person can breathe under water. They are lurking here and waiting for opportunities.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <comps>
