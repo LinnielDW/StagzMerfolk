@@ -17,7 +17,7 @@
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <label>siren song</label>
-            <warmupTime>3</warmupTime>
+            <warmupTime>1</warmupTime>
             <range>16.9</range>
             <drawAimPie>true</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
@@ -29,10 +29,9 @@
         <comps>
             <li Class="StagzMerfolk.CompAbility.CompProperties_AbilitySirenSong">
                 <compClass>StagzMerfolk.CompAbility.CompAbilityEffect_SirenSong</compClass>
-                <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <mentalState>Stagz_Charmed</mentalState>
                 <hediff>Stagz_Infatuated</hediff>
-                <chanceForMentalState>0.9</chanceForMentalState>
+                <chanceForMentalState>0.33</chanceForMentalState>
             </li>
         </comps>
     </AbilityDef>
@@ -177,12 +176,11 @@
         <comps>
             <li Class="StagzMerfolk.CompAbility.CompProperties_AbilityCallWeather">
                 <compClass>StagzMerfolk.CompAbility.CompAbilityEffect_CallWeather</compClass>
-                <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <weatherDefs>
                     <li>RainyThunderstorm</li>
                     <li>FoggyRain</li>
                 </weatherDefs>
-                <weatherDuration>9000</weatherDuration>
+                <weatherDuration>90000</weatherDuration>
             </li>
         </comps>
     </AbilityDef>
