@@ -28,6 +28,11 @@
         <exclusionTags>
             <li>FireDamage</li>
         </exclusionTags>
+        <modExtensions>
+            <li MayRequire="pathfinding.framework" Class="PathfindingFramework.MovementExtension">
+                <movementDef>PF_Movement_Amphibious</movementDef>
+            </li>
+        </modExtensions>
     </GeneDef>
     <NeedDef>
         <defName>Stagz_NeedAquatic</defName>

@@ -14,6 +14,12 @@ namespace StagzMerfolk.HarmonyPatches;
 })]
 public static class Pawn_PathFollower_Patches
 {
+    [HarmonyPrepare]
+    private static bool shouldUseInsteadOfPathfindingFramework()
+    {
+        return !ModsConfig.IsActive("pathfinding.framework");
+    }
+    
     private static void Postfix(Pawn pawn, IntVec3 c, ref float __result)
     {
         if (pawn?.genes != null && pawn.genes.HasGene(StagzDefOf.Stagz_Aquatic) && pawn.Map.terrainGrid.TerrainAt(c).IsWater)
